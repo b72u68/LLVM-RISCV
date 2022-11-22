@@ -1,0 +1,1732 @@
+prog: FUN LPAREN IDENT COLON TBOOL RPAREN ARROW WITH
+##
+## Ends in an error in state: 40.
+##
+## expr_ -> FUN ppat ARROW . expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## FUN ppat ARROW
+##
+
+Expected expression after ->
+
+prog: FUN LPAREN IDENT COLON TBOOL RPAREN WITH
+##
+## Ends in an error in state: 39.
+##
+## expr_ -> FUN ppat . ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## FUN ppat
+##
+
+Expected ->
+
+prog: FUN LPAREN IDENT COLON TUNIT WITH
+##
+## Ends in an error in state: 29.
+##
+## ppat -> LPAREN IDENT COLON typ . RPAREN [ EQUAL COLON ARROW ]
+## typ -> typ . ARROW typ [ RPAREN ARROW ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN IDENT COLON typ
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 27, spurious reduction of production ttyp -> atyp
+## In state 24, spurious reduction of production typ -> ttyp
+##
+
+Expected )
+
+prog: FUN LPAREN IDENT COLON WITH
+##
+## Ends in an error in state: 15.
+##
+## ppat -> LPAREN IDENT COLON . typ RPAREN [ EQUAL COLON ARROW ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN IDENT COLON
+##
+
+Expected type
+
+prog: FUN LPAREN IDENT WITH
+##
+## Ends in an error in state: 14.
+##
+## ppat -> LPAREN IDENT . COLON typ RPAREN [ EQUAL COLON ARROW ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN IDENT
+##
+
+Expected : type
+
+prog: FUN LPAREN WITH
+##
+## Ends in an error in state: 13.
+##
+## ppat -> LPAREN . IDENT COLON typ RPAREN [ EQUAL COLON ARROW ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN
+##
+
+Expected pattern
+
+prog: FUN WITH
+##
+## Ends in an error in state: 38.
+##
+## expr_ -> FUN . ppat ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## FUN
+##
+
+Expected pattern
+
+prog: IF UNIT THEN UNIT ELSE WITH
+##
+## Ends in an error in state: 81.
+##
+## expr_ -> IF expr THEN expr ELSE . expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## IF expr THEN expr ELSE
+##
+
+Expected expression
+
+prog: IF UNIT THEN UNIT WITH
+##
+## Ends in an error in state: 80.
+##
+## expr_ -> IF expr THEN expr . ELSE expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## IF expr THEN expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected expression
+
+prog: IF UNIT THEN WITH
+##
+## Ends in an error in state: 79.
+##
+## expr_ -> IF expr THEN . expr ELSE expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## IF expr THEN
+##
+
+Expected expression
+
+prog: IF UNIT WITH
+##
+## Ends in an error in state: 78.
+##
+## expr_ -> IF expr . THEN expr ELSE expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## IF expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected THEN
+
+prog: IF WITH
+##
+## Ends in an error in state: 36.
+##
+## expr_ -> IF . expr THEN expr ELSE expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## IF
+##
+
+Expected expression
+
+prog: LET IDENT COLON TUNIT WITH
+##
+## Ends in an error in state: 33.
+##
+## optannot -> COLON typ . [ EQUAL ]
+## typ -> typ . ARROW typ [ EQUAL ARROW ]
+##
+## The known suffix of the stack is as follows:
+## COLON typ
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 27, spurious reduction of production ttyp -> atyp
+## In state 24, spurious reduction of production typ -> ttyp
+##
+
+Expected =
+
+prog: LET IDENT COLON WITH
+##
+## Ends in an error in state: 32.
+##
+## optannot -> COLON . typ [ EQUAL ]
+##
+## The known suffix of the stack is as follows:
+## COLON
+##
+
+Expected type
+
+prog: LET IDENT EQUAL UNIT DOUBLESEMI WITH
+##
+## Ends in an error in state: 161.
+##
+## prog -> LET IDENT optannot EQUAL expr DOUBLESEMI . prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT optannot EQUAL expr DOUBLESEMI
+##
+
+Expected declaration or EOF
+
+prog: LET IDENT EQUAL UNIT IN WITH
+##
+## Ends in an error in state: 105.
+##
+## expr_ -> LET IDENT optannot EQUAL expr IN . expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT optannot EQUAL expr IN
+##
+
+Expected expression
+
+prog: LET IDENT EQUAL UNIT WITH
+##
+## Ends in an error in state: 160.
+##
+## expr_ -> LET IDENT optannot EQUAL expr . IN expr [ DOUBLESEMI ]
+## prog -> LET IDENT optannot EQUAL expr . DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT optannot EQUAL expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected IN or ;;
+
+prog: LET IDENT EQUAL WITH
+##
+## Ends in an error in state: 159.
+##
+## expr_ -> LET IDENT optannot EQUAL . expr IN expr [ DOUBLESEMI ]
+## prog -> LET IDENT optannot EQUAL . expr DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT optannot EQUAL
+##
+
+Expected expression
+
+prog: LET IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL UNIT DOUBLESEMI WITH
+##
+## Ends in an error in state: 156.
+##
+## prog -> LET IDENT ppat optannot EQUAL expr DOUBLESEMI . prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT ppat optannot EQUAL expr DOUBLESEMI
+##
+
+Expected declaration or EOF
+
+prog: LET IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL UNIT IN WITH
+##
+## Ends in an error in state: 100.
+##
+## expr_ -> LET IDENT ppat optannot EQUAL expr IN . expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT ppat optannot EQUAL expr IN
+##
+
+Expected expression
+
+prog: LET IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL UNIT WITH
+##
+## Ends in an error in state: 155.
+##
+## expr_ -> LET IDENT ppat optannot EQUAL expr . IN expr [ DOUBLESEMI ]
+## prog -> LET IDENT ppat optannot EQUAL expr . DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT ppat optannot EQUAL expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected IN or ;;
+
+prog: LET IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL WITH
+##
+## Ends in an error in state: 154.
+##
+## expr_ -> LET IDENT ppat optannot EQUAL . expr IN expr [ DOUBLESEMI ]
+## prog -> LET IDENT ppat optannot EQUAL . expr DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT ppat optannot EQUAL
+##
+
+Expected expression
+
+prog: LET IDENT LPAREN IDENT COLON TBOOL RPAREN WITH
+##
+## Ends in an error in state: 152.
+##
+## expr_ -> LET IDENT ppat . optannot EQUAL expr IN expr [ DOUBLESEMI ]
+## prog -> LET IDENT ppat . optannot EQUAL expr DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT ppat
+##
+
+Expected =
+
+prog: LET IDENT WITH
+##
+## Ends in an error in state: 151.
+##
+## expr_ -> LET IDENT . optannot EQUAL expr IN expr [ DOUBLESEMI ]
+## expr_ -> LET IDENT . ppat optannot EQUAL expr IN expr [ DOUBLESEMI ]
+## prog -> LET IDENT . optannot EQUAL expr DOUBLESEMI prog [ # ]
+## prog -> LET IDENT . ppat optannot EQUAL expr DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT
+##
+
+Expected =
+
+prog: LET LPAREN IDENT COMMA IDENT RPAREN EQUAL UNIT IN WITH
+##
+## Ends in an error in state: 93.
+##
+## expr_ -> LET LPAREN IDENT COMMA IDENT RPAREN EQUAL expr IN . expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET LPAREN IDENT COMMA IDENT RPAREN EQUAL expr IN
+##
+
+Expected expression
+
+prog: LET LPAREN IDENT COMMA IDENT RPAREN EQUAL UNIT WITH
+##
+## Ends in an error in state: 92.
+##
+## expr_ -> LET LPAREN IDENT COMMA IDENT RPAREN EQUAL expr . IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET LPAREN IDENT COMMA IDENT RPAREN EQUAL expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected IN
+
+prog: LET LPAREN IDENT COMMA IDENT RPAREN EQUAL WITH
+##
+## Ends in an error in state: 91.
+##
+## expr_ -> LET LPAREN IDENT COMMA IDENT RPAREN EQUAL . expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET LPAREN IDENT COMMA IDENT RPAREN EQUAL
+##
+
+Expected expression
+
+prog: LET LPAREN IDENT COMMA IDENT RPAREN WITH
+##
+## Ends in an error in state: 90.
+##
+## expr_ -> LET LPAREN IDENT COMMA IDENT RPAREN . EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET LPAREN IDENT COMMA IDENT RPAREN
+##
+
+Expected =
+
+prog: LET LPAREN IDENT COMMA IDENT WITH
+##
+## Ends in an error in state: 89.
+##
+## expr_ -> LET LPAREN IDENT COMMA IDENT . RPAREN EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET LPAREN IDENT COMMA IDENT
+##
+
+Expected )
+
+prog: LET LPAREN IDENT COMMA WITH
+##
+## Ends in an error in state: 88.
+##
+## expr_ -> LET LPAREN IDENT COMMA . IDENT RPAREN EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET LPAREN IDENT COMMA
+##
+
+Expected identifier
+
+prog: LET LPAREN IDENT WITH
+##
+## Ends in an error in state: 87.
+##
+## expr_ -> LET LPAREN IDENT . COMMA IDENT RPAREN EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET LPAREN IDENT
+##
+
+Expected COMMA identifier RPAREN
+
+prog: LET LPAREN WITH
+##
+## Ends in an error in state: 86.
+##
+## expr_ -> LET LPAREN . IDENT COMMA IDENT RPAREN EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET LPAREN
+##
+
+Expected pattern
+
+prog: LET REC IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL UNIT DOUBLESEMI WITH
+##
+## Ends in an error in state: 145.
+##
+## prog -> LET REC IDENT ppat optannot EQUAL expr DOUBLESEMI . prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT ppat optannot EQUAL expr DOUBLESEMI
+##
+
+Expected declaration or EOF
+
+prog: LET REC IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL UNIT IN WITH
+##
+## Ends in an error in state: 84.
+##
+## expr_ -> LET REC IDENT ppat optannot EQUAL expr IN . expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT ppat optannot EQUAL expr IN
+##
+
+Expected expression
+
+prog: LET REC IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL UNIT WITH
+##
+## Ends in an error in state: 144.
+##
+## expr_ -> LET REC IDENT ppat optannot EQUAL expr . IN expr [ DOUBLESEMI ]
+## prog -> LET REC IDENT ppat optannot EQUAL expr . DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT ppat optannot EQUAL expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected IN or ;;
+
+prog: LET REC IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL WITH
+##
+## Ends in an error in state: 143.
+##
+## expr_ -> LET REC IDENT ppat optannot EQUAL . expr IN expr [ DOUBLESEMI ]
+## prog -> LET REC IDENT ppat optannot EQUAL . expr DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT ppat optannot EQUAL
+##
+
+Expected expression
+
+prog: LET REC IDENT LPAREN IDENT COLON TBOOL RPAREN WITH
+##
+## Ends in an error in state: 141.
+##
+## expr_ -> LET REC IDENT ppat . optannot EQUAL expr IN expr [ DOUBLESEMI ]
+## prog -> LET REC IDENT ppat . optannot EQUAL expr DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT ppat
+##
+
+Expected =
+
+prog: LET REC IDENT WITH
+##
+## Ends in an error in state: 140.
+##
+## expr_ -> LET REC IDENT . ppat optannot EQUAL expr IN expr [ DOUBLESEMI ]
+## prog -> LET REC IDENT . ppat optannot EQUAL expr DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+prog: LET REC WITH
+##
+## Ends in an error in state: 139.
+##
+## expr_ -> LET REC . IDENT ppat optannot EQUAL expr IN expr [ DOUBLESEMI ]
+## prog -> LET REC . IDENT ppat optannot EQUAL expr DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET REC
+##
+
+Expected function name
+
+prog: LET WITH
+##
+## Ends in an error in state: 138.
+##
+## expr_ -> LET . IDENT optannot EQUAL expr IN expr [ DOUBLESEMI ]
+## expr_ -> LET . REC IDENT ppat optannot EQUAL expr IN expr [ DOUBLESEMI ]
+## expr_ -> LET . IDENT ppat optannot EQUAL expr IN expr [ DOUBLESEMI ]
+## expr_ -> LET . LPAREN IDENT COMMA IDENT RPAREN EQUAL expr IN expr [ DOUBLESEMI ]
+## prog -> LET . IDENT optannot EQUAL expr DOUBLESEMI prog [ # ]
+## prog -> LET . REC IDENT ppat optannot EQUAL expr DOUBLESEMI prog [ # ]
+## prog -> LET . IDENT ppat optannot EQUAL expr DOUBLESEMI prog [ # ]
+##
+## The known suffix of the stack is as follows:
+## LET
+##
+
+Expected REC or identifier
+
+prog: LPAREN UNIT COMMA UNIT WITH
+##
+## Ends in an error in state: 113.
+##
+## tuple_ -> expr . COMMA expr [ RPAREN ]
+## tuple_ -> expr COMMA expr . [ RPAREN ]
+## tuple_ -> expr . COMMA tuple_ [ RPAREN ]
+##
+## The known suffix of the stack is as follows:
+## expr COMMA expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected )
+
+prog: LPAREN UNIT COMMA WITH
+##
+## Ends in an error in state: 111.
+##
+## tuple_ -> expr COMMA . expr [ RPAREN ]
+## tuple_ -> expr COMMA . tuple_ [ RPAREN ]
+##
+## The known suffix of the stack is as follows:
+## expr COMMA
+##
+
+Expected expression
+
+prog: LPAREN UNIT WITH
+##
+## Ends in an error in state: 109.
+##
+## simple_expr_ -> LPAREN expr . RPAREN [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## tuple_ -> expr . COMMA expr [ RPAREN ]
+## tuple_ -> expr . COMMA tuple_ [ RPAREN ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected )
+
+prog: LPAREN WITH
+##
+## Ends in an error in state: 9.
+##
+## expr_ -> LPAREN . tuple_ RPAREN [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## simple_expr_ -> LPAREN . expr RPAREN [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN
+##
+
+Expected )
+
+prog: MATCH LET IDENT EQUAL UNIT WITH
+##
+## Ends in an error in state: 104.
+##
+## expr_ -> LET IDENT optannot EQUAL expr . IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT optannot EQUAL expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected IN
+
+prog: MATCH LET IDENT EQUAL WITH
+##
+## Ends in an error in state: 103.
+##
+## expr_ -> LET IDENT optannot EQUAL . expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT optannot EQUAL
+##
+
+Expected expression
+
+prog: MATCH LET IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL UNIT WITH
+##
+## Ends in an error in state: 99.
+##
+## expr_ -> LET IDENT ppat optannot EQUAL expr . IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT ppat optannot EQUAL expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected IN
+
+prog: MATCH LET IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL WITH
+##
+## Ends in an error in state: 98.
+##
+## expr_ -> LET IDENT ppat optannot EQUAL . expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT ppat optannot EQUAL
+##
+
+Expected expression
+
+prog: MATCH LET IDENT LPAREN IDENT COLON TBOOL RPAREN WITH
+##
+## Ends in an error in state: 96.
+##
+## expr_ -> LET IDENT ppat . optannot EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT ppat
+##
+
+Expected =
+
+prog: MATCH LET IDENT WITH
+##
+## Ends in an error in state: 95.
+##
+## expr_ -> LET IDENT . optannot EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## expr_ -> LET IDENT . ppat optannot EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET IDENT
+##
+
+Expected =
+
+prog: MATCH LET REC IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL UNIT WITH
+##
+## Ends in an error in state: 83.
+##
+## expr_ -> LET REC IDENT ppat optannot EQUAL expr . IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT ppat optannot EQUAL expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected IN
+
+prog: MATCH LET REC IDENT LPAREN IDENT COLON TBOOL RPAREN EQUAL WITH
+##
+## Ends in an error in state: 35.
+##
+## expr_ -> LET REC IDENT ppat optannot EQUAL . expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT ppat optannot EQUAL
+##
+
+Expected experssion
+
+prog: MATCH LET REC IDENT LPAREN IDENT COLON TBOOL RPAREN WITH
+##
+## Ends in an error in state: 31.
+##
+## expr_ -> LET REC IDENT ppat . optannot EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT ppat
+##
+
+Expected =
+
+prog: MATCH LET REC IDENT WITH
+##
+## Ends in an error in state: 12.
+##
+## expr_ -> LET REC IDENT . ppat optannot EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET REC IDENT
+##
+
+Expected pattern
+
+prog: MATCH LET REC WITH
+##
+## Ends in an error in state: 11.
+##
+## expr_ -> LET REC . IDENT ppat optannot EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET REC
+##
+
+Expected identifier
+
+prog: MATCH LET WITH
+##
+## Ends in an error in state: 10.
+##
+## expr_ -> LET . IDENT optannot EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## expr_ -> LET . REC IDENT ppat optannot EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## expr_ -> LET . IDENT ppat optannot EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## expr_ -> LET . LPAREN IDENT COMMA IDENT RPAREN EQUAL expr IN expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## LET
+##
+
+Expected REC or pattern
+
+prog: MATCH UNIT THEN
+##
+## Ends in an error in state: 114.
+##
+## expr_ -> MATCH expr . WITH NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## expr_ -> MATCH expr . WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected WITH
+
+prog: MATCH UNIT WITH NIL ARROW UNIT PIPE IDENT CONS IDENT ARROW WITH
+##
+## Ends in an error in state: 133.
+##
+## expr_ -> MATCH expr WITH NIL ARROW expr PIPE IDENT CONS IDENT ARROW . expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH NIL ARROW expr PIPE IDENT CONS IDENT ARROW
+##
+
+Expected expression
+
+prog: MATCH UNIT WITH NIL ARROW UNIT PIPE IDENT CONS IDENT WITH
+##
+## Ends in an error in state: 132.
+##
+## expr_ -> MATCH expr WITH NIL ARROW expr PIPE IDENT CONS IDENT . ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH NIL ARROW expr PIPE IDENT CONS IDENT
+##
+
+Expected ->
+
+prog: MATCH UNIT WITH NIL ARROW UNIT PIPE IDENT CONS WITH
+##
+## Ends in an error in state: 131.
+##
+## expr_ -> MATCH expr WITH NIL ARROW expr PIPE IDENT CONS . IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH NIL ARROW expr PIPE IDENT CONS
+##
+
+Expected identifier
+
+prog: MATCH UNIT WITH NIL ARROW UNIT PIPE IDENT WITH
+##
+## Ends in an error in state: 130.
+##
+## expr_ -> MATCH expr WITH NIL ARROW expr PIPE IDENT . CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH NIL ARROW expr PIPE IDENT
+##
+
+Expected :: (only list patterns are supported)
+
+prog: MATCH UNIT WITH NIL ARROW UNIT PIPE WITH
+##
+## Ends in an error in state: 129.
+##
+## expr_ -> MATCH expr WITH NIL ARROW expr PIPE . IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH NIL ARROW expr PIPE
+##
+
+Expected cons pattern (e.g. h::t -- only list patterns are supported)
+
+prog: MATCH UNIT WITH NIL ARROW UNIT WITH
+##
+## Ends in an error in state: 128.
+##
+## expr_ -> MATCH expr WITH NIL ARROW expr . PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH NIL ARROW expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected cons pattern (incomplete pattern matches not allowed)
+
+prog: MATCH UNIT WITH NIL ARROW WITH
+##
+## Ends in an error in state: 127.
+##
+## expr_ -> MATCH expr WITH NIL ARROW . expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH NIL ARROW
+##
+
+Expected expression
+
+prog: MATCH UNIT WITH NIL WITH
+##
+## Ends in an error in state: 126.
+##
+## expr_ -> MATCH expr WITH NIL . ARROW expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH NIL
+##
+
+Expected branches after WITH
+
+prog: MATCH UNIT WITH PIPE NIL ARROW UNIT PIPE IDENT CONS IDENT ARROW WITH
+##
+## Ends in an error in state: 124.
+##
+## expr_ -> MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT ARROW . expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT ARROW
+##
+
+Expected expression
+
+prog: MATCH UNIT WITH PIPE NIL ARROW UNIT PIPE IDENT CONS IDENT WITH
+##
+## Ends in an error in state: 123.
+##
+## expr_ -> MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT . ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT
+##
+
+Expected ->
+
+prog: MATCH UNIT WITH PIPE NIL ARROW UNIT PIPE IDENT CONS WITH
+##
+## Ends in an error in state: 122.
+##
+## expr_ -> MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS . IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS
+##
+
+Expected identifier
+
+prog: MATCH UNIT WITH PIPE NIL ARROW UNIT PIPE IDENT WITH
+##
+## Ends in an error in state: 121.
+##
+## expr_ -> MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT . CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT
+##
+
+Expected cons pattern (e.g. h::t -- only list patterns are supported)
+
+prog: MATCH UNIT WITH PIPE NIL ARROW UNIT PIPE WITH
+##
+## Ends in an error in state: 120.
+##
+## expr_ -> MATCH expr WITH PIPE NIL ARROW expr PIPE . IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH PIPE NIL ARROW expr PIPE
+##
+
+Expected cons pattern (e.g. h::t -- only list patterns are supported)
+
+prog: MATCH UNIT WITH PIPE NIL ARROW UNIT WITH
+##
+## Ends in an error in state: 119.
+##
+## expr_ -> MATCH expr WITH PIPE NIL ARROW expr . PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH PIPE NIL ARROW expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected cons pattern (incomplete pattern matches not supported)
+
+prog: MATCH UNIT WITH PIPE NIL ARROW WITH
+##
+## Ends in an error in state: 118.
+##
+## expr_ -> MATCH expr WITH PIPE NIL ARROW . expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH PIPE NIL ARROW
+##
+
+Expected expression
+
+prog: MATCH UNIT WITH PIPE NIL WITH
+##
+## Ends in an error in state: 117.
+##
+## expr_ -> MATCH expr WITH PIPE NIL . ARROW expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH PIPE NIL
+##
+
+Expected ->
+
+prog: MATCH UNIT WITH PIPE WITH
+##
+## Ends in an error in state: 116.
+##
+## expr_ -> MATCH expr WITH PIPE . NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH PIPE
+##
+
+Expected [] (only list pattern matches supported)
+
+prog: MATCH UNIT WITH WITH
+##
+## Ends in an error in state: 115.
+##
+## expr_ -> MATCH expr WITH . NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## expr_ -> MATCH expr WITH . PIPE NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH expr WITH
+##
+
+Expected branches after WITH
+
+prog: MATCH WITH
+##
+## Ends in an error in state: 8.
+##
+## expr_ -> MATCH . expr WITH NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## expr_ -> MATCH . expr WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## MATCH
+##
+
+Expected expression
+
+prog: NEG WITH
+##
+## Ends in an error in state: 6.
+##
+## simple_expr_ -> NEG . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## NEG
+##
+
+Expected expression
+
+prog: NOT WITH
+##
+## Ends in an error in state: 4.
+##
+## simple_expr_ -> NOT . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## NOT
+##
+
+Expected expression
+
+prog: UNIT AND WITH
+##
+## Ends in an error in state: 50.
+##
+## simple_expr_ -> simple_expr AND . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr AND
+##
+
+Expected expression
+
+prog: UNIT COLON LPAREN TUNIT WITH
+##
+## Ends in an error in state: 20.
+##
+## atyp -> LPAREN typ . RPAREN [ WITH TLIST TIMES THEN RPAREN PIPE IN EQUAL ELSE DOUBLESEMI COMMA ARROW ]
+## typ -> typ . ARROW typ [ RPAREN ARROW ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN typ
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 27, spurious reduction of production ttyp -> atyp
+## In state 24, spurious reduction of production typ -> ttyp
+##
+
+Expected )
+
+prog: UNIT COLON LPAREN WITH
+##
+## Ends in an error in state: 19.
+##
+## atyp -> LPAREN . typ RPAREN [ WITH TLIST TIMES THEN RPAREN PIPE IN EQUAL ELSE DOUBLESEMI COMMA ARROW ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN
+##
+
+Expected )
+
+prog: UNIT COLON TUNIT ARROW WITH
+##
+## Ends in an error in state: 22.
+##
+## typ -> typ ARROW . typ [ WITH THEN RPAREN PIPE IN EQUAL ELSE DOUBLESEMI COMMA ARROW ]
+##
+## The known suffix of the stack is as follows:
+## typ ARROW
+##
+
+Expected type
+
+prog: UNIT COLON TUNIT EQUAL
+##
+## Ends in an error in state: 73.
+##
+## expr_ -> simple_expr COLON typ . [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## typ -> typ . ARROW typ [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ARROW ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr COLON typ
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 27, spurious reduction of production ttyp -> atyp
+## In state 24, spurious reduction of production typ -> ttyp
+##
+
+Invalid token
+
+prog: UNIT COLON TUNIT TIMES WITH
+##
+## Ends in an error in state: 25.
+##
+## ttyp -> ttyp TIMES . ttyp [ WITH TIMES THEN RPAREN PIPE IN EQUAL ELSE DOUBLESEMI COMMA ARROW ]
+##
+## The known suffix of the stack is as follows:
+## ttyp TIMES
+##
+
+Expected type
+
+prog: UNIT COLON TUNIT UNIT
+##
+## Ends in an error in state: 27.
+##
+## atyp -> atyp . TLIST [ WITH TLIST TIMES THEN RPAREN PIPE IN EQUAL ELSE DOUBLESEMI COMMA ARROW ]
+## ttyp -> atyp . [ WITH TIMES THEN RPAREN PIPE IN EQUAL ELSE DOUBLESEMI COMMA ARROW ]
+##
+## The known suffix of the stack is as follows:
+## atyp
+##
+
+Invalid token
+
+prog: UNIT COLON WITH
+##
+## Ends in an error in state: 72.
+##
+## expr_ -> simple_expr COLON . typ [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr COLON
+##
+
+Expected type
+
+prog: UNIT CONS UNIT UNIT
+##
+## Ends in an error in state: 71.
+##
+## expr_ -> simple_expr CONS simple_expr . [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH TIMES THEN RPAREN PLUS PIPE OR NE MINUS LT LE IN GT GE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr CONS simple_expr
+##
+
+Expected operator
+
+prog: UNIT CONS WITH
+##
+## Ends in an error in state: 70.
+##
+## expr_ -> simple_expr CONS . simple_expr [ WITH THEN RPAREN PIPE IN ELSE DOUBLESEMI COMMA ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr CONS
+##
+
+Expected expression
+
+prog: UNIT DIV UNIT TUNIT
+##
+## Ends in an error in state: 55.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr DIV simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr DIV simple_expr
+##
+
+Expected operator
+
+prog: UNIT DIV WITH
+##
+## Ends in an error in state: 54.
+##
+## simple_expr_ -> simple_expr DIV . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr DIV
+##
+
+Expected expression
+
+prog: UNIT DOUBLESEMI WITH
+##
+## Ends in an error in state: 148.
+##
+## prog -> expr DOUBLESEMI . prog [ # ]
+## prog -> expr DOUBLESEMI . EOF [ # ]
+##
+## The known suffix of the stack is as follows:
+## expr DOUBLESEMI
+##
+
+Expected declaration or EOF
+
+prog: UNIT EQUAL UNIT TUNIT
+##
+## Ends in an error in state: 69.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr EQUAL simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr EQUAL simple_expr
+##
+
+Expected operator
+
+prog: UNIT EQUAL WITH
+##
+## Ends in an error in state: 68.
+##
+## simple_expr_ -> simple_expr EQUAL . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr EQUAL
+##
+
+Expected expression
+
+prog: UNIT GE UNIT TUNIT
+##
+## Ends in an error in state: 67.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr GE simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr GE simple_expr
+##
+
+Expected operator
+
+prog: UNIT GE WITH
+##
+## Ends in an error in state: 66.
+##
+## simple_expr_ -> simple_expr GE . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr GE
+##
+
+Expected expression
+
+prog: UNIT GT UNIT TUNIT
+##
+## Ends in an error in state: 65.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr GT simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr GT simple_expr
+##
+
+Expected operator
+
+prog: UNIT GT WITH
+##
+## Ends in an error in state: 64.
+##
+## simple_expr_ -> simple_expr GT . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr GT
+##
+
+Expected expression
+
+prog: UNIT LE UNIT TUNIT
+##
+## Ends in an error in state: 63.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr LE simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr LE simple_expr
+##
+
+Expected operator
+
+prog: UNIT LE WITH
+##
+## Ends in an error in state: 62.
+##
+## simple_expr_ -> simple_expr LE . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr LE
+##
+
+Expected expression
+
+prog: UNIT LPAREN UNIT WITH
+##
+## Ends in an error in state: 135.
+##
+## simple_expr_ -> LPAREN expr . RPAREN [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Expected )
+
+prog: UNIT LPAREN WITH
+##
+## Ends in an error in state: 7.
+##
+## simple_expr_ -> LPAREN . expr RPAREN [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## LPAREN
+##
+
+Expected expression
+
+prog: UNIT LT UNIT TUNIT
+##
+## Ends in an error in state: 61.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr LT simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr LT simple_expr
+##
+
+Expected operator
+
+prog: UNIT LT WITH
+##
+## Ends in an error in state: 60.
+##
+## simple_expr_ -> simple_expr LT . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr LT
+##
+
+<YOUR SYNTAX ERROR MESSAGE HERE>
+
+prog: UNIT MINUS UNIT TUNIT
+##
+## Ends in an error in state: 59.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr MINUS simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr MINUS simple_expr
+##
+
+Expected operator
+
+prog: UNIT MINUS WITH
+##
+## Ends in an error in state: 58.
+##
+## simple_expr_ -> simple_expr MINUS . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr MINUS
+##
+
+Expected expression
+
+prog: UNIT NE UNIT TUNIT
+##
+## Ends in an error in state: 57.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr NE simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr NE simple_expr
+##
+
+Expected operator
+
+prog: UNIT NE WITH
+##
+## Ends in an error in state: 56.
+##
+## simple_expr_ -> simple_expr NE . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr NE
+##
+
+Expected expression
+
+prog: UNIT OR WITH
+##
+## Ends in an error in state: 47.
+##
+## simple_expr_ -> simple_expr OR . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr OR
+##
+
+Expected expression
+
+prog: UNIT PLUS UNIT TUNIT
+##
+## Ends in an error in state: 53.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr PLUS simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr PLUS simple_expr
+##
+
+Expected operator
+
+prog: UNIT PLUS WITH
+##
+## Ends in an error in state: 52.
+##
+## simple_expr_ -> simple_expr PLUS . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr PLUS
+##
+
+Expected expression
+
+prog: UNIT TIMES UNIT TUNIT
+##
+## Ends in an error in state: 46.
+##
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr TIMES simple_expr . [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr TIMES simple_expr
+##
+
+Expected operator
+
+prog: UNIT TIMES WITH
+##
+## Ends in an error in state: 44.
+##
+## simple_expr_ -> simple_expr TIMES . simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV CONS COMMA COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr TIMES
+##
+
+Expected expression
+
+prog: UNIT TUNIT
+##
+## Ends in an error in state: 42.
+##
+## app_expr_ -> simple_expr_ . [ WITH UNIT TRUE THEN RPAREN PIPE NUM NOT NIL NEG LPAREN IN IDENT FALSE ELSE DOUBLESEMI COMMA ]
+## simple_expr -> simple_expr_ . [ TIMES PLUS OR NE MINUS LT LE GT GE EQUAL DIV CONS COLON AND ]
+##
+## The known suffix of the stack is as follows:
+## simple_expr_
+##
+
+Invalid token
+
+prog: UNIT UNIT TUNIT
+##
+## Ends in an error in state: 77.
+##
+## app_expr_ -> app_expr_ simple_expr . [ WITH UNIT TRUE THEN RPAREN PIPE NUM NOT NIL NEG LPAREN IN IDENT FALSE ELSE DOUBLESEMI COMMA ]
+## simple_expr_ -> simple_expr . PLUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . MINUS simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . TIMES simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . DIV simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . AND simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . OR simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . EQUAL simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . LT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . LE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . GT simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . GE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+## simple_expr_ -> simple_expr . NE simple_expr [ WITH UNIT TRUE TIMES THEN RPAREN PLUS PIPE OR NUM NOT NIL NEG NE MINUS LT LPAREN LE IN IDENT GT GE FALSE EQUAL ELSE DOUBLESEMI DIV COMMA AND ]
+##
+## The known suffix of the stack is as follows:
+## app_expr_ simple_expr
+##
+
+Invalid token
+
+prog: UNIT WITH
+##
+## Ends in an error in state: 147.
+##
+## prog -> expr . DOUBLESEMI prog [ # ]
+## prog -> expr . DOUBLESEMI EOF [ # ]
+##
+## The known suffix of the stack is as follows:
+## expr
+##
+## WARNING: This example involves spurious reductions.
+## This implies that, although the LR(1) items shown above provide an
+## accurate view of the past (what has been recognized so far), they
+## may provide an INCOMPLETE view of the future (what was expected next).
+## In state 42, spurious reduction of production app_expr_ -> simple_expr_
+## In state 76, spurious reduction of production expr_ -> app_expr_
+## In state 74, spurious reduction of production expr -> expr_
+##
+
+Invalid token
+
+prog: WITH
+##
+## Ends in an error in state: 0.
+##
+## prog' -> . prog [ # ]
+##
+## The known suffix of the stack is as follows:
+##
+##
+
+Invalid token
+

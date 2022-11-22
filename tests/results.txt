@@ -1,0 +1,5 @@
+bignum	0
+fibc	8
+mem	28
+mem2	28
+spill	497

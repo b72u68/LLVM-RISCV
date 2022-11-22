@@ -1,0 +1,457 @@
+
+** Conflict (shift/reduce) in state 129.
+** Tokens involved: UNIT TRUE NUM NIL MATCH LPAREN LET IF IDENT FUN FALSE
+** The following explanations concentrate on token UNIT.
+** This state is reached from prog after reading:
+
+MATCH expr WITH NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 129, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+MATCH expr WITH NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr 
+                                                           expr_ 
+                                                           expr simple_expr 
+                                                                simple_expr_ 
+                                                                const 
+                                                                . UNIT 
+
+** In state 129, looking ahead at UNIT, reducing production
+** simple_expr_ -> MATCH expr WITH NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr
+** is permitted because of the following sub-derivation:
+
+expr simple_expr // lookahead token appears because simple_expr can begin with UNIT
+expr_ // lookahead token is inherited
+simple_expr // lookahead token is inherited
+simple_expr_ // lookahead token is inherited
+MATCH expr WITH NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr . 
+
+** Conflict (shift/reduce) in state 120.
+** Tokens involved: UNIT TRUE NUM NIL MATCH LPAREN LET IF IDENT FUN FALSE
+** The following explanations concentrate on token UNIT.
+** This state is reached from prog after reading:
+
+MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 120, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr 
+                                                                expr_ 
+                                                                expr simple_expr 
+                                                                     simple_expr_ 
+                                                                     const 
+                                                                     . UNIT 
+
+** In state 120, looking ahead at UNIT, reducing production
+** simple_expr_ -> MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr
+** is permitted because of the following sub-derivation:
+
+expr simple_expr // lookahead token appears because simple_expr can begin with UNIT
+expr_ // lookahead token is inherited
+simple_expr // lookahead token is inherited
+simple_expr_ // lookahead token is inherited
+MATCH expr WITH PIPE NIL ARROW expr PIPE IDENT CONS IDENT ARROW expr . 
+
+** Conflict (shift/reduce) in state 105.
+** Tokens involved: UNIT TRUE NUM NIL MATCH LPAREN LET IF IDENT FUN FALSE COMMA
+** The following explanations concentrate on token UNIT.
+** This state is reached from prog after reading:
+
+LET IDENT optannot EQUAL expr IN expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 105, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+LET IDENT optannot EQUAL expr IN expr 
+                                 expr_ 
+                                 expr simple_expr 
+                                      simple_expr_ 
+                                      const 
+                                      . UNIT 
+
+** In state 105, looking ahead at UNIT, reducing production
+** simple_expr_ -> LET IDENT optannot EQUAL expr IN expr
+** is permitted because of the following sub-derivation:
+
+expr simple_expr // lookahead token appears because simple_expr can begin with UNIT
+expr_ // lookahead token is inherited
+simple_expr // lookahead token is inherited
+simple_expr_ // lookahead token is inherited
+LET IDENT optannot EQUAL expr IN expr . 
+
+** Conflict (shift/reduce) in state 100.
+** Tokens involved: UNIT TRUE NUM NIL MATCH LPAREN LET IF IDENT FUN FALSE COMMA
+** The following explanations concentrate on token UNIT.
+** This state is reached from prog after reading:
+
+LET IDENT ppat optannot EQUAL expr IN expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 100, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+LET IDENT ppat optannot EQUAL expr IN expr 
+                                      expr_ 
+                                      expr simple_expr 
+                                           simple_expr_ 
+                                           const 
+                                           . UNIT 
+
+** In state 100, looking ahead at UNIT, reducing production
+** simple_expr_ -> LET IDENT ppat optannot EQUAL expr IN expr
+** is permitted because of the following sub-derivation:
+
+expr simple_expr // lookahead token appears because simple_expr can begin with UNIT
+expr_ // lookahead token is inherited
+simple_expr // lookahead token is inherited
+simple_expr_ // lookahead token is inherited
+LET IDENT ppat optannot EQUAL expr IN expr . 
+
+** Conflict (shift/reduce) in state 93.
+** Tokens involved: UNIT TRUE NUM NIL MATCH LPAREN LET IF IDENT FUN FALSE COMMA
+** The following explanations concentrate on token UNIT.
+** This state is reached from prog after reading:
+
+LET LPAREN IDENT COMMA IDENT RPAREN EQUAL expr IN expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 93, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+LET LPAREN IDENT COMMA IDENT RPAREN EQUAL expr IN expr 
+                                                  expr_ 
+                                                  expr simple_expr 
+                                                       simple_expr_ 
+                                                       const 
+                                                       . UNIT 
+
+** In state 93, looking ahead at UNIT, reducing production
+** simple_expr_ -> LET LPAREN IDENT COMMA IDENT RPAREN EQUAL expr IN expr
+** is permitted because of the following sub-derivation:
+
+expr simple_expr // lookahead token appears because simple_expr can begin with UNIT
+expr_ // lookahead token is inherited
+simple_expr // lookahead token is inherited
+simple_expr_ // lookahead token is inherited
+LET LPAREN IDENT COMMA IDENT RPAREN EQUAL expr IN expr . 
+
+** Conflict (shift/reduce) in state 84.
+** Tokens involved: UNIT TRUE NUM NIL MATCH LPAREN LET IF IDENT FUN FALSE COMMA
+** The following explanations concentrate on token UNIT.
+** This state is reached from prog after reading:
+
+LET REC IDENT ppat optannot EQUAL expr IN expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 84, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+LET REC IDENT ppat optannot EQUAL expr IN expr 
+                                          expr_ 
+                                          expr simple_expr 
+                                               simple_expr_ 
+                                               const 
+                                               . UNIT 
+
+** In state 84, looking ahead at UNIT, reducing production
+** simple_expr_ -> LET REC IDENT ppat optannot EQUAL expr IN expr
+** is permitted because of the following sub-derivation:
+
+expr simple_expr // lookahead token appears because simple_expr can begin with UNIT
+expr_ // lookahead token is inherited
+simple_expr // lookahead token is inherited
+simple_expr_ // lookahead token is inherited
+LET REC IDENT ppat optannot EQUAL expr IN expr . 
+
+** Conflict (shift/reduce) in state 81.
+** Tokens involved: UNIT TRUE NUM NIL MATCH LPAREN LET IF IDENT FUN FALSE COMMA
+** The following explanations concentrate on token UNIT.
+** This state is reached from prog after reading:
+
+IF expr THEN expr ELSE expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 81, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+IF expr THEN expr ELSE expr 
+                       expr_ 
+                       expr simple_expr 
+                            simple_expr_ 
+                            const 
+                            . UNIT 
+
+** In state 81, looking ahead at UNIT, reducing production
+** simple_expr_ -> IF expr THEN expr ELSE expr
+** is permitted because of the following sub-derivation:
+
+expr simple_expr // lookahead token appears because simple_expr can begin with UNIT
+expr_ // lookahead token is inherited
+simple_expr // lookahead token is inherited
+simple_expr_ // lookahead token is inherited
+IF expr THEN expr ELSE expr . 
+
+** Conflict (shift/reduce) in state 75.
+** Tokens involved: UNIT TRUE NUM NIL MATCH LPAREN LET IF IDENT FUN FALSE
+** The following explanations concentrate on token UNIT.
+** This state is reached from prog after reading:
+
+expr COMMA expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 75, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+expr COMMA expr 
+           expr_ 
+           expr simple_expr 
+                simple_expr_ 
+                const 
+                . UNIT 
+
+** In state 75, looking ahead at UNIT, reducing production
+** expr_ -> expr COMMA expr
+** is permitted because of the following sub-derivation:
+
+expr simple_expr // lookahead token appears because simple_expr can begin with UNIT
+expr_ // lookahead token is inherited
+expr COMMA expr . 
+
+** Conflict (shift/reduce) in state 73.
+** Tokens involved: UNIT TRUE NUM NIL MATCH LPAREN LET IF IDENT FUN FALSE
+** The following explanations concentrate on token UNIT.
+** This state is reached from prog after reading:
+
+FUN ppat ARROW expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 73, looking ahead at UNIT, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+FUN ppat ARROW expr 
+               expr_ 
+               expr simple_expr 
+                    simple_expr_ 
+                    const 
+                    . UNIT 
+
+** In state 73, looking ahead at UNIT, reducing production
+** simple_expr_ -> FUN ppat ARROW expr
+** is permitted because of the following sub-derivation:
+
+expr simple_expr // lookahead token appears because simple_expr can begin with UNIT
+expr_ // lookahead token is inherited
+simple_expr // lookahead token is inherited
+simple_expr_ // lookahead token is inherited
+FUN ppat ARROW expr . 
+
+** Conflict (shift/reduce) in state 41.
+** Tokens involved: TIMES PLUS OR NE MINUS LT LE GT GE EQUAL DIV CONS COLON AND
+** The following explanations concentrate on token TIMES.
+** This state is reached from prog after reading:
+
+FUN ppat ARROW simple_expr
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 41, looking ahead at TIMES, reducing production
+** expr_ -> simple_expr
+** is permitted because of the following sub-derivation:
+
+infixop 
+simple_expr TIMES simple_expr // lookahead token appears
+simple_expr_ // lookahead token is inherited
+FUN ppat ARROW expr // lookahead token is inherited
+               expr_ // lookahead token is inherited
+               simple_expr . 
+
+** In state 41, looking ahead at TIMES, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+FUN ppat ARROW expr 
+               expr_ 
+               infixop 
+               simple_expr . TIMES simple_expr 
+
+** Conflict (shift/reduce) in state 26.
+** Token involved: TLIST
+** This state is reached from prog after reading:
+
+simple_expr COLON atyp ARROW typ
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+simple_expr CONS simple_expr 
+simple_expr_ 
+simple_expr COLON typ 
+                  (?)
+
+** In state 26, looking ahead at TLIST, shifting is permitted
+** because of the following sub-derivation:
+
+atyp ARROW typ 
+           typ . TLIST 
+
+** In state 26, looking ahead at TLIST, reducing production
+** typ -> atyp ARROW typ
+** is permitted because of the following sub-derivation:
+
+typ TLIST // lookahead token appears
+atyp ARROW typ . 
+
+** Conflict (shift/reduce) in state 24.
+** Token involved: TLIST
+** This state is reached from prog after reading:
+
+simple_expr COLON atyp TIMES typ
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+simple_expr CONS simple_expr 
+simple_expr_ 
+simple_expr COLON typ 
+                  (?)
+
+** In state 24, looking ahead at TLIST, shifting is permitted
+** because of the following sub-derivation:
+
+atyp TIMES typ 
+           typ . TLIST 
+
+** In state 24, looking ahead at TLIST, reducing production
+** typ -> atyp TIMES typ
+** is permitted because of the following sub-derivation:
+
+typ TLIST // lookahead token appears
+atyp TIMES typ . 
+
+** Conflict (shift/reduce) in state 22.
+** Token involved: TIMES
+** This state is reached from prog after reading:
+
+simple_expr COLON atyp
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+prog 
+expr DOUBLESEMI prog 
+expr_ 
+(?)
+
+** In state 22, looking ahead at TIMES, reducing production
+** typ -> atyp
+** is permitted because of the following sub-derivation:
+
+infixop 
+simple_expr TIMES simple_expr // lookahead token appears
+simple_expr_ // lookahead token is inherited
+simple_expr COLON typ // lookahead token is inherited
+                  atyp . 
+
+** In state 22, looking ahead at TIMES, shifting is permitted
+** because of the following sub-derivation:
+
+simple_expr CONS simple_expr 
+simple_expr_ 
+simple_expr COLON typ 
+                  atyp . TIMES typ 
