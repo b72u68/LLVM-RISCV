@@ -25,13 +25,13 @@ module type GRAPH =
     val add_node: t -> node -> t
     val rem_edge: t -> node * node -> t
     val rem_node: t -> node -> t
-      
+
     val succs: t -> node -> node list
     val preds: t -> node -> node list
     val exists_edge: t -> node -> node -> bool
 
     val dom_tree_and_front: t -> node -> t * t
-      
+
   end
 
 module Make (A: NodeData) : GRAPH with type nodedata = A.data
@@ -48,7 +48,7 @@ module Make (A: NodeData) : GRAPH with type nodedata = A.data
                          type t = node
                          let compare = cmp_node
                        end)
-             
+
     (* Forward adjacency list, reverse adjacency list *)
     type t = node list NodeMap.t * node list NodeMap.t
 
@@ -109,7 +109,7 @@ module Make (A: NodeData) : GRAPH with type nodedata = A.data
       let f' = if NodeMap.mem n f then f else NodeMap.add n [] f in
       let r' = if NodeMap.mem n r then r else NodeMap.add n [] r in
       (f', r')
-      
+
     let rem_edge ((f, r): t) ((src, dest) : node * node) =
       let ssrc = succs (f, r) src in
       let pdest = preds (f, r) dest in
@@ -122,7 +122,7 @@ module Make (A: NodeData) : GRAPH with type nodedata = A.data
          (NodeMap.map (List.filter (fun n' -> n <> n')) f),
        NodeMap.remove n
          (NodeMap.map (List.filter (fun n' -> n <> n')) r))
-      
+
     let exists_edge (g: t) (src: node) (dest: node) =
       in_nbrs dest (succs g src)
 
@@ -234,6 +234,6 @@ module Make (A: NodeData) : GRAPH with type nodedata = A.data
         NodeMap.add n my_df df
       in
       (dt, from_adj_map (comp_df (NodeMap.empty) s0))
-            
-      
+
+
   end

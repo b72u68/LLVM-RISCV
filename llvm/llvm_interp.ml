@@ -5,7 +5,7 @@ open Llvm_ast
 
 type mem = int array
 type loc = string * int
-         
+
 exception RuntimeError of string * loc
 
 let initstack () =
@@ -28,7 +28,7 @@ let rec interp ((p, ctx): prog * typdefs) (globs: value Varmap.t) =
     with _ -> raise (RuntimeError ("Invalid function: " ^
                                      (string_of_int n), ("", 0)))
   in
-  
+
   let rec interp_int
             (currfunc: func)
             (prevlabel: label)
@@ -42,7 +42,7 @@ let rec interp ((p, ctx): prog * typdefs) (globs: value Varmap.t) =
               (!cost) +
                 (match currfunc.f_body.(pc) with
                  | ILabel _ | IPhi _ -> 0
-                 | IBinop (_, BMul, _, _, _) 
+                 | IBinop (_, BMul, _, _, _)
                    | IBinop (_, BDiv, _, _, _) -> 3
                  | ISet _ | IBinop _ | ICmp _ | ICast _
                    | IGetElementPtr _ | IAlloca _ -> 1
@@ -51,7 +51,7 @@ let rec interp ((p, ctx): prog * typdefs) (globs: value Varmap.t) =
                  | ICall _ | IRet _ -> 15
                 )
     in
-    
+
     (* let _ = Printf.printf "%s\n" currfunc.f_name in *)
     let loc = (currfunc.f_name, pc) in
     let lookup (v: var)  =
@@ -74,7 +74,7 @@ let rec interp ((p, ctx): prog * typdefs) (globs: value Varmap.t) =
       | Var v -> lookup v
       | _ -> v
     in
-    
+
     let interp_value v =
       match v with
       | Const n -> n
@@ -286,10 +286,10 @@ let rec interp ((p, ctx): prog * typdefs) (globs: value Varmap.t) =
     in
     let func = get_func_by_name "main" in
     interp_int func "" 0 (Varmap.empty) globs (initstack ()) (initheap ())
-      
-    
-    
-              
-                           
-                                       
-       
+
+
+
+
+
+
+

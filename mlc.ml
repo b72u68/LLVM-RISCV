@@ -1,7 +1,7 @@
 (** IIT CS443 **)
 (** ML to C Compiler **)
 (** Project 4 **)
-(** Your name(s) here **)
+(** SOLUTIONS **)
 open ML.Ast
 
 module Ca = C.Ast
@@ -194,17 +194,200 @@ let compile_bop =
            | BGt -> Ca.BGt | BGe -> Ca.BGe | BLt -> Ca.BLt
            | BLe -> Ca.BLe | BNe -> Ca.BNe | BEq -> Ca.BEq
 
-exception Unimplemented
-
 (* Compile the body of a function *)
 let rec compile_body (env: env) (name: string) (x: var) (tx: typ) (body: t_exp)
   =
-  raise Unimplemented
+  let ((extis, _, extc), env') = extend_env env x (mk_exp (Ca.EVar x)) in
+  let (bodyis, body', bc) = compile_exp env' body in
+  let n = new_mangle name in
+  let clos =
+    { cname = n;
+      cret = compile_typ body.einfo;
+      cparam = (x, compile_typ tx);
+      cbody = mk_stmt (Ca.SBlock (extis @ bodyis @ [mk_stmt
+                                                     (Ca.SReturn (Some body'))]))
+    }
+  in
+  let (is, e, c) =
+    init_struct
+      clos_struct
+      [(clos_fun, mk_cast (Ca.EVar n) fptr_typ);
+       (clos_env, mk_exp (Ca.EVar env_var))]
+  in
+  (is, e, clos::(bc @ c))
 
 (* Compile an expression *)
 and compile_exp (env: env) (e: t_exp)
           : Ca.p_stmt list * Ca.p_exp * closure_typ list =
-  raise Unimplemented
+    match e.edesc with
+    | EVar v ->
+       (try
+          lookup_in_env (List.assoc v env) (compile_typ e.einfo)
+        with Not_found ->
+          ([], mk_exp (Ca.EVar v), []))
+    | EConst c -> compile_const c
+    | EBinop (b, e1, e2) ->
+       let (is1, e1', c1) = compile_exp env e1 in
+       let (is2, e2', c2) = compile_exp env e2 in
+       (is1 @ is2,
+        mk_exp (Ca.EBinop (compile_bop b, e1', e2')),
+        c1 @ c2)
+    | EUnop (u, e1) ->
+        let (is1, e1', c1) = compile_exp env e1 in
+        (is1, mk_exp (Ca.EUnop ((match u with UNot -> Ca.UNot | UNeg -> Ca.UNeg),
+                               e1')),
+         c1)
+    | EFun (x, t, body) -> compile_body env "fun" x t body
+    | EIf (e1, e2, e3) ->
+       let (is1, e1', c1) = compile_exp env e1 in
+       let (is2, e2', c2) = compile_exp env e2 in
+       let (is3, e3', c3) = compile_exp env e3 in
+       let v = new_var () in
+       ([mk_stmt (Ca.SDecl (v, compile_typ e2.einfo, None))]
+        @ is1
+        @ [
+            mk_stmt (Ca.SIf (e1', mk_stmt (Ca.SBlock (is2 @ [mk_assign_s v e2'])),
+                            mk_stmt (Ca.SBlock (is3 @ [mk_assign_s v e3']))))
+          ]
+       ,
+         mk_exp (Ca.EVar v)
+       , c1 @ c2 @ c3)
+    | ELet (x, _, e1, e2) ->
+       let (is1, e1', c1) = compile_exp env e1 in
+       let ((extis, _, extc), env') = extend_env env x e1' in
+       let (is2, e2', c2) = compile_exp env' e2 in
+       let ((popis, _, popc), env'') = pop_env env' in
+       let temp = new_var () in
+       (is1 @ extis @ is2
+        @ [mk_stmt (Ca.SDecl (temp, compile_typ e2.einfo, Some e2'))]
+        @ popis,
+        mk_exp (Ca.EVar temp),
+        c1 @ extc @ c2 @ popc)
+    | ELetFun (_, f, x, t, _, body, e2) ->
+       (* Because of alpha conversion, we can add f to the environment
+        * whether or not the function is recursive. *)
+       let env' = extend_with_placeholder env f in
+       let (fis, fe, fc) = compile_body env' f x t body in
+       let ((extis, _, extc), env') = extend_env env f fe in
+       let (is2, e2', c2) = compile_exp env' e2 in
+       let ((popis, _, popc), env'') = pop_env env' in
+       let temp = new_var () in
+       let fevar = match fe.edesc with
+         | Ca.EVar v -> v
+         | _ -> failwith "compile_body should return a var"
+       in
+       (fis @ extis
+        (* Backpatch fe's environment field to point to the new environment
+         * with fe bound *)
+        @ [mk_stmt (Ca.SExp
+                      (mk_exp
+                         (Ca.EAssign
+                            (mk_lhs (Ca.LHField (fevar, (), clos_env)),
+                             mk_exp (Ca.EVar env_var)))))]
+        @ is2
+        @ [mk_stmt (Ca.SDecl (temp, compile_typ e2.einfo, Some e2'))]
+        @ popis,
+        mk_exp (Ca.EVar temp),
+        fc @ extc @ c2 @ popc)
+    | ELetPair (x, y, e1, e2) ->
+       let (is1, e1', c1) = compile_exp env e1 in
+       let pairv = new_var () in
+       let ((extis1, _, extc1), env') =
+         extend_env env x (mk_exp (Ca.EField (mk_exp (Ca.EVar pairv), pair_fst)))
+       in
+       let ((extis2, _, extc2), env') =
+         extend_env env' y (mk_exp (Ca.EField (mk_exp (Ca.EVar pairv), pair_snd)))
+       in
+       let (is2, e2', c2) = compile_exp env' e2 in
+       let ((popis1, _, popc1), env') = pop_env env' in
+       let ((popis2, _, popc2), env') = pop_env env' in
+       let temp = new_var () in
+       (is1
+        @ [mk_stmt (Ca.SDecl (pairv, compile_typ e1.einfo, Some e1'))]
+        @ extis1 @ extis2
+        @ is2
+        @ [mk_stmt (Ca.SDecl (temp, compile_typ e2.einfo, Some e2'))]
+        @ popis1 @ popis2,
+        mk_exp (Ca.EVar temp),
+        c1 @ extc1 @ extc2 @ c2 @ popc1 @ popc2)
+    | EApp (e1, e2) ->
+       let (is1, e1', c1) = compile_exp env e1 in
+       let (is2, e2', c2) = compile_exp env e2 in
+       let (rtyp, ftyp) =
+         match e1.einfo with
+         | TArrow (t1, t2) ->
+            let rtyp = compile_typ t2 in
+            (rtyp,
+             Ca.TFunction (rtyp,
+                           [(compile_typ t1, "arg");
+                            (env_type, "__env")])
+            )
+         | _ -> failwith "expected fn"
+       in
+       let v = new_var () in
+       let vret = new_var () in
+       let calle =
+         mk_exp (Ca.ECall
+                   (mk_cast (Ca.EField (mk_exp (Ca.EVar v), clos_fun)) ftyp,
+                    [e2'; mk_exp (Ca.EField (mk_exp (Ca.EVar v), clos_env))]))
+       in
+       (is1 @ is2 @
+          [mk_stmt (Ca.SDecl (v, compile_typ (e1.einfo), Some e1'));
+           mk_stmt (Ca.SDecl (vret, rtyp, Some calle))]
+       , mk_exp (Ca.EVar vret)
+       , c1 @ c2)
+    | EMatchList (e1, e2, h, t, e3) ->
+       let (is1, e1', c1) = compile_exp env e1 in
+       let lv = new_var () in
+       let (is2, e2', c2) = compile_exp env e2 in
+       let listt =
+         match e1.einfo with
+         | TList ty -> ty
+         | _ -> failwith "Error: list not of list type"
+       in
+       let ((extis1, _, extc1), env') =
+         extend_env env h (mk_cast (Ca.EField (mk_exp (Ca.EVar lv), list_hd))
+                             (compile_typ listt))
+       in
+       let ((extis2, _, extc2), env') =
+         extend_env env' t (mk_exp (Ca.EField (mk_exp (Ca.EVar lv), list_tl)))
+       in
+       let (is3, e3', c3) = compile_exp env' e3 in
+       let ((popis1, _, popc1), env') = pop_env env' in
+       let ((popis2, _, popc2), env') = pop_env env' in
+       let v = new_var () in
+       (is1
+        @
+          [mk_stmt (Ca.SDecl (lv, compile_typ e1.einfo, Some e1'));
+           mk_stmt (Ca.SDecl (v, compile_typ e2.einfo, None));
+           mk_stmt (Ca.SIf (mk_exp (Ca.EBinop (Ca.BEq,
+                                             mk_cast_e e1' Ca.TInt,
+                                             mk_exp (Ca.EConst (Ca.CInt 0)))),
+                           mk_stmt (Ca.SBlock (is2 @ [mk_assign_s v e2'])),
+                           mk_stmt (Ca.SBlock
+                                      (extis1 @ extis2 @ is3 @
+                                         [mk_assign_s v e3'] @ popis1 @ popis2))
+             ))
+          ],
+        mk_exp (Ca.EVar v),
+        c1 @ c2 @ extc1 @ extc2 @ c3 @ popc1 @ popc2)
+    | EPair (e1, e2) ->
+       let (is1, e1', c1) = compile_exp env e1 in
+       let (is2, e2', c2) = compile_exp env e2 in
+       let (pis, pe, pc) = init_struct pair_struct
+                             [(pair_fst, mk_exp (Ca.ECast (e1', Ca.TInt)));
+                              (pair_snd, mk_exp (Ca.ECast (e2', Ca.TInt)))]
+       in
+       (is1 @ is2 @ pis, pe, c1 @ c2 @ pc)
+    | ECons (e1, e2) ->
+       let (is1, e1', c1) = compile_exp env e1 in
+       let (is2, e2', c2) = compile_exp env e2 in
+       let (pis, pe, pc) = init_struct list_struct
+                             [(list_hd, mk_exp (Ca.ECast (e1', Ca.TInt)));
+                              (list_tl, e2')]
+       in
+       (is1 @ is2 @ pis, pe, c1 @ c2 @ pc)
+    | EAnnot (e, _) -> compile_exp env e
 
 let lib_structs =
   [(Ca.DStructDef (list_struct, list_fields));
@@ -212,7 +395,10 @@ let lib_structs =
    (Ca.DStructDef (clos_struct, clos_fields))
   ]
 let lib_structs = List.map (fun d -> Ca.mk_def d dummy_loc) lib_structs
-                     
+
+let compile_exp env e =
+  compile_exp env (ML.Alpha.alpha_prog e)
+
 let compile_prog p =
   let (mainis, maine, c) = compile_exp [] p in
   let mainis =

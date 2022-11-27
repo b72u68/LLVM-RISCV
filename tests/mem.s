@@ -33,67 +33,67 @@ __main:
 main__entry:
   addi sp,sp,-32
   add a0,zero,sp
-  addi a1,a0,0
+  addi a7,a0,0
   addi t0,zero,0
   addi t1,zero,4
   mul t0,t0,t1
-  add a1,a1,t0
-  addi a2,a0,0
+  add a7,a7,t0
+  addi a6,a0,0
   addi t0,zero,1
   addi t1,zero,4
   mul t0,t0,t1
-  add a2,a2,t0
-  addi a3,a0,0
+  add a6,a6,t0
+  addi a5,a0,0
   addi t0,zero,2
   addi t1,zero,4
   mul t0,t0,t1
-  add a3,a3,t0
+  add a5,a5,t0
   addi a4,a0,0
   addi t0,zero,3
   addi t1,zero,4
   mul t0,t0,t1
   add a4,a4,t0
-  addi a5,a0,0
+  addi a3,a0,0
   addi t0,zero,4
   addi t1,zero,4
   mul t0,t0,t1
-  add a5,a5,t0
-  addi a6,a0,0
+  add a3,a3,t0
+  addi a2,a0,0
   addi t0,zero,5
   addi t1,zero,4
   mul t0,t0,t1
-  add a6,a6,t0
-  addi a7,a0,0
+  add a2,a2,t0
+  addi a1,a0,0
   addi t0,zero,6
   addi t1,zero,4
   mul t0,t0,t1
-  add a7,a7,t0
+  add a1,a1,t0
   addi a0,a0,0
   addi t0,zero,7
   addi t1,zero,4
   mul t0,t0,t1
   add a0,a0,t0
   addi t0,zero,8
-  sw t0,0(a1)
+  sw t0,0(a7)
   addi t0,zero,9
-  sw t0,0(a2)
+  sw t0,0(a6)
   addi t0,zero,10
-  sw t0,0(a3)
+  sw t0,0(a5)
   addi t0,zero,11
   sw t0,0(a4)
   addi t0,zero,12
-  sw t0,0(a5)
+  sw t0,0(a3)
   addi t0,zero,13
-  sw t0,0(a6)
+  sw t0,0(a2)
   addi t0,zero,14
-  sw t0,0(a7)
+  sw t0,0(a1)
   addi t0,zero,15
   sw t0,0(a0)
   addi t0,zero,16
-  sw t0,0(a1)
-  lw a0,0(a1)
-  lw a1,0(a5)
-  add a0,a0,a1
+  sw t0,0(a7)
+  lw a1,0(a7)
+  lw a0,0(a3)
+  add a0,a1,a0
   add a0,a0,zero
   jal zero,main__exit
 main__exit:

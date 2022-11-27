@@ -20,8 +20,8 @@ __main:
   addi fp,sp,4
   addi sp,sp,0
   add s1,s1,zero
-  add s2,s2,zero
-  add s3,s3,zero
+  add a2,s2,zero
+  add a1,s3,zero
   add s4,s4,zero
   add s5,s5,zero
   add s6,s6,zero
@@ -34,19 +34,18 @@ main__entry:
   addi t0,zero,0
   lui t1,1
   addi t1,t1,904
-  add a0,t0,t1
+  add s3,t0,t1
   addi t0,zero,0
   lui t1,1048575
   addi t1,t1,-904
-  add a1,t0,t1
-  add a0,a0,a1
-  add a0,a0,zero
-  lw t0,main__exit
-  jal t0,main__exit
+  add s2,t0,t1
+  add s2,s3,s2
+  add a0,s2,zero
+  jal zero,main__exit
 main__exit:
   add s1,s1,zero
-  add s2,s2,zero
-  add s3,s3,zero
+  add s2,a2,zero
+  add s3,a1,zero
   add s4,s4,zero
   add s5,s5,zero
   add s6,s6,zero

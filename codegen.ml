@@ -165,6 +165,8 @@ let greedy (glob_alloc: alloc_res VRMap.t) ((cfg, n): Dfg.t) :
  * glob_alloc contains global variables, mapped to InMem of their symbols.
  * Return (list of spilled variables, allocation map)
  * Returned map should include glob_alloc. *)
+let nodelist_str nodes = List.fold_left (fun s n -> s ^ (vr_to_string (IG.get_data n)) ^ " ") "" nodes
+
 let grcolor (glob_alloc: alloc_res VRMap.t) ((cfg, n): Dfg.t) :
       var list * alloc_res VRMap.t =
   (* Do liveness analysis *)
@@ -180,11 +182,83 @@ let grcolor (glob_alloc: alloc_res VRMap.t) ((cfg, n): Dfg.t) :
       R.all_regs
   in
 
+  let k = List.length Riscv.Ast.general_purpose in
+  let get_deg igraph node = List.length (IG.preds igraph node) in
+  let is_empty igraph = (IG.empty = igraph) in
 
-  let rec color igraph =
-    raise Unimplemented
-
+  let rec simplify igraph (spill_nodes, stack) =
+      let rec simp_rec igraph (spill_nodes, stack) = function
+          | [] -> (spill_nodes, stack, igraph)
+          | n::t ->
+                  if (get_deg igraph n) < k then
+                      simp_rec (IG.rem_node igraph n) (spill_nodes, n::stack) t
+                  else simp_rec igraph (spill_nodes, stack) t
+      in
+      let og_igraph = igraph in
+      let nodes = IG.nodes igraph in
+      let (spill_nodes, stack, igraph) = simp_rec igraph (spill_nodes, stack) nodes in
+      if igraph <> og_igraph then simplify igraph (spill_nodes, stack)
+      else (spill_nodes, stack, igraph)
   in
+
+  let spill igraph (spill_nodes, stack) =
+      let nodes = IG.nodes igraph in
+      let not_reg = ref [] in
+      let spilled = ref false in
+      let rec spill_rec = function
+          | [] ->
+                  if !spilled then (spill_nodes, stack, igraph)
+                  else
+                      if List.length !not_reg = 0 then failwith "can't find a node to spill"
+                      else
+                          let n = List.nth !not_reg 0 in
+                          (n::spill_nodes, n::stack, IG.rem_node igraph n)
+          | n::t ->
+                  match IG.get_data n with
+                  | Register _ -> spill_rec t
+                  | _ ->
+                          not_reg := n::(!not_reg);
+                          if (get_deg igraph n) >= k then
+                              (spilled := true;
+                              (n::spill_nodes, n::stack, IG.rem_node igraph n))
+                          else spill_rec t
+      in
+      if is_empty igraph then (spill_nodes, stack, igraph)
+      else spill_rec nodes
+  in
+
+  let rec simp_spill igraph (spill_nodes, stack) =
+      if not (is_empty igraph) then
+          let (spill_nodes, stack, igraph) = simplify igraph (spill_nodes, stack) in
+          let (spill_nodes, stack, igraph) = spill igraph (spill_nodes, stack) in
+          simp_spill igraph (spill_nodes, stack)
+      else (spill_nodes, stack)
+  in
+
+  let select igraph colors (spill_nodes, stack) =
+      let sel_rec (spills, colors) n =
+          if List.mem n spill_nodes then
+              match IG.get_data n with
+              | Register _ -> failwith "can't spill a register"
+              | Variable v ->
+                      (v::spills, VRMap.add (IG.get_data n) (OnStack (List.length spills)) colors)
+          else
+              match get_reg igraph colors n with
+              | Some r -> (spills, VRMap.add (IG.get_data n) (InReg r) colors)
+              | None ->
+                      (match IG.get_data n with
+                      | Register _ -> failwith "can't spill a register"
+                      | Variable v ->
+                              (v::spills, VRMap.add (IG.get_data n) (OnStack (List.length spills)) colors))
+      in
+      List.fold_left sel_rec ([], colors) stack
+  in
+
+  let color igraph =
+      simp_spill igraph ([], [])
+      |> select igraph glob_alloc
+  in
+
   color igraph
 
 let rec codegen_body
@@ -444,9 +518,9 @@ let rec codegen_body
        alloc
 
 (* Select which register allocation strategy we want to use *)
-let regalloc_strategy = greedy
+(*let regalloc_strategy = greedy*)
 (* Uncomment this line to see your great graph-coloring allocator in action *)
-(* let regalloc_strategy = grcolor *)
+let regalloc_strategy = grcolor
 
 let print_alloc = ref false
 
