@@ -165,6 +165,8 @@ let greedy (glob_alloc: alloc_res VRMap.t) ((cfg, n): Dfg.t) :
  * glob_alloc contains global variables, mapped to InMem of their symbols.
  * Return (list of spilled variables, allocation map)
  * Returned map should include glob_alloc. *)
+let nodelist_str nodes = List.fold_left (fun s n -> s ^ (vr_to_string (IG.get_data n)) ^ " ") "" nodes
+
 let grcolor (glob_alloc: alloc_res VRMap.t) ((cfg, n): Dfg.t) :
       var list * alloc_res VRMap.t =
   (* Do liveness analysis *)
@@ -195,14 +197,24 @@ let grcolor (glob_alloc: alloc_res VRMap.t) ((cfg, n): Dfg.t) :
           | [] -> (spill_nodes, stack, igraph)
           | n::t ->
                   if (get_deg igraph n) < k then
-                     simp_rec (IG.rem_node igraph n) (spill_nodes, n::stack) t
+                      (
+                          print_endline "igraph:";
+                          Printf.printf "put to stack: %s\n" (vr_to_string (IG.get_data n));
+                          print_igraph igraph;
+                          print_endline "";
+                          simp_rec (IG.rem_node igraph n) (spill_nodes, n::stack) t
+                      )
                   else simp_rec igraph (spill_nodes, stack) t
       in
       let og_igraph = igraph in
       let nodes = IG.nodes igraph in
-      let (spill_nodes, stack, igraph) as result = simp_rec igraph (spill_nodes, stack) nodes in
+      let (spill_nodes, stack, igraph) = simp_rec igraph (spill_nodes, stack) nodes in
+      Printf.printf "previous igraph: %d\n" (List.length (IG.nodes og_igraph));
+      Printf.printf "igraph: %d\n" (List.length (IG.nodes igraph));
+      Printf.printf "K: %d\n" k;
+      print_endline "";
       if igraph <> og_igraph then simplify igraph (spill_nodes, stack)
-      else result
+      else (spill_nodes, stack, igraph)
   in
 
   let spill igraph (spill_nodes, stack) =
