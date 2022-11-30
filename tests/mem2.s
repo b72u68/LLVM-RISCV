@@ -23,86 +23,86 @@ __f:
   addi fp,sp,4
   addi sp,sp,0
   add a0,a0,zero
-  add t3,s1,zero
-  add a7,s2,zero
-  add a6,s3,zero
-  add a5,s4,zero
-  add a4,s5,zero
-  add a3,s6,zero
-  add a2,s7,zero
-  add a1,s8,zero
+  add s1,s1,zero
+  add s2,s2,zero
+  add s3,s3,zero
+  add s4,s4,zero
+  add s5,s5,zero
+  add s6,s6,zero
+  add s7,s7,zero
+  add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
   add s11,s11,zero
 f__entry:
-  addi s8,a0,0
+  addi a1,a0,0
   addi t0,zero,0
   addi t1,zero,4
   mul t0,t0,t1
-  add s8,s8,t0
-  addi s7,a0,0
+  add a1,a1,t0
+  addi a2,a0,0
   addi t0,zero,1
   addi t1,zero,4
   mul t0,t0,t1
-  add s7,s7,t0
-  addi s6,a0,0
+  add a2,a2,t0
+  addi a3,a0,0
   addi t0,zero,2
   addi t1,zero,4
   mul t0,t0,t1
-  add s6,s6,t0
-  addi s5,a0,0
+  add a3,a3,t0
+  addi a4,a0,0
   addi t0,zero,3
   addi t1,zero,4
   mul t0,t0,t1
-  add s5,s5,t0
-  addi s4,a0,0
+  add a4,a4,t0
+  addi a5,a0,0
   addi t0,zero,4
   addi t1,zero,4
   mul t0,t0,t1
-  add s4,s4,t0
-  addi s3,a0,0
+  add a5,a5,t0
+  addi a6,a0,0
   addi t0,zero,5
   addi t1,zero,4
   mul t0,t0,t1
-  add s3,s3,t0
-  addi s2,a0,0
+  add a6,a6,t0
+  addi a7,a0,0
   addi t0,zero,6
   addi t1,zero,4
   mul t0,t0,t1
-  add s2,s2,t0
-  addi s1,a0,0
+  add a7,a7,t0
+  addi a0,a0,0
   addi t0,zero,7
   addi t1,zero,4
   mul t0,t0,t1
-  add s1,s1,t0
+  add a0,a0,t0
   addi t0,zero,8
-  sw t0,0(s8)
+  sw t0,0(a1)
   addi t0,zero,9
-  sw t0,0(s7)
+  sw t0,0(a2)
   addi t0,zero,10
-  sw t0,0(s6)
+  sw t0,0(a3)
   addi t0,zero,11
-  sw t0,0(s5)
+  sw t0,0(a4)
   addi t0,zero,12
-  sw t0,0(s4)
+  sw t0,0(a5)
   addi t0,zero,13
-  sw t0,0(s3)
+  sw t0,0(a6)
   addi t0,zero,14
-  sw t0,0(s2)
+  sw t0,0(a7)
   addi t0,zero,15
-  sw t0,0(s1)
+  sw t0,0(a0)
   addi t0,zero,16
-  sw t0,0(s8)
+  sw t0,0(a1)
   jal zero,f__exit
 f__exit:
-  add s1,t3,zero
-  add s2,a7,zero
-  add s3,a6,zero
-  add s4,a5,zero
-  add s5,a4,zero
-  add s6,a3,zero
-  add s7,a2,zero
-  add s8,a1,zero
+  add s1,s1,zero
+  add s2,s2,zero
+  add s3,s3,zero
+  add s4,s4,zero
+  add s5,s5,zero
+  add s6,s6,zero
+  add s7,s7,zero
+  add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
   add s11,s11,zero
@@ -117,8 +117,7 @@ __main:
   sw ra,0(sp)
   addi fp,sp,4
   addi sp,sp,-4
-  add t2,s1,zero
-  sw t2,-8(fp)
+  add s1,s1,zero
   add s2,s2,zero
   add s3,s3,zero
   add s4,s4,zero
@@ -131,29 +130,32 @@ __main:
   add s11,s11,zero
 main__entry:
   addi sp,sp,-32
-  add s1,zero,sp
-  add a0,s1,zero
+  add t2,zero,sp
+  sw t2,-8(fp)
+  lw t0,-8(fp)
+  add a0,t0,zero
   lw t0,f
   jalr ra,t0,0
   addi a0,a0,0
-  addi a0,s1,0
+  lw t0,-8(fp)
+  addi a0,t0,0
   addi t0,zero,0
   addi t1,zero,4
   mul t0,t0,t1
   add a0,a0,t0
-  addi s1,s1,0
+  lw t0,-8(fp)
+  addi a1,t0,0
   addi t0,zero,4
   addi t1,zero,4
   mul t0,t0,t1
-  add s1,s1,t0
+  add a1,a1,t0
   lw a0,0(a0)
-  lw s1,0(s1)
-  add s1,a0,s1
-  add a0,s1,zero
+  lw a1,0(a1)
+  add a0,a0,a1
+  add a0,a0,zero
   jal zero,main__exit
 main__exit:
-  lw t0,-8(fp)
-  add s1,t0,zero
+  add s1,s1,zero
   add s2,s2,zero
   add s3,s3,zero
   add s4,s4,zero
