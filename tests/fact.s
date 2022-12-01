@@ -124,33 +124,33 @@ __factorial06:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-128
+  addi sp,sp,-104
   add t2,a0,zero
-  sw t2,-132(fp)
-  add t2,a1,zero
-  sw t2,-128(fp)
-  add t2,s1,zero
-  sw t2,-124(fp)
-  add t2,s2,zero
-  sw t2,-120(fp)
-  add t2,s3,zero
-  sw t2,-116(fp)
-  add t2,s4,zero
-  sw t2,-112(fp)
-  add t2,s5,zero
   sw t2,-108(fp)
-  add t2,s6,zero
+  add t2,a1,zero
   sw t2,-104(fp)
-  add t2,s7,zero
+  add t2,s1,zero
   sw t2,-100(fp)
-  add t2,s8,zero
+  add t2,s2,zero
   sw t2,-96(fp)
-  add t2,s9,zero
+  add t2,s3,zero
   sw t2,-92(fp)
-  add t2,s10,zero
+  add t2,s4,zero
   sw t2,-88(fp)
-  add t2,s11,zero
+  add t2,s5,zero
   sw t2,-84(fp)
+  add t2,s6,zero
+  sw t2,-80(fp)
+  add t2,s7,zero
+  sw t2,-76(fp)
+  add t2,s8,zero
+  sw t2,-72(fp)
+  add t2,s9,zero
+  sw t2,-68(fp)
+  add t2,s10,zero
+  sw t2,-64(fp)
+  add t2,s11,zero
+  sw t2,-60(fp)
 factorial06__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -158,7 +158,7 @@ factorial06__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-128(fp)
+  lw t0,-104(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -171,7 +171,7 @@ factorial06__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-132(fp)
+  lw t0,-108(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -185,19 +185,16 @@ factorial06__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-80(fp)
-  lw t0,-80(fp)
-  add s1,t0,zero
+  add s3,s3,zero
+  add s1,s3,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s4,t0,zero
   addi t0,zero,0
   add s2,t0,zero
-  lw t0,-80(fp)
-  add s1,t0,zero
+  add s1,s3,zero
   add a0,s2,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s4,0
   addi s1,a0,0
   add s2,s1,zero
   addi t0,zero,0
@@ -211,20 +208,15 @@ label5:
   add s1,t0,zero
   add s1,s1,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-76(fp)
+  add s6,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-72(fp)
+  add s6,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-68(fp)
+  add s6,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-64(fp)
+  add s6,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-60(fp)
+  add s6,t0,zero
   addi t0,zero,0
   add s5,t0,zero
   addi t0,zero,0
@@ -279,8 +271,7 @@ label6:
   addi t0,zero,1
   add t2,t0,zero
   sw t2,-52(fp)
-  lw t0,-80(fp)
-  add t2,t0,zero
+  add t2,s3,zero
   sw t2,-48(fp)
   lw t0,-52(fp)
   add a0,t0,zero
@@ -313,8 +304,7 @@ label6:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-28(fp)
-  lw t0,-80(fp)
-  add t2,t0,zero
+  add t2,s3,zero
   sw t2,-24(fp)
   lw t0,-28(fp)
   add a0,t0,zero
@@ -355,8 +345,7 @@ label6:
   add s8,t0,zero
   addi t0,zero,0
   add s7,t0,zero
-  lw t0,-80(fp)
-  add s6,t0,zero
+  add s6,s3,zero
   add a0,s7,zero
   add a1,s6,zero
   jalr ra,s8,0
@@ -365,16 +354,11 @@ label6:
   add s4,s4,zero
   mul s3,s5,s4
   add s3,s3,zero
-  add t2,s6,zero
-  sw t2,-76(fp)
-  add t2,s7,zero
-  sw t2,-72(fp)
-  add t2,s8,zero
-  sw t2,-68(fp)
-  add t2,s5,zero
-  sw t2,-64(fp)
-  add t2,s4,zero
-  sw t2,-60(fp)
+  add s6,s6,zero
+  add s6,s7,zero
+  add s6,s8,zero
+  add s6,s5,zero
+  add s6,s4,zero
   add s5,s5,zero
   add s5,s3,zero
   add s5,s10,zero
@@ -419,27 +403,27 @@ label7:
   add a0,s1,zero
   jal zero,factorial06__exit
 factorial06__exit:
-  lw t0,-124(fp)
-  add s1,t0,zero
-  lw t0,-120(fp)
-  add s2,t0,zero
-  lw t0,-116(fp)
-  add s3,t0,zero
-  lw t0,-112(fp)
-  add s4,t0,zero
-  lw t0,-108(fp)
-  add s5,t0,zero
-  lw t0,-104(fp)
-  add s6,t0,zero
   lw t0,-100(fp)
-  add s7,t0,zero
+  add s1,t0,zero
   lw t0,-96(fp)
-  add s8,t0,zero
+  add s2,t0,zero
   lw t0,-92(fp)
-  add s9,t0,zero
+  add s3,t0,zero
   lw t0,-88(fp)
-  add s10,t0,zero
+  add s4,t0,zero
   lw t0,-84(fp)
+  add s5,t0,zero
+  lw t0,-80(fp)
+  add s6,t0,zero
+  lw t0,-76(fp)
+  add s7,t0,zero
+  lw t0,-72(fp)
+  add s8,t0,zero
+  lw t0,-68(fp)
+  add s9,t0,zero
+  lw t0,-64(fp)
+  add s10,t0,zero
+  lw t0,-60(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)

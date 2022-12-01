@@ -124,33 +124,33 @@ __find122:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-316
+  addi sp,sp,-252
   add t2,a0,zero
-  sw t2,-320(fp)
+  sw t2,-256(fp)
   add t2,a1,zero
-  sw t2,-316(fp)
+  sw t2,-252(fp)
   add t2,s1,zero
-  sw t2,-312(fp)
+  sw t2,-248(fp)
   add t2,s2,zero
-  sw t2,-308(fp)
+  sw t2,-244(fp)
   add t2,s3,zero
-  sw t2,-304(fp)
+  sw t2,-240(fp)
   add t2,s4,zero
-  sw t2,-300(fp)
+  sw t2,-236(fp)
   add t2,s5,zero
-  sw t2,-296(fp)
+  sw t2,-232(fp)
   add t2,s6,zero
-  sw t2,-292(fp)
+  sw t2,-228(fp)
   add t2,s7,zero
-  sw t2,-288(fp)
+  sw t2,-224(fp)
   add t2,s8,zero
-  sw t2,-284(fp)
+  sw t2,-220(fp)
   add t2,s9,zero
-  sw t2,-280(fp)
+  sw t2,-216(fp)
   add t2,s10,zero
-  sw t2,-276(fp)
+  sw t2,-212(fp)
   add t2,s11,zero
-  sw t2,-272(fp)
+  sw t2,-208(fp)
 find122__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -158,7 +158,7 @@ find122__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-316(fp)
+  lw t0,-252(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -171,7 +171,7 @@ find122__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-320(fp)
+  lw t0,-256(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -219,45 +219,38 @@ find122__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-268(fp)
-  lw t0,-268(fp)
-  add s1,t0,zero
+  add s3,s3,zero
+  add s1,s3,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s4,t0,zero
   addi t0,zero,1
   add s2,t0,zero
-  lw t0,-268(fp)
-  add s1,t0,zero
+  add s1,s3,zero
   add a0,s2,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s4,0
   addi s1,a0,0
-  add t2,s1,zero
-  sw t2,-264(fp)
+  add s2,s1,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s5,t0,zero
   addi t0,zero,1
-  add s2,t0,zero
-  lw t0,-268(fp)
-  add s1,t0,zero
-  add a0,s2,zero
+  add s4,t0,zero
+  add s1,s3,zero
+  add a0,s4,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s5,0
   addi s1,a0,0
   add s1,s1,zero
-  add s2,s1,zero
+  add s4,s1,zero
   addi t0,zero,0
   add s1,t0,zero
-  sub s1,s2,s1
+  sub s1,s4,s1
   sltiu s1,s1,1
   beq s1,zero,label6
   jal zero,label5
 label10:
-  add t2,s8,zero
-  sw t2,-256(fp)
-  lw t0,-256(fp)
-  add s9,t0,zero
+  add s8,s8,zero
+  add s9,s8,zero
   add s6,s7,zero
   addi s5,s6,0
   addi t0,zero,0
@@ -289,32 +282,6 @@ label10:
   add s2,s6,zero
   add s2,s4,zero
   add s2,s9,zero
-  lw t0,-260(fp)
-  add s2,t0,zero
-  lw t0,-252(fp)
-  add s2,t0,zero
-  lw t0,-248(fp)
-  add s2,t0,zero
-  lw t0,-244(fp)
-  add s2,t0,zero
-  lw t0,-240(fp)
-  add s2,t0,zero
-  lw t0,-236(fp)
-  add s2,t0,zero
-  lw t0,-232(fp)
-  add s2,t0,zero
-  lw t0,-228(fp)
-  add s2,t0,zero
-  lw t0,-224(fp)
-  add s2,t0,zero
-  lw t0,-220(fp)
-  add s2,t0,zero
-  lw t0,-216(fp)
-  add s2,t0,zero
-  lw t0,-212(fp)
-  add s2,t0,zero
-  lw t0,-208(fp)
-  add s2,t0,zero
   lw t0,-204(fp)
   add s2,t0,zero
   lw t0,-200(fp)
@@ -355,6 +322,19 @@ label10:
   add s2,t0,zero
   lw t0,-128(fp)
   add s2,t0,zero
+  add s2,t6,zero
+  add s2,t5,zero
+  add s2,t4,zero
+  add s2,t3,zero
+  add s2,a7,zero
+  add s2,a6,zero
+  add s2,a5,zero
+  add s2,a4,zero
+  add s2,a3,zero
+  add s2,a2,zero
+  add s2,a1,zero
+  add s2,a0,zero
+  add s2,s11,zero
   lw t0,-124(fp)
   add s2,t0,zero
   lw t0,-120(fp)
@@ -404,8 +384,7 @@ label10:
   addi t0,zero,0
   add s2,t0,zero
   add s3,s7,zero
-  lw t0,-256(fp)
-  add s2,t0,zero
+  add s2,s8,zero
   add s4,s8,zero
   add s1,s1,zero
   add s1,s10,zero
@@ -545,8 +524,7 @@ label5:
   addi t0,zero,0
   add s2,t0,zero
   add s2,s1,zero
-  lw t0,-268(fp)
-  add s3,t0,zero
+  add s3,s3,zero
   add s2,s1,zero
   addi t0,zero,0
   add s4,t0,zero
@@ -569,8 +547,7 @@ label6:
   lw t0,-36(fp)
   add t2,t0,zero
   sw t2,-28(fp)
-  lw t0,-268(fp)
-  add t2,t0,zero
+  add t2,s3,zero
   sw t2,-44(fp)
   lw t0,-28(fp)
   addi t2,t0,0
@@ -589,8 +566,7 @@ label6:
   lw t0,-44(fp)
   add t2,t0,zero
   sw t2,-40(fp)
-  lw t0,-264(fp)
-  add t2,t0,zero
+  add t2,s2,zero
   sw t2,-72(fp)
   lw t0,-72(fp)
   addi t2,t0,0
@@ -661,8 +637,7 @@ label6:
   lw t0,-92(fp)
   add t2,t0,zero
   sw t2,-88(fp)
-  lw t0,-264(fp)
-  add t2,t0,zero
+  add t2,s2,zero
   sw t2,-116(fp)
   lw t0,-116(fp)
   addi t2,t0,0
@@ -704,48 +679,48 @@ label6:
   sw t2,-124(fp)
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-232(fp)
+  sw t2,-180(fp)
   addi t0,zero,1
   add t2,t0,zero
-  sw t2,-236(fp)
+  sw t2,-184(fp)
   add t2,s7,zero
-  sw t2,-240(fp)
-  lw t0,-236(fp)
+  sw t2,-188(fp)
+  lw t0,-184(fp)
   add a0,t0,zero
-  lw t0,-240(fp)
+  lw t0,-188(fp)
   add a1,t0,zero
-  lw t0,-232(fp)
+  lw t0,-180(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-228(fp)
-  lw t0,-228(fp)
+  sw t2,-176(fp)
+  lw t0,-176(fp)
   add t2,t0,zero
-  sw t2,-220(fp)
+  sw t2,-168(fp)
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-248(fp)
+  sw t2,-196(fp)
   addi t0,zero,2
   add t2,t0,zero
-  sw t2,-252(fp)
+  sw t2,-200(fp)
   add t2,s7,zero
-  sw t2,-260(fp)
-  lw t0,-252(fp)
+  sw t2,-204(fp)
+  lw t0,-200(fp)
   add a0,t0,zero
-  lw t0,-260(fp)
+  lw t0,-204(fp)
   add a1,t0,zero
-  lw t0,-248(fp)
+  lw t0,-196(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-244(fp)
-  lw t0,-244(fp)
+  sw t2,-192(fp)
+  lw t0,-192(fp)
   add t2,t0,zero
-  sw t2,-224(fp)
-  lw t0,-220(fp)
-  lw t1,-224(fp)
+  sw t2,-172(fp)
+  lw t0,-168(fp)
+  lw t1,-172(fp)
   sub t2,t0,t1
   sltiu t2,t2,1
-  sw t2,-216(fp)
-  lw t0,-216(fp)
+  sw t2,-164(fp)
+  lw t0,-164(fp)
   beq t0,zero,label9
   jal zero,label8
 label7:
@@ -779,45 +754,6 @@ label8:
   add s5,s3,zero
   addi t0,zero,0
   add t2,t0,zero
-  sw t2,-212(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-208(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-204(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-200(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-196(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-192(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-188(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-184(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-180(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-176(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-172(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-168(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-164(fp)
-  addi t0,zero,0
-  add t2,t0,zero
   sw t2,-160(fp)
   addi t0,zero,0
   add t2,t0,zero
@@ -828,16 +764,42 @@ label8:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-148(fp)
-  add t2,s4,zero
+  addi t0,zero,0
+  add t2,t0,zero
   sw t2,-144(fp)
-  add t2,s1,zero
+  addi t0,zero,0
+  add t2,t0,zero
   sw t2,-140(fp)
-  add t2,s2,zero
+  addi t0,zero,0
+  add t2,t0,zero
   sw t2,-136(fp)
-  add t2,s3,zero
+  addi t0,zero,0
+  add t2,t0,zero
   sw t2,-132(fp)
-  add t2,s5,zero
+  addi t0,zero,0
+  add t2,t0,zero
   sw t2,-128(fp)
+  addi t0,zero,0
+  add t6,t0,zero
+  addi t0,zero,0
+  add t5,t0,zero
+  addi t0,zero,0
+  add t4,t0,zero
+  addi t0,zero,0
+  add t3,t0,zero
+  addi t0,zero,0
+  add a7,t0,zero
+  addi t0,zero,0
+  add a6,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a4,t0,zero
+  add a3,s4,zero
+  add a2,s1,zero
+  add a1,s2,zero
+  add a0,s3,zero
+  add s11,s5,zero
   add s8,s3,zero
   addi t0,zero,0
   add s1,t0,zero
@@ -905,85 +867,72 @@ label9:
   add s1,s2,zero
   add s1,s1,zero
   add t2,s1,zero
-  sw t2,-212(fp)
+  sw t2,-160(fp)
   add t2,s4,zero
-  sw t2,-208(fp)
+  sw t2,-156(fp)
   add t2,s5,zero
-  sw t2,-204(fp)
+  sw t2,-152(fp)
   add t2,s7,zero
-  sw t2,-200(fp)
+  sw t2,-148(fp)
   add t2,s8,zero
-  sw t2,-196(fp)
+  sw t2,-144(fp)
   add t2,s9,zero
-  sw t2,-192(fp)
+  sw t2,-140(fp)
   add t2,s6,zero
-  sw t2,-188(fp)
+  sw t2,-136(fp)
   add t2,s11,zero
-  sw t2,-184(fp)
+  sw t2,-132(fp)
   lw t0,-8(fp)
   add t2,t0,zero
-  sw t2,-180(fp)
-  add t2,s10,zero
-  sw t2,-176(fp)
-  add t2,s3,zero
-  sw t2,-172(fp)
-  add t2,s6,zero
-  sw t2,-168(fp)
-  add t2,s10,zero
-  sw t2,-164(fp)
-  lw t0,-16(fp)
-  add t2,t0,zero
-  sw t2,-160(fp)
-  lw t0,-20(fp)
-  add t2,t0,zero
-  sw t2,-156(fp)
-  lw t0,-24(fp)
-  add t2,t0,zero
-  sw t2,-152(fp)
-  lw t0,-12(fp)
-  add t2,t0,zero
-  sw t2,-148(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-144(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-140(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-136(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-132(fp)
-  addi t0,zero,0
-  add t2,t0,zero
   sw t2,-128(fp)
+  add t6,s10,zero
+  add t5,s3,zero
+  add t4,s6,zero
+  add t3,s10,zero
+  lw t0,-16(fp)
+  add a7,t0,zero
+  lw t0,-20(fp)
+  add a6,t0,zero
+  lw t0,-24(fp)
+  add a5,t0,zero
+  lw t0,-12(fp)
+  add a4,t0,zero
+  addi t0,zero,0
+  add a3,t0,zero
+  addi t0,zero,0
+  add a2,t0,zero
+  addi t0,zero,0
+  add a1,t0,zero
+  addi t0,zero,0
+  add a0,t0,zero
+  addi t0,zero,0
+  add s11,t0,zero
   add s8,s1,zero
   add s1,s2,zero
   add s10,s5,zero
   jal zero,label10
 find122__exit:
-  lw t0,-312(fp)
+  lw t0,-248(fp)
   add s1,t0,zero
-  lw t0,-308(fp)
+  lw t0,-244(fp)
   add s2,t0,zero
-  lw t0,-304(fp)
+  lw t0,-240(fp)
   add s3,t0,zero
-  lw t0,-300(fp)
+  lw t0,-236(fp)
   add s4,t0,zero
-  lw t0,-296(fp)
+  lw t0,-232(fp)
   add s5,t0,zero
-  lw t0,-292(fp)
+  lw t0,-228(fp)
   add s6,t0,zero
-  lw t0,-288(fp)
+  lw t0,-224(fp)
   add s7,t0,zero
-  lw t0,-284(fp)
+  lw t0,-220(fp)
   add s8,t0,zero
-  lw t0,-280(fp)
+  lw t0,-216(fp)
   add s9,t0,zero
-  lw t0,-276(fp)
+  lw t0,-212(fp)
   add s10,t0,zero
-  lw t0,-272(fp)
+  lw t0,-208(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -995,21 +944,18 @@ __main:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-28
+  addi sp,sp,-16
   add t2,s1,zero
-  sw t2,-32(fp)
-  add t2,s2,zero
-  sw t2,-28(fp)
-  add t2,s3,zero
-  sw t2,-24(fp)
-  add t2,s4,zero
   sw t2,-20(fp)
-  add t2,s5,zero
+  add t2,s2,zero
   sw t2,-16(fp)
-  add t2,s6,zero
+  add t2,s3,zero
   sw t2,-12(fp)
-  add t2,s7,zero
+  add t2,s4,zero
   sw t2,-8(fp)
+  add s5,s5,zero
+  add s6,s6,zero
+  add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
@@ -1313,15 +1259,15 @@ main__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,1
-  add s5,t0,zero
+  add a0,t0,zero
   add s1,s4,zero
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s5,s1,zero
+  add a0,s1,zero
   add s1,s3,zero
   addi s1,s1,0
   addi t0,zero,0
@@ -1333,7 +1279,7 @@ main__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,s2,0
   addi s1,a0,0
@@ -1367,20 +1313,17 @@ main__entry:
   add a0,s1,zero
   jal zero,main__exit
 main__exit:
-  lw t0,-32(fp)
-  add s1,t0,zero
-  lw t0,-28(fp)
-  add s2,t0,zero
-  lw t0,-24(fp)
-  add s3,t0,zero
   lw t0,-20(fp)
-  add s4,t0,zero
+  add s1,t0,zero
   lw t0,-16(fp)
-  add s5,t0,zero
+  add s2,t0,zero
   lw t0,-12(fp)
-  add s6,t0,zero
+  add s3,t0,zero
   lw t0,-8(fp)
-  add s7,t0,zero
+  add s4,t0,zero
+  add s5,s5,zero
+  add s6,s6,zero
+  add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero

@@ -1265,23 +1265,22 @@ __fun601:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-32
+  addi sp,sp,-28
   add t2,a0,zero
-  sw t2,-36(fp)
-  add t2,a1,zero
   sw t2,-32(fp)
-  add t2,s1,zero
+  add t2,a1,zero
   sw t2,-28(fp)
-  add t2,s2,zero
+  add t2,s1,zero
   sw t2,-24(fp)
-  add t2,s3,zero
+  add t2,s2,zero
   sw t2,-20(fp)
-  add t2,s4,zero
+  add t2,s3,zero
   sw t2,-16(fp)
-  add t2,s5,zero
+  add t2,s4,zero
   sw t2,-12(fp)
-  add t2,s6,zero
+  add t2,s5,zero
   sw t2,-8(fp)
+  add s6,s6,zero
   add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
@@ -1294,7 +1293,7 @@ fun601__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-32(fp)
+  lw t0,-28(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -1307,7 +1306,7 @@ fun601__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-36(fp)
+  lw t0,-32(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -1346,13 +1345,13 @@ fun601__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,26
   add s4,t0,zero
   add s1,s5,zero
   add a0,s4,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
   add s4,s1,zero
   add s1,s3,zero
@@ -1395,13 +1394,13 @@ fun601__entry:
   lw t0,__lookup
   add a2,t0,zero
   addi t0,zero,1
-  add s6,t0,zero
+  add a0,t0,zero
   add s1,s5,zero
-  add a0,s6,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,a2,0
   addi s1,a0,0
-  add s6,s1,zero
+  add a0,s1,zero
   add s1,s3,zero
   addi s1,s1,0
   addi t0,zero,0
@@ -1413,7 +1412,7 @@ fun601__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add a0,s6,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,s2,0
   addi s1,a0,0
@@ -1471,9 +1470,9 @@ fun601__entry:
   lw t0,__lookup
   add a2,t0,zero
   addi t0,zero,0
-  add s6,t0,zero
+  add a0,t0,zero
   add s1,s5,zero
-  add a0,s6,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,a2,0
   addi s1,a0,0
@@ -1526,18 +1525,17 @@ fun601__entry:
   add a0,s1,zero
   jal zero,fun601__exit
 fun601__exit:
-  lw t0,-28(fp)
-  add s1,t0,zero
   lw t0,-24(fp)
-  add s2,t0,zero
+  add s1,t0,zero
   lw t0,-20(fp)
-  add s3,t0,zero
+  add s2,t0,zero
   lw t0,-16(fp)
-  add s4,t0,zero
+  add s3,t0,zero
   lw t0,-12(fp)
-  add s5,t0,zero
+  add s4,t0,zero
   lw t0,-8(fp)
-  add s6,t0,zero
+  add s5,t0,zero
+  add s6,s6,zero
   add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
@@ -1820,25 +1818,22 @@ __fun652:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-36
+  addi sp,sp,-24
   add t2,a0,zero
-  sw t2,-40(fp)
-  add t2,a1,zero
-  sw t2,-36(fp)
-  add t2,s1,zero
-  sw t2,-32(fp)
-  add t2,s2,zero
   sw t2,-28(fp)
-  add t2,s3,zero
+  add t2,a1,zero
   sw t2,-24(fp)
-  add t2,s4,zero
+  add t2,s1,zero
   sw t2,-20(fp)
-  add t2,s5,zero
+  add t2,s2,zero
   sw t2,-16(fp)
-  add t2,s6,zero
+  add t2,s3,zero
   sw t2,-12(fp)
-  add t2,s7,zero
+  add t2,s4,zero
   sw t2,-8(fp)
+  add s5,s5,zero
+  add s6,s6,zero
+  add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
@@ -1850,7 +1845,7 @@ fun652__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-36(fp)
+  lw t0,-24(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -1863,7 +1858,7 @@ fun652__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-40(fp)
+  lw t0,-28(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -1946,16 +1941,16 @@ fun652__entry:
   sw s3,0(s1)
   add s1,s3,zero
   lw t0,__lookup
-  add s5,t0,zero
+  add a2,t0,zero
   addi t0,zero,5
   add s3,t0,zero
   add s1,s4,zero
   add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s5,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s5,s1,zero
-  add s1,s5,zero
+  add a0,s1,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -1968,7 +1963,7 @@ fun652__entry:
   lw s1,0(s1)
   add s3,s1,zero
   add s2,s2,zero
-  add s1,s5,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -1984,16 +1979,16 @@ fun652__entry:
   jalr ra,s3,0
   addi s3,a0,0
   lw t0,__lookup
-  add s5,t0,zero
+  add a2,t0,zero
   addi t0,zero,19
   add s2,t0,zero
   add s1,s4,zero
   add a0,s2,zero
   add a1,s1,zero
-  jalr ra,s5,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s6,s1,zero
-  add s1,s6,zero
+  add a0,s1,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2004,10 +1999,10 @@ fun652__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add s5,s1,zero
+  add a2,s1,zero
   addi t0,zero,0
   add s2,t0,zero
-  add s1,s6,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2020,19 +2015,19 @@ fun652__entry:
   lw s1,0(s1)
   add a0,s2,zero
   add a1,s1,zero
-  jalr ra,s5,0
+  jalr ra,a2,0
   addi s2,a0,0
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,7
-  add s5,t0,zero
+  add a0,t0,zero
   add s1,s4,zero
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s6,s1,zero
-  add s1,s6,zero
+  add a0,s1,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2043,9 +2038,9 @@ fun652__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add s5,s1,zero
+  add a2,s1,zero
   add s2,s2,zero
-  add s1,s6,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2058,19 +2053,19 @@ fun652__entry:
   lw s1,0(s1)
   add a0,s2,zero
   add a1,s1,zero
-  jalr ra,s5,0
+  jalr ra,a2,0
   addi s2,a0,0
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,14
-  add s5,t0,zero
+  add a0,t0,zero
   add s1,s4,zero
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s6,s1,zero
-  add s1,s6,zero
+  add a0,s1,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2081,9 +2076,9 @@ fun652__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add s5,s1,zero
+  add a2,s1,zero
   add s2,s2,zero
-  add s1,s6,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2096,7 +2091,7 @@ fun652__entry:
   lw s1,0(s1)
   add a0,s2,zero
   add a1,s1,zero
-  jalr ra,s5,0
+  jalr ra,a2,0
   addi s2,a0,0
   addi t0,zero,8
   add a0,t0,zero
@@ -2105,33 +2100,33 @@ fun652__entry:
   addi s1,a0,0
   add s1,s1,zero
   add s4,s4,zero
-  addi s5,s1,0
+  addi a0,s1,0
   addi t0,zero,0
   addi t1,zero,8
   mul t0,t0,t1
-  add s5,s5,t0
+  add a0,a0,t0
   addi t1,zero,0
   addi t0,zero,4
   mul t1,t1,t0
-  add s5,s5,t1
-  sw s4,0(s5)
-  add s5,s4,zero
+  add a0,a0,t1
+  sw s4,0(a0)
+  add a0,s4,zero
   lw t0,fun605
-  add s5,t0,zero
-  add s6,s5,zero
-  addi s5,s1,0
+  add a0,t0,zero
+  add a1,a0,zero
+  addi a0,s1,0
   addi t0,zero,0
   addi t1,zero,8
   mul t0,t0,t1
-  add s5,s5,t0
+  add a0,a0,t0
   addi t1,zero,1
   addi t0,zero,4
   mul t1,t1,t0
-  add s5,s5,t1
-  sw s6,0(s5)
-  add s5,s6,zero
-  add s6,s2,zero
-  add s2,s6,zero
+  add a0,a0,t1
+  sw a1,0(a0)
+  add a0,a1,zero
+  add a0,s2,zero
+  add s2,a0,zero
   addi s2,s2,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2142,9 +2137,9 @@ fun652__entry:
   mul t1,t1,t0
   add s2,s2,t1
   lw s2,0(s2)
-  add s5,s2,zero
+  add a2,s2,zero
   add s2,s1,zero
-  add s1,s6,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2157,10 +2152,10 @@ fun652__entry:
   lw s1,0(s1)
   add a0,s2,zero
   add a1,s1,zero
-  jalr ra,s5,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s5,s3,zero
-  add s2,s5,zero
+  add a0,s3,zero
+  add s2,a0,zero
   addi s2,s2,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2173,7 +2168,7 @@ fun652__entry:
   lw s2,0(s2)
   add s3,s2,zero
   add s2,s1,zero
-  add s1,s5,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2189,16 +2184,16 @@ fun652__entry:
   jalr ra,s3,0
   addi s2,a0,0
   lw t0,__lookup
-  add s5,t0,zero
+  add a2,t0,zero
   addi t0,zero,14
   add s3,t0,zero
   add s1,s4,zero
   add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s5,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s5,s1,zero
-  add s1,s5,zero
+  add a0,s1,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2211,7 +2206,7 @@ fun652__entry:
   lw s1,0(s1)
   add s3,s1,zero
   add s2,s2,zero
-  add s1,s5,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -2291,20 +2286,17 @@ fun652__entry:
   add a0,s1,zero
   jal zero,fun652__exit
 fun652__exit:
-  lw t0,-32(fp)
-  add s1,t0,zero
-  lw t0,-28(fp)
-  add s2,t0,zero
-  lw t0,-24(fp)
-  add s3,t0,zero
   lw t0,-20(fp)
-  add s4,t0,zero
+  add s1,t0,zero
   lw t0,-16(fp)
-  add s5,t0,zero
+  add s2,t0,zero
   lw t0,-12(fp)
-  add s6,t0,zero
+  add s3,t0,zero
   lw t0,-8(fp)
-  add s7,t0,zero
+  add s4,t0,zero
+  add s5,s5,zero
+  add s6,s6,zero
+  add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
@@ -3112,33 +3104,33 @@ __fun545:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-284
+  addi sp,sp,-200
   add t2,a0,zero
-  sw t2,-288(fp)
+  sw t2,-204(fp)
   add t2,a1,zero
-  sw t2,-284(fp)
+  sw t2,-200(fp)
   add t2,s1,zero
-  sw t2,-280(fp)
+  sw t2,-196(fp)
   add t2,s2,zero
-  sw t2,-276(fp)
+  sw t2,-192(fp)
   add t2,s3,zero
-  sw t2,-272(fp)
+  sw t2,-188(fp)
   add t2,s4,zero
-  sw t2,-268(fp)
+  sw t2,-184(fp)
   add t2,s5,zero
-  sw t2,-264(fp)
+  sw t2,-180(fp)
   add t2,s6,zero
-  sw t2,-260(fp)
+  sw t2,-176(fp)
   add t2,s7,zero
-  sw t2,-256(fp)
+  sw t2,-172(fp)
   add t2,s8,zero
-  sw t2,-252(fp)
+  sw t2,-168(fp)
   add t2,s9,zero
-  sw t2,-248(fp)
+  sw t2,-164(fp)
   add t2,s10,zero
-  sw t2,-244(fp)
+  sw t2,-160(fp)
   add t2,s11,zero
-  sw t2,-240(fp)
+  sw t2,-156(fp)
 fun545__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -3146,7 +3138,7 @@ fun545__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-284(fp)
+  lw t0,-200(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -3159,7 +3151,7 @@ fun545__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-288(fp)
+  lw t0,-204(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -3174,14 +3166,14 @@ fun545__entry:
   sw s2,0(s1)
   add s1,s2,zero
   add t2,s3,zero
-  sw t2,-236(fp)
-  lw t0,-236(fp)
+  sw t2,-152(fp)
+  lw t0,-152(fp)
   add s1,t0,zero
   lw t0,__lookup
   add s3,t0,zero
   addi t0,zero,0
   add s2,t0,zero
-  lw t0,-236(fp)
+  lw t0,-152(fp)
   add s1,t0,zero
   add a0,s2,zero
   add a1,s1,zero
@@ -3200,105 +3192,16 @@ label15:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-232(fp)
-  lw t0,-232(fp)
-  add t2,t0,zero
-  sw t2,-228(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-224(fp)
-  lw t0,-224(fp)
-  add t2,t0,zero
-  sw t2,-220(fp)
-  lw t0,-228(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-216(fp)
-  lw t0,-220(fp)
-  sw t0,0(t2)
-  sw t2,-216(fp)
-  lw t0,-220(fp)
-  add t2,t0,zero
-  sw t2,-212(fp)
-  lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-208(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-204(fp)
-  lw t0,-236(fp)
-  add t2,t0,zero
-  sw t2,-200(fp)
-  lw t0,-204(fp)
-  add a0,t0,zero
-  lw t0,-200(fp)
-  add a1,t0,zero
-  lw t0,-208(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-196(fp)
-  lw t0,-196(fp)
-  add t2,t0,zero
-  sw t2,-192(fp)
-  addi t0,zero,500
-  add t2,t0,zero
-  sw t2,-188(fp)
-  lw t0,-192(fp)
-  lw t1,-188(fp)
-  sub t2,t0,t1
-  sw t2,-184(fp)
-  lw t0,-184(fp)
-  add t2,t0,zero
-  sw t2,-180(fp)
-  lw t0,-228(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-176(fp)
-  lw t0,-180(fp)
-  sw t0,0(t2)
-  sw t2,-176(fp)
-  lw t0,-180(fp)
-  add t2,t0,zero
-  sw t2,-172(fp)
-  lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-168(fp)
-  addi t0,zero,5
-  add t2,t0,zero
-  sw t2,-164(fp)
-  lw t0,-236(fp)
-  add t2,t0,zero
-  sw t2,-160(fp)
-  lw t0,-164(fp)
-  add a0,t0,zero
-  lw t0,-160(fp)
-  add a1,t0,zero
-  lw t0,-168(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-156(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
-  sw t2,-152(fp)
-  lw t0,-152(fp)
-  add t2,t0,zero
   sw t2,-148(fp)
   lw t0,-148(fp)
-  addi t2,t0,0
+  add s6,t0,zero
+  addi t0,zero,0
+  add t2,t0,zero
+  sw t2,-144(fp)
+  lw t0,-144(fp)
+  add t2,t0,zero
+  sw t2,-140(fp)
+  addi t2,s6,0
   addi t0,zero,0
   addi t1,zero,8
   mul t0,t0,t1
@@ -3307,71 +3210,124 @@ label15:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-144(fp)
-  lw t0,-144(fp)
-  lw t2,0(t0)
-  sw t2,-140(fp)
+  sw t2,-136(fp)
+  lw t0,-140(fp)
+  sw t0,0(t2)
+  sw t2,-136(fp)
   lw t0,-140(fp)
   add t2,t0,zero
-  sw t2,-136(fp)
-  lw t0,-228(fp)
-  add t2,t0,zero
   sw t2,-132(fp)
-  lw t0,-152(fp)
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-128(fp)
-  lw t0,-128(fp)
-  addi t2,t0,0
   addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
+  add t2,t0,zero
   sw t2,-124(fp)
-  lw t0,-124(fp)
-  lw t2,0(t0)
+  lw t0,-152(fp)
+  add t2,t0,zero
   sw t2,-120(fp)
-  lw t0,-132(fp)
+  lw t0,-124(fp)
   add a0,t0,zero
   lw t0,-120(fp)
   add a1,t0,zero
-  lw t0,-136(fp)
+  lw t0,-128(fp)
   jalr ra,t0,0
   addi t2,a0,0
   sw t2,-116(fp)
   lw t0,-116(fp)
-  add s2,t0,zero
-  add s2,s2,zero
-  addi t0,zero,0
   add t2,t0,zero
   sw t2,-112(fp)
-  addi t0,zero,0
+  addi t0,zero,500
   add t2,t0,zero
   sw t2,-108(fp)
-  addi t0,zero,0
-  add t2,t0,zero
+  lw t0,-112(fp)
+  lw t1,-108(fp)
+  sub t2,t0,t1
   sw t2,-104(fp)
-  addi t0,zero,0
+  lw t0,-104(fp)
   add t2,t0,zero
   sw t2,-100(fp)
+  addi t2,s6,0
   addi t0,zero,0
-  add t2,t0,zero
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
   sw t2,-96(fp)
-  addi t0,zero,0
+  lw t0,-100(fp)
+  sw t0,0(t2)
+  sw t2,-96(fp)
+  lw t0,-100(fp)
   add t2,t0,zero
   sw t2,-92(fp)
-  addi t0,zero,0
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-88(fp)
-  addi t0,zero,0
+  addi t0,zero,5
   add t2,t0,zero
   sw t2,-84(fp)
-  addi t0,zero,0
+  lw t0,-152(fp)
   add t2,t0,zero
   sw t2,-80(fp)
+  lw t0,-84(fp)
+  add a0,t0,zero
+  lw t0,-80(fp)
+  add a1,t0,zero
+  lw t0,-88(fp)
+  jalr ra,t0,0
+  addi s11,a0,0
+  add s5,s11,zero
+  add s10,s5,zero
+  addi s9,s10,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add s9,s9,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add s9,s9,t1
+  lw s8,0(s9)
+  add s8,s8,zero
+  add s6,s6,zero
+  add s5,s5,zero
+  addi s4,s5,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add s4,s4,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add s4,s4,t1
+  lw s3,0(s4)
+  add a0,s6,zero
+  add a1,s3,zero
+  jalr ra,s8,0
+  addi s2,a0,0
+  add s2,s2,zero
+  add s7,s2,zero
+  addi t0,zero,0
+  add a0,t0,zero
+  addi t0,zero,0
+  add a0,t0,zero
+  addi t0,zero,0
+  add a0,t0,zero
+  addi t0,zero,0
+  add a0,t0,zero
+  addi t0,zero,0
+  add a0,t0,zero
+  addi t0,zero,0
+  add a0,t0,zero
+  addi t0,zero,0
+  add a0,t0,zero
+  addi t0,zero,0
+  add a0,t0,zero
+  addi t0,zero,0
+  add a0,t0,zero
   addi t0,zero,0
   add s1,t0,zero
   addi t0,zero,0
@@ -3410,74 +3366,62 @@ label15:
   add s1,t0,zero
   addi t0,zero,0
   add s1,t0,zero
-  add s1,s2,zero
+  add s1,s7,zero
+  add s1,s4,zero
+  add s1,s5,zero
+  add s1,s9,zero
+  add s1,s10,zero
+  add s1,s8,zero
+  add s1,s3,zero
+  add s1,s6,zero
+  add s1,s8,zero
+  lw t0,-80(fp)
+  add s1,t0,zero
+  lw t0,-84(fp)
+  add s1,t0,zero
+  lw t0,-88(fp)
+  add s1,t0,zero
+  add s1,s11,zero
+  lw t0,-120(fp)
+  add s1,t0,zero
   lw t0,-124(fp)
   add s1,t0,zero
   lw t0,-128(fp)
   add s1,t0,zero
+  lw t0,-116(fp)
+  add s1,t0,zero
+  lw t0,-108(fp)
+  add s1,t0,zero
+  lw t0,-112(fp)
+  add s1,t0,zero
+  lw t0,-104(fp)
+  add s1,t0,zero
+  lw t0,-96(fp)
+  add s1,t0,zero
+  lw t0,-100(fp)
+  add s1,t0,zero
+  lw t0,-92(fp)
+  add s1,t0,zero
   lw t0,-144(fp)
-  add s1,t0,zero
-  lw t0,-148(fp)
-  add s1,t0,zero
-  lw t0,-140(fp)
-  add s1,t0,zero
-  lw t0,-120(fp)
-  add s1,t0,zero
-  lw t0,-132(fp)
   add s1,t0,zero
   lw t0,-136(fp)
   add s1,t0,zero
-  lw t0,-160(fp)
+  lw t0,-140(fp)
   add s1,t0,zero
-  lw t0,-164(fp)
+  lw t0,-132(fp)
   add s1,t0,zero
-  lw t0,-168(fp)
-  add s1,t0,zero
-  lw t0,-156(fp)
-  add s1,t0,zero
-  lw t0,-200(fp)
-  add s1,t0,zero
-  lw t0,-204(fp)
-  add s1,t0,zero
-  lw t0,-208(fp)
-  add s1,t0,zero
-  lw t0,-196(fp)
-  add s1,t0,zero
-  lw t0,-188(fp)
-  add s1,t0,zero
-  lw t0,-192(fp)
-  add s1,t0,zero
-  lw t0,-184(fp)
-  add s1,t0,zero
-  lw t0,-176(fp)
-  add s1,t0,zero
-  lw t0,-180(fp)
-  add s1,t0,zero
-  lw t0,-172(fp)
-  add s1,t0,zero
-  lw t0,-224(fp)
-  add s1,t0,zero
-  lw t0,-216(fp)
-  add s1,t0,zero
-  lw t0,-220(fp)
-  add s1,t0,zero
-  lw t0,-212(fp)
-  add s1,t0,zero
-  lw t0,-232(fp)
+  lw t0,-148(fp)
   add s1,t0,zero
   add s1,s2,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s3,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s3,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
-  lw t0,-116(fp)
-  add s2,t0,zero
-  lw t0,-152(fp)
-  add s2,t0,zero
-  lw t0,-228(fp)
-  add s2,t0,zero
+  add s3,t0,zero
+  add s2,s2,zero
+  add s2,s5,zero
+  add s2,s6,zero
   jal zero,label17
 label16:
   addi t0,zero,8
@@ -3518,7 +3462,7 @@ label16:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-48(fp)
-  lw t0,-236(fp)
+  lw t0,-152(fp)
   add s9,t0,zero
   lw t0,-48(fp)
   add a0,t0,zero
@@ -3547,7 +3491,7 @@ label16:
   add s3,t0,zero
   addi t0,zero,6
   add s2,t0,zero
-  lw t0,-236(fp)
+  lw t0,-152(fp)
   add s1,t0,zero
   add a0,s2,zero
   add a1,s1,zero
@@ -3606,32 +3550,23 @@ label16:
   addi s11,a0,0
   add s10,s11,zero
   add s10,s10,zero
-  add t2,s10,zero
-  sw t2,-112(fp)
+  add a0,s10,zero
   lw t0,-12(fp)
-  add t2,t0,zero
-  sw t2,-108(fp)
+  add a0,t0,zero
   lw t0,-16(fp)
-  add t2,t0,zero
-  sw t2,-104(fp)
+  add a0,t0,zero
   lw t0,-32(fp)
-  add t2,t0,zero
-  sw t2,-100(fp)
+  add a0,t0,zero
   lw t0,-36(fp)
-  add t2,t0,zero
-  sw t2,-96(fp)
+  add a0,t0,zero
   lw t0,-28(fp)
-  add t2,t0,zero
-  sw t2,-92(fp)
+  add a0,t0,zero
   lw t0,-8(fp)
-  add t2,t0,zero
-  sw t2,-88(fp)
+  add a0,t0,zero
   lw t0,-20(fp)
-  add t2,t0,zero
-  sw t2,-84(fp)
+  add a0,t0,zero
   lw t0,-24(fp)
-  add t2,t0,zero
-  sw t2,-80(fp)
+  add a0,t0,zero
   add s1,s1,zero
   add s1,s2,zero
   add s1,s3,zero
@@ -3716,11 +3651,11 @@ label16:
   addi t0,zero,0
   add s1,t0,zero
   add s1,s10,zero
-  add s2,s11,zero
+  add s3,s11,zero
   lw t0,-40(fp)
-  add s2,t0,zero
+  add s3,t0,zero
   lw t0,-72(fp)
-  add s2,t0,zero
+  add s3,t0,zero
   addi t0,zero,0
   add s2,t0,zero
   addi t0,zero,0
@@ -3733,7 +3668,7 @@ label17:
   add s4,t0,zero
   addi t0,zero,7
   add s3,t0,zero
-  lw t0,-236(fp)
+  lw t0,-152(fp)
   add s2,t0,zero
   add a0,s3,zero
   add a1,s2,zero
@@ -3772,7 +3707,7 @@ label17:
   add s4,t0,zero
   addi t0,zero,9
   add s2,t0,zero
-  lw t0,-236(fp)
+  lw t0,-152(fp)
   add s1,t0,zero
   add a0,s2,zero
   add a1,s1,zero
@@ -3795,7 +3730,7 @@ label17:
   add s6,t0,zero
   addi t0,zero,0
   add s5,t0,zero
-  lw t0,-236(fp)
+  lw t0,-152(fp)
   add s4,t0,zero
   add a0,s5,zero
   add a1,s4,zero
@@ -3853,27 +3788,27 @@ label17:
   add a0,s1,zero
   jal zero,fun545__exit
 fun545__exit:
-  lw t0,-280(fp)
+  lw t0,-196(fp)
   add s1,t0,zero
-  lw t0,-276(fp)
+  lw t0,-192(fp)
   add s2,t0,zero
-  lw t0,-272(fp)
+  lw t0,-188(fp)
   add s3,t0,zero
-  lw t0,-268(fp)
+  lw t0,-184(fp)
   add s4,t0,zero
-  lw t0,-264(fp)
+  lw t0,-180(fp)
   add s5,t0,zero
-  lw t0,-260(fp)
+  lw t0,-176(fp)
   add s6,t0,zero
-  lw t0,-256(fp)
+  lw t0,-172(fp)
   add s7,t0,zero
-  lw t0,-252(fp)
+  lw t0,-168(fp)
   add s8,t0,zero
-  lw t0,-248(fp)
+  lw t0,-164(fp)
   add s9,t0,zero
-  lw t0,-244(fp)
+  lw t0,-160(fp)
   add s10,t0,zero
-  lw t0,-240(fp)
+  lw t0,-156(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -3978,23 +3913,22 @@ __fun515:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-32
+  addi sp,sp,-28
   add t2,a0,zero
-  sw t2,-36(fp)
-  add t2,a1,zero
   sw t2,-32(fp)
-  add t2,s1,zero
+  add t2,a1,zero
   sw t2,-28(fp)
-  add t2,s2,zero
+  add t2,s1,zero
   sw t2,-24(fp)
-  add t2,s3,zero
+  add t2,s2,zero
   sw t2,-20(fp)
-  add t2,s4,zero
+  add t2,s3,zero
   sw t2,-16(fp)
-  add t2,s5,zero
+  add t2,s4,zero
   sw t2,-12(fp)
-  add t2,s6,zero
+  add t2,s5,zero
   sw t2,-8(fp)
+  add s6,s6,zero
   add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
@@ -4007,7 +3941,7 @@ fun515__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-32(fp)
+  lw t0,-28(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -4020,7 +3954,7 @@ fun515__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-36(fp)
+  lw t0,-32(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -4120,13 +4054,13 @@ fun515__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,5
   add s4,t0,zero
   add s1,s5,zero
   add a0,s4,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
   add s4,s1,zero
   add s1,s3,zero
@@ -4245,9 +4179,9 @@ fun515__entry:
   lw t0,__lookup
   add a2,t0,zero
   addi t0,zero,0
-  add s6,t0,zero
+  add a0,t0,zero
   add s1,s5,zero
-  add a0,s6,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,a2,0
   addi s1,a0,0
@@ -4300,18 +4234,17 @@ fun515__entry:
   add a0,s1,zero
   jal zero,fun515__exit
 fun515__exit:
-  lw t0,-28(fp)
-  add s1,t0,zero
   lw t0,-24(fp)
-  add s2,t0,zero
+  add s1,t0,zero
   lw t0,-20(fp)
-  add s3,t0,zero
+  add s2,t0,zero
   lw t0,-16(fp)
-  add s4,t0,zero
+  add s3,t0,zero
   lw t0,-12(fp)
-  add s5,t0,zero
+  add s4,t0,zero
   lw t0,-8(fp)
-  add s6,t0,zero
+  add s5,t0,zero
+  add s6,s6,zero
   add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
@@ -5053,27 +4986,25 @@ __fun526:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-40
+  addi sp,sp,-32
   add t2,a0,zero
-  sw t2,-44(fp)
-  add t2,a1,zero
-  sw t2,-40(fp)
-  add t2,s1,zero
   sw t2,-36(fp)
-  add t2,s2,zero
+  add t2,a1,zero
   sw t2,-32(fp)
-  add t2,s3,zero
+  add t2,s1,zero
   sw t2,-28(fp)
-  add t2,s4,zero
+  add t2,s2,zero
   sw t2,-24(fp)
-  add t2,s5,zero
+  add t2,s3,zero
   sw t2,-20(fp)
-  add t2,s6,zero
+  add t2,s4,zero
   sw t2,-16(fp)
-  add t2,s7,zero
+  add t2,s5,zero
   sw t2,-12(fp)
-  add t2,s8,zero
+  add t2,s6,zero
   sw t2,-8(fp)
+  add s7,s7,zero
+  add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
   add s11,s11,zero
@@ -5084,7 +5015,7 @@ fun526__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-40(fp)
+  lw t0,-32(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -5097,7 +5028,7 @@ fun526__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-44(fp)
+  lw t0,-36(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -5649,15 +5580,15 @@ fun526__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s8,t0,zero
+  add a2,t0,zero
   addi t0,zero,3
-  add s7,t0,zero
+  add a0,t0,zero
   add s1,s6,zero
-  add a0,s7,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s8,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s7,s1,zero
+  add a0,s1,zero
   add s1,s3,zero
   addi s1,s1,0
   addi t0,zero,0
@@ -5669,7 +5600,7 @@ fun526__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add a0,s7,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,s2,0
   addi s2,a0,0
@@ -5693,7 +5624,7 @@ fun526__entry:
   add s3,s6,zero
   lw t0,fun515
   add s3,t0,zero
-  add s7,s3,zero
+  add a0,s3,zero
   addi s3,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -5703,10 +5634,10 @@ fun526__entry:
   addi t0,zero,4
   mul t1,t1,t0
   add s3,s3,t1
-  sw s7,0(s3)
-  add s3,s7,zero
-  add s7,s2,zero
-  add s2,s7,zero
+  sw a0,0(s3)
+  add s3,a0,zero
+  add a0,s2,zero
+  add s2,a0,zero
   addi s2,s2,0
   addi t0,zero,0
   addi t1,zero,8
@@ -5719,7 +5650,7 @@ fun526__entry:
   lw s2,0(s2)
   add s3,s2,zero
   add s2,s1,zero
-  add s1,s7,zero
+  add s1,a0,zero
   addi s1,s1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -5835,22 +5766,20 @@ fun526__entry:
   add a0,s1,zero
   jal zero,fun526__exit
 fun526__exit:
-  lw t0,-36(fp)
-  add s1,t0,zero
-  lw t0,-32(fp)
-  add s2,t0,zero
   lw t0,-28(fp)
-  add s3,t0,zero
+  add s1,t0,zero
   lw t0,-24(fp)
-  add s4,t0,zero
+  add s2,t0,zero
   lw t0,-20(fp)
-  add s5,t0,zero
+  add s3,t0,zero
   lw t0,-16(fp)
-  add s6,t0,zero
+  add s4,t0,zero
   lw t0,-12(fp)
-  add s7,t0,zero
+  add s5,t0,zero
   lw t0,-8(fp)
-  add s8,t0,zero
+  add s6,t0,zero
+  add s7,s7,zero
+  add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
   add s11,s11,zero
@@ -6713,25 +6642,22 @@ __fun421:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-36
+  addi sp,sp,-24
   add t2,a0,zero
-  sw t2,-40(fp)
-  add t2,a1,zero
-  sw t2,-36(fp)
-  add t2,s1,zero
-  sw t2,-32(fp)
-  add t2,s2,zero
   sw t2,-28(fp)
-  add t2,s3,zero
+  add t2,a1,zero
   sw t2,-24(fp)
-  add t2,s4,zero
+  add t2,s1,zero
   sw t2,-20(fp)
-  add t2,s5,zero
+  add t2,s2,zero
   sw t2,-16(fp)
-  add t2,s6,zero
+  add t2,s3,zero
   sw t2,-12(fp)
-  add t2,s7,zero
+  add t2,s4,zero
   sw t2,-8(fp)
+  add s5,s5,zero
+  add s6,s6,zero
+  add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
@@ -6743,7 +6669,7 @@ fun421__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-36(fp)
+  lw t0,-24(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -6756,7 +6682,7 @@ fun421__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-40(fp)
+  lw t0,-28(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -6795,15 +6721,15 @@ fun421__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,0
-  add s5,t0,zero
+  add a0,t0,zero
   add s1,s4,zero
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s5,s1,zero
+  add a0,s1,zero
   add s1,s3,zero
   addi s1,s1,0
   addi t0,zero,0
@@ -6815,7 +6741,7 @@ fun421__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,s2,0
   addi s1,a0,0
@@ -7025,15 +6951,15 @@ fun421__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,22
-  add s5,t0,zero
+  add a0,t0,zero
   add s1,s4,zero
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s5,s1,zero
+  add a0,s1,zero
   add s1,s3,zero
   addi s1,s1,0
   addi t0,zero,0
@@ -7045,7 +6971,7 @@ fun421__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,s2,0
   addi s1,a0,0
@@ -7063,15 +6989,15 @@ fun421__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,0
-  add s5,t0,zero
+  add a0,t0,zero
   add s1,s4,zero
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s5,s1,zero
+  add a0,s1,zero
   add s1,s3,zero
   addi s1,s1,0
   addi t0,zero,0
@@ -7083,7 +7009,7 @@ fun421__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,s2,0
   addi s1,a0,0
@@ -7101,15 +7027,15 @@ fun421__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,1
-  add s5,t0,zero
+  add a0,t0,zero
   add s1,s4,zero
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s5,s1,zero
+  add a0,s1,zero
   add s1,s3,zero
   addi s1,s1,0
   addi t0,zero,0
@@ -7121,7 +7047,7 @@ fun421__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,s2,0
   addi s1,a0,0
@@ -7145,13 +7071,13 @@ fun421__entry:
   sw s2,0(s1)
   add s1,s2,zero
   lw t0,__lookup
-  add s5,t0,zero
+  add a2,t0,zero
   addi t0,zero,23
   add s2,t0,zero
   add s1,s4,zero
   add a0,s2,zero
   add a1,s1,zero
-  jalr ra,s5,0
+  jalr ra,a2,0
   addi s1,a0,0
   add s1,s1,zero
   add s2,s1,zero
@@ -7173,16 +7099,16 @@ fun421__entry:
   addi s1,a0,0
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,2
-  add s5,t0,zero
+  add a0,t0,zero
   add s1,s4,zero
-  add a0,s5,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
   add s1,s1,zero
-  add s5,s1,zero
+  add a0,s1,zero
   addi s1,s2,0
   addi t0,zero,0
   addi t1,zero,8
@@ -7192,8 +7118,8 @@ fun421__entry:
   addi t0,zero,4
   mul t1,t1,t0
   add s1,s1,t1
-  sw s5,0(s1)
-  add s1,s5,zero
+  sw a0,0(s1)
+  add s1,a0,zero
   add s1,s3,zero
   add s3,s1,zero
   addi s1,s2,0
@@ -7261,20 +7187,17 @@ fun421__entry:
   add a0,s1,zero
   jal zero,fun421__exit
 fun421__exit:
-  lw t0,-32(fp)
-  add s1,t0,zero
-  lw t0,-28(fp)
-  add s2,t0,zero
-  lw t0,-24(fp)
-  add s3,t0,zero
   lw t0,-20(fp)
-  add s4,t0,zero
+  add s1,t0,zero
   lw t0,-16(fp)
-  add s5,t0,zero
+  add s2,t0,zero
   lw t0,-12(fp)
-  add s6,t0,zero
+  add s3,t0,zero
   lw t0,-8(fp)
-  add s7,t0,zero
+  add s4,t0,zero
+  add s5,s5,zero
+  add s6,s6,zero
+  add s7,s7,zero
   add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
@@ -9283,27 +9206,24 @@ __fun328:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-40
+  addi sp,sp,-28
   add t2,a0,zero
-  sw t2,-44(fp)
-  add t2,a1,zero
-  sw t2,-40(fp)
-  add t2,s1,zero
-  sw t2,-36(fp)
-  add t2,s2,zero
   sw t2,-32(fp)
-  add t2,s3,zero
+  add t2,a1,zero
   sw t2,-28(fp)
-  add t2,s4,zero
+  add t2,s1,zero
   sw t2,-24(fp)
-  add t2,s5,zero
+  add t2,s2,zero
   sw t2,-20(fp)
-  add t2,s6,zero
+  add t2,s3,zero
   sw t2,-16(fp)
-  add t2,s7,zero
+  add t2,s4,zero
   sw t2,-12(fp)
-  add t2,s8,zero
+  add t2,s5,zero
   sw t2,-8(fp)
+  add s6,s6,zero
+  add s7,s7,zero
+  add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
   add s11,s11,zero
@@ -9314,7 +9234,7 @@ fun328__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-40(fp)
+  lw t0,-28(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -9327,7 +9247,7 @@ fun328__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-44(fp)
+  lw t0,-32(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -9366,13 +9286,13 @@ fun328__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,0
   add s5,t0,zero
   add s1,s4,zero
   add a0,s5,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
   add s5,s1,zero
   add s1,s3,zero
@@ -9864,13 +9784,13 @@ fun328__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,5
   add s4,t0,zero
   add s1,s5,zero
   add a0,s4,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
   add s4,s1,zero
   add s1,s3,zero
@@ -9902,13 +9822,13 @@ fun328__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,1
   add s4,t0,zero
   add s1,s5,zero
   add a0,s4,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
   add s4,s1,zero
   add s1,s3,zero
@@ -9933,13 +9853,13 @@ fun328__entry:
   addi s1,a0,0
   add s4,s1,zero
   lw t0,__lookup
-  add s6,t0,zero
+  add a2,t0,zero
   addi t0,zero,0
   add s3,t0,zero
   add s1,s5,zero
   add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s6,0
+  jalr ra,a2,0
   addi s1,a0,0
   add s1,s1,zero
   add s3,s1,zero
@@ -9990,15 +9910,15 @@ fun328__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s7,t0,zero
+  add a2,t0,zero
   addi t0,zero,2
-  add s6,t0,zero
+  add a0,t0,zero
   add s1,s5,zero
-  add a0,s6,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s7,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s6,s1,zero
+  add a0,s1,zero
   add s1,s3,zero
   addi s1,s1,0
   addi t0,zero,0
@@ -10010,7 +9930,7 @@ fun328__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add a0,s6,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,s2,0
   addi s1,a0,0
@@ -10028,15 +9948,15 @@ fun328__entry:
   lw s1,0(s1)
   add s2,s1,zero
   lw t0,__lookup
-  add s7,t0,zero
+  add a2,t0,zero
   addi t0,zero,6
-  add s6,t0,zero
+  add a0,t0,zero
   add s1,s5,zero
-  add a0,s6,zero
+  add a0,a0,zero
   add a1,s1,zero
-  jalr ra,s7,0
+  jalr ra,a2,0
   addi s1,a0,0
-  add s6,s1,zero
+  add a0,s1,zero
   add s1,s3,zero
   addi s1,s1,0
   addi t0,zero,0
@@ -10048,7 +9968,7 @@ fun328__entry:
   mul t1,t1,t0
   add s1,s1,t1
   lw s1,0(s1)
-  add a0,s6,zero
+  add a0,a0,zero
   add a1,s1,zero
   jalr ra,s2,0
   addi s2,a0,0
@@ -10188,22 +10108,19 @@ fun328__entry:
   add a0,s1,zero
   jal zero,fun328__exit
 fun328__exit:
-  lw t0,-36(fp)
-  add s1,t0,zero
-  lw t0,-32(fp)
-  add s2,t0,zero
-  lw t0,-28(fp)
-  add s3,t0,zero
   lw t0,-24(fp)
-  add s4,t0,zero
+  add s1,t0,zero
   lw t0,-20(fp)
-  add s5,t0,zero
+  add s2,t0,zero
   lw t0,-16(fp)
-  add s6,t0,zero
+  add s3,t0,zero
   lw t0,-12(fp)
-  add s7,t0,zero
+  add s4,t0,zero
   lw t0,-8(fp)
-  add s8,t0,zero
+  add s5,t0,zero
+  add s6,s6,zero
+  add s7,s7,zero
+  add s8,s8,zero
   add s9,s9,zero
   add s10,s10,zero
   add s11,s11,zero
@@ -10555,33 +10472,33 @@ __fun283:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-648
+  addi sp,sp,-332
   add t2,a0,zero
-  sw t2,-652(fp)
+  sw t2,-336(fp)
   add t2,a1,zero
-  sw t2,-648(fp)
+  sw t2,-332(fp)
   add t2,s1,zero
-  sw t2,-644(fp)
+  sw t2,-328(fp)
   add t2,s2,zero
-  sw t2,-640(fp)
+  sw t2,-324(fp)
   add t2,s3,zero
-  sw t2,-636(fp)
+  sw t2,-320(fp)
   add t2,s4,zero
-  sw t2,-632(fp)
+  sw t2,-316(fp)
   add t2,s5,zero
-  sw t2,-628(fp)
+  sw t2,-312(fp)
   add t2,s6,zero
-  sw t2,-624(fp)
+  sw t2,-308(fp)
   add t2,s7,zero
-  sw t2,-620(fp)
+  sw t2,-304(fp)
   add t2,s8,zero
-  sw t2,-616(fp)
+  sw t2,-300(fp)
   add t2,s9,zero
-  sw t2,-612(fp)
+  sw t2,-296(fp)
   add t2,s10,zero
-  sw t2,-608(fp)
+  sw t2,-292(fp)
   add t2,s11,zero
-  sw t2,-604(fp)
+  sw t2,-288(fp)
 fun283__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -10589,7 +10506,7 @@ fun283__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-648(fp)
+  lw t0,-332(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -10602,7 +10519,7 @@ fun283__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-652(fp)
+  lw t0,-336(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -10616,266 +10533,88 @@ fun283__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-600(fp)
-  lw t0,-600(fp)
-  add s1,t0,zero
+  add s5,s3,zero
+  add s1,s5,zero
   lw t0,__lookup
   add s3,t0,zero
   addi t0,zero,0
   add s2,t0,zero
-  lw t0,-600(fp)
-  add s1,t0,zero
+  add s1,s5,zero
   add a0,s2,zero
   add a1,s1,zero
   jalr ra,s3,0
   addi s1,a0,0
-  add t2,s1,zero
-  sw t2,-596(fp)
+  add s2,s1,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s4,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
-  lw t0,-600(fp)
-  add s1,t0,zero
-  add a0,s2,zero
+  add s3,t0,zero
+  add s1,s5,zero
+  add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s4,0
   addi s1,a0,0
   add s1,s1,zero
-  add s2,s1,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
-  sub s1,s2,s1
+  sub s1,s3,s1
   sltiu s1,s1,1
   beq s1,zero,label55
   jal zero,label54
 label54:
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-592(fp)
-  lw t0,-592(fp)
-  add t2,t0,zero
-  sw t2,-588(fp)
-  lw t0,-588(fp)
-  add t2,t0,zero
-  sw t2,-584(fp)
+  add s2,t0,zero
+  add s1,s2,zero
+  add s1,s1,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-580(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-576(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-572(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-568(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-564(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-560(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-556(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-552(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-548(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-544(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-540(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-536(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-532(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-528(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-524(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-520(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-516(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-512(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-508(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-504(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-500(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-496(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-492(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-488(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-484(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-480(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-476(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-472(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-468(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-464(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-460(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-456(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-452(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-448(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-444(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-440(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-436(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-432(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-428(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-424(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-420(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-416(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-412(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-408(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-404(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-400(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-396(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-392(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-388(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-384(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-380(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-376(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-372(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-368(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-364(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-360(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-356(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-352(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-348(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-344(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-340(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-336(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-332(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-328(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-324(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-320(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-316(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-312(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-308(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-304(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-300(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-296(fp)
+  add s4,t0,zero
   addi t0,zero,0
   add s3,t0,zero
   addi t0,zero,0
@@ -10902,14 +10641,106 @@ label54:
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
-  lw t0,-592(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-584(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-600(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-588(fp)
+  addi t0,zero,0
   add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  add s3,s2,zero
+  add s3,s1,zero
+  add s3,s5,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
   addi t0,zero,0
@@ -10933,14 +10764,13 @@ label55:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-292(fp)
-  lw t0,-292(fp)
-  add t2,t0,zero
-  sw t2,-288(fp)
-  lw t0,-600(fp)
-  add t2,t0,zero
   sw t2,-284(fp)
-  lw t0,-288(fp)
+  lw t0,-284(fp)
+  add t2,t0,zero
+  sw t2,-280(fp)
+  add t2,s5,zero
+  sw t2,-276(fp)
+  lw t0,-280(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -10950,106 +10780,36 @@ label55:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-280(fp)
-  lw t0,-284(fp)
-  sw t0,0(t2)
-  sw t2,-280(fp)
-  lw t0,-284(fp)
-  add t2,t0,zero
-  sw t2,-276(fp)
-  lw t0,-596(fp)
-  add t2,t0,zero
   sw t2,-272(fp)
-  lw t0,-272(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
+  lw t0,-276(fp)
+  sw t0,0(t2)
+  sw t2,-272(fp)
+  lw t0,-276(fp)
+  add t2,t0,zero
   sw t2,-268(fp)
-  lw t0,-268(fp)
-  lw t2,0(t0)
+  add t2,s2,zero
   sw t2,-264(fp)
   lw t0,-264(fp)
-  add t2,t0,zero
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
   sw t2,-260(fp)
   lw t0,-260(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-256(fp)
-  lw t0,-288(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-252(fp)
   lw t0,-256(fp)
-  sw t0,0(t2)
+  add t2,t0,zero
   sw t2,-252(fp)
-  lw t0,-256(fp)
+  lw t0,-252(fp)
   add t2,t0,zero
   sw t2,-248(fp)
-  lw t0,-288(fp)
-  add s1,t0,zero
-  add t2,s1,zero
-  sw t2,-244(fp)
-  addi t0,zero,8
-  add a0,t0,zero
-  lw t0,malloc
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-240(fp)
-  lw t0,-240(fp)
-  add t2,t0,zero
-  sw t2,-236(fp)
-  add t2,s1,zero
-  sw t2,-232(fp)
-  lw t0,-236(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-228(fp)
-  lw t0,-232(fp)
-  sw t0,0(t2)
-  sw t2,-228(fp)
-  lw t0,-232(fp)
-  add t2,t0,zero
-  sw t2,-224(fp)
-  lw t0,-596(fp)
-  add t2,t0,zero
-  sw t2,-220(fp)
-  lw t0,-220(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-216(fp)
-  lw t0,-216(fp)
-  lw t2,0(t0)
-  sw t2,-212(fp)
-  lw t0,-212(fp)
-  add t2,t0,zero
-  sw t2,-208(fp)
-  lw t0,-236(fp)
+  lw t0,-280(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -11059,52 +10819,117 @@ label55:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-204(fp)
-  lw t0,-208(fp)
+  sw t2,-244(fp)
+  lw t0,-248(fp)
   sw t0,0(t2)
-  sw t2,-204(fp)
-  lw t0,-208(fp)
+  sw t2,-244(fp)
+  lw t0,-248(fp)
   add t2,t0,zero
-  sw t2,-200(fp)
-  lw t0,-236(fp)
-  add t2,t0,zero
-  sw t2,-196(fp)
-  lw t0,-196(fp)
-  add t2,t0,zero
-  sw t2,-192(fp)
+  sw t2,-240(fp)
+  lw t0,-280(fp)
+  add s1,t0,zero
+  add t2,s1,zero
+  sw t2,-236(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
+  sw t2,-232(fp)
+  lw t0,-232(fp)
+  add t2,t0,zero
+  sw t2,-228(fp)
+  add t2,s1,zero
+  sw t2,-224(fp)
+  lw t0,-228(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-220(fp)
+  lw t0,-224(fp)
+  sw t0,0(t2)
+  sw t2,-220(fp)
+  lw t0,-224(fp)
+  add t2,t0,zero
+  sw t2,-216(fp)
+  add t2,s2,zero
+  sw t2,-212(fp)
+  lw t0,-212(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-208(fp)
+  lw t0,-208(fp)
+  lw t2,0(t0)
+  sw t2,-204(fp)
+  lw t0,-204(fp)
+  add t2,t0,zero
+  sw t2,-200(fp)
+  lw t0,-228(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-196(fp)
+  lw t0,-200(fp)
+  sw t0,0(t2)
+  sw t2,-196(fp)
+  lw t0,-200(fp)
+  add t2,t0,zero
+  sw t2,-192(fp)
+  lw t0,-228(fp)
+  add s7,t0,zero
+  add t2,s7,zero
   sw t2,-188(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
-  sw t2,-184(fp)
-  lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-180(fp)
-  addi t0,zero,1
-  add t2,t0,zero
-  sw t2,-176(fp)
-  lw t0,-196(fp)
-  add t2,t0,zero
-  sw t2,-172(fp)
-  lw t0,-176(fp)
+  addi t0,zero,8
   add a0,t0,zero
-  lw t0,-172(fp)
-  add a1,t0,zero
-  lw t0,-180(fp)
+  lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-168(fp)
-  lw t0,-168(fp)
+  sw t2,-184(fp)
+  lw t0,-184(fp)
   add t2,t0,zero
+  sw t2,-180(fp)
+  lw t0,__lookup
+  add t2,t0,zero
+  sw t2,-176(fp)
+  addi t0,zero,1
+  add t2,t0,zero
+  sw t2,-172(fp)
+  add t2,s7,zero
+  sw t2,-168(fp)
+  lw t0,-172(fp)
+  add a0,t0,zero
+  lw t0,-168(fp)
+  add a1,t0,zero
+  lw t0,-176(fp)
+  jalr ra,t0,0
+  addi t2,a0,0
   sw t2,-164(fp)
   lw t0,-164(fp)
   add t2,t0,zero
   sw t2,-160(fp)
-  lw t0,-184(fp)
+  lw t0,-160(fp)
+  add t2,t0,zero
+  sw t2,-156(fp)
+  lw t0,-180(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -11114,37 +10939,36 @@ label55:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-156(fp)
-  lw t0,-160(fp)
-  sw t0,0(t2)
-  sw t2,-156(fp)
-  lw t0,-160(fp)
-  add t2,t0,zero
   sw t2,-152(fp)
-  lw t0,__lookup
+  lw t0,-156(fp)
+  sw t0,0(t2)
+  sw t2,-152(fp)
+  lw t0,-156(fp)
   add t2,t0,zero
   sw t2,-148(fp)
-  addi t0,zero,3
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-144(fp)
-  lw t0,-196(fp)
+  addi t0,zero,3
   add t2,t0,zero
   sw t2,-140(fp)
-  lw t0,-144(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-136(fp)
   lw t0,-140(fp)
+  add a0,t0,zero
+  lw t0,-136(fp)
   add a1,t0,zero
-  lw t0,-148(fp)
+  lw t0,-144(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-136(fp)
-  lw t0,-136(fp)
-  add t2,t0,zero
   sw t2,-132(fp)
   lw t0,-132(fp)
   add t2,t0,zero
   sw t2,-128(fp)
-  lw t0,-184(fp)
+  lw t0,-128(fp)
+  add t2,t0,zero
+  sw t2,-124(fp)
+  lw t0,-180(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -11154,37 +10978,36 @@ label55:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-124(fp)
-  lw t0,-128(fp)
-  sw t0,0(t2)
-  sw t2,-124(fp)
-  lw t0,-128(fp)
-  add t2,t0,zero
   sw t2,-120(fp)
-  lw t0,__lookup
+  lw t0,-124(fp)
+  sw t0,0(t2)
+  sw t2,-120(fp)
+  lw t0,-124(fp)
   add t2,t0,zero
   sw t2,-116(fp)
-  addi t0,zero,4
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-112(fp)
-  lw t0,-196(fp)
+  addi t0,zero,4
   add t2,t0,zero
   sw t2,-108(fp)
-  lw t0,-112(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-104(fp)
   lw t0,-108(fp)
+  add a0,t0,zero
+  lw t0,-104(fp)
   add a1,t0,zero
-  lw t0,-116(fp)
+  lw t0,-112(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-104(fp)
-  lw t0,-104(fp)
-  add t2,t0,zero
   sw t2,-100(fp)
   lw t0,-100(fp)
   add t2,t0,zero
   sw t2,-96(fp)
   lw t0,-96(fp)
+  add t2,t0,zero
+  sw t2,-92(fp)
+  lw t0,-92(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -11194,44 +11017,43 @@ label55:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-92(fp)
-  lw t0,-92(fp)
-  lw t2,0(t0)
   sw t2,-88(fp)
   lw t0,-88(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-84(fp)
-  lw t0,__lookup
+  lw t0,-84(fp)
   add t2,t0,zero
   sw t2,-80(fp)
-  addi t0,zero,3
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-76(fp)
-  lw t0,-196(fp)
+  addi t0,zero,3
   add t2,t0,zero
   sw t2,-72(fp)
-  lw t0,-76(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-68(fp)
   lw t0,-72(fp)
+  add a0,t0,zero
+  lw t0,-68(fp)
   add a1,t0,zero
-  lw t0,-80(fp)
+  lw t0,-76(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-68(fp)
-  lw t0,-68(fp)
-  add t2,t0,zero
   sw t2,-64(fp)
-  addi t0,zero,1
+  lw t0,-64(fp)
   add t2,t0,zero
   sw t2,-60(fp)
-  lw t0,-64(fp)
-  lw t1,-60(fp)
-  add t2,t0,t1
-  sw t2,-56(fp)
-  lw t0,-100(fp)
+  addi t0,zero,1
   add t2,t0,zero
+  sw t2,-56(fp)
+  lw t0,-60(fp)
+  lw t1,-56(fp)
+  add t2,t0,t1
   sw t2,-52(fp)
-  lw t0,-52(fp)
+  lw t0,-96(fp)
+  add t2,t0,zero
+  sw t2,-48(fp)
+  lw t0,-48(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -11241,23 +11063,21 @@ label55:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-48(fp)
-  lw t0,-48(fp)
-  lw t2,0(t0)
   sw t2,-44(fp)
-  lw t0,-56(fp)
-  add a0,t0,zero
   lw t0,-44(fp)
+  lw t2,0(t0)
+  sw t2,-40(fp)
+  lw t0,-52(fp)
+  add a0,t0,zero
+  lw t0,-40(fp)
   add a1,t0,zero
-  lw t0,-84(fp)
+  lw t0,-80(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-40(fp)
-  lw t0,-40(fp)
-  add t2,t0,zero
   sw t2,-36(fp)
   lw t0,-36(fp)
-  add t2,t0,zero
+  add s5,t0,zero
+  add t2,s5,zero
   sw t2,-32(fp)
   lw t0,-32(fp)
   addi t2,t0,0
@@ -11282,8 +11102,7 @@ label55:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-12(fp)
-  lw t0,-196(fp)
-  add t2,t0,zero
+  add t2,s7,zero
   sw t2,-8(fp)
   lw t0,-12(fp)
   add a0,t0,zero
@@ -11293,8 +11112,7 @@ label55:
   jalr ra,t0,0
   addi s6,a0,0
   add s6,s6,zero
-  lw t0,-36(fp)
-  add s5,t0,zero
+  add s5,s5,zero
   addi s4,s5,0
   addi t0,zero,0
   addi t1,zero,8
@@ -11328,7 +11146,7 @@ label55:
   add a6,a6,t1
   sw s2,0(a6)
   add a5,s2,zero
-  lw t0,-184(fp)
+  lw t0,-180(fp)
   add a4,t0,zero
   add a2,a4,zero
   addi a3,s1,0
@@ -11344,8 +11162,7 @@ label55:
   add a2,a2,zero
   add a1,s1,zero
   add a1,a1,zero
-  lw t0,-196(fp)
-  add a0,t0,zero
+  add a0,s7,zero
   addi s11,a0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -11369,227 +11186,155 @@ label55:
   add s8,s8,t1
   lw s7,0(s8)
   add s7,s7,zero
-  add t2,s8,zero
-  sw t2,-580(fp)
-  add t2,s9,zero
-  sw t2,-576(fp)
-  add t2,s7,zero
-  sw t2,-572(fp)
-  add t2,s11,zero
-  sw t2,-568(fp)
-  add t2,a0,zero
-  sw t2,-564(fp)
-  add t2,s10,zero
-  sw t2,-560(fp)
-  add t2,a1,zero
-  sw t2,-556(fp)
-  add t2,a4,zero
-  sw t2,-552(fp)
-  add t2,a3,zero
-  sw t2,-548(fp)
-  add t2,a2,zero
-  sw t2,-544(fp)
-  add t2,a2,zero
-  sw t2,-540(fp)
-  add t2,a6,zero
-  sw t2,-536(fp)
-  add t2,s2,zero
-  sw t2,-532(fp)
-  add t2,a5,zero
-  sw t2,-528(fp)
-  add t2,s1,zero
-  sw t2,-524(fp)
-  add t2,s4,zero
-  sw t2,-520(fp)
-  add t2,s5,zero
-  sw t2,-516(fp)
+  add s8,s8,zero
+  add s8,s9,zero
+  add s8,s7,zero
+  add s8,s11,zero
+  add s8,a0,zero
+  add s8,s10,zero
+  add s8,a1,zero
+  add s8,a4,zero
+  add s8,a3,zero
+  add s8,a2,zero
+  add s8,a2,zero
+  add s8,a6,zero
+  add s8,s2,zero
+  add s8,a5,zero
+  add s8,s1,zero
+  add s4,s4,zero
+  add s4,s5,zero
   lw t0,-8(fp)
-  add t2,t0,zero
-  sw t2,-512(fp)
+  add s4,t0,zero
   lw t0,-12(fp)
-  add t2,t0,zero
-  sw t2,-508(fp)
+  add s4,t0,zero
   lw t0,-16(fp)
-  add t2,t0,zero
-  sw t2,-504(fp)
-  add t2,s6,zero
-  sw t2,-500(fp)
+  add s4,t0,zero
+  add s4,s6,zero
   lw t0,-28(fp)
-  add t2,t0,zero
-  sw t2,-496(fp)
+  add s4,t0,zero
   lw t0,-32(fp)
-  add t2,t0,zero
-  sw t2,-492(fp)
+  add s4,t0,zero
   lw t0,-24(fp)
-  add t2,t0,zero
-  sw t2,-488(fp)
-  add t2,s3,zero
-  sw t2,-484(fp)
-  add t2,s6,zero
-  sw t2,-480(fp)
+  add s4,t0,zero
+  add s3,s3,zero
+  add s3,s6,zero
   lw t0,-20(fp)
-  add t2,t0,zero
-  sw t2,-476(fp)
-  lw t0,-48(fp)
-  add t2,t0,zero
-  sw t2,-472(fp)
-  lw t0,-52(fp)
-  add t2,t0,zero
-  sw t2,-468(fp)
-  lw t0,-72(fp)
-  add t2,t0,zero
-  sw t2,-464(fp)
-  lw t0,-76(fp)
-  add t2,t0,zero
-  sw t2,-460(fp)
-  lw t0,-80(fp)
-  add t2,t0,zero
-  sw t2,-456(fp)
-  lw t0,-68(fp)
-  add t2,t0,zero
-  sw t2,-452(fp)
-  lw t0,-60(fp)
-  add t2,t0,zero
-  sw t2,-448(fp)
-  lw t0,-64(fp)
-  add t2,t0,zero
-  sw t2,-444(fp)
-  lw t0,-92(fp)
-  add t2,t0,zero
-  sw t2,-440(fp)
-  lw t0,-96(fp)
-  add t2,t0,zero
-  sw t2,-436(fp)
-  lw t0,-88(fp)
-  add t2,t0,zero
-  sw t2,-432(fp)
+  add s3,t0,zero
   lw t0,-44(fp)
-  add t2,t0,zero
-  sw t2,-428(fp)
+  add s3,t0,zero
+  lw t0,-48(fp)
+  add s3,t0,zero
+  lw t0,-68(fp)
+  add s3,t0,zero
+  lw t0,-72(fp)
+  add s3,t0,zero
+  lw t0,-76(fp)
+  add s3,t0,zero
+  lw t0,-64(fp)
+  add s3,t0,zero
   lw t0,-56(fp)
-  add t2,t0,zero
-  sw t2,-424(fp)
+  add s3,t0,zero
+  lw t0,-60(fp)
+  add s3,t0,zero
+  lw t0,-88(fp)
+  add s3,t0,zero
+  lw t0,-92(fp)
+  add s3,t0,zero
   lw t0,-84(fp)
-  add t2,t0,zero
-  sw t2,-420(fp)
-  lw t0,-108(fp)
-  add t2,t0,zero
-  sw t2,-416(fp)
-  lw t0,-112(fp)
-  add t2,t0,zero
-  sw t2,-412(fp)
-  lw t0,-116(fp)
-  add t2,t0,zero
-  sw t2,-408(fp)
+  add s3,t0,zero
+  lw t0,-40(fp)
+  add s3,t0,zero
+  lw t0,-52(fp)
+  add s3,t0,zero
+  lw t0,-80(fp)
+  add s3,t0,zero
   lw t0,-104(fp)
-  add t2,t0,zero
-  sw t2,-404(fp)
-  lw t0,-140(fp)
-  add t2,t0,zero
-  sw t2,-400(fp)
-  lw t0,-144(fp)
-  add t2,t0,zero
-  sw t2,-396(fp)
-  lw t0,-148(fp)
-  add t2,t0,zero
-  sw t2,-392(fp)
+  add s3,t0,zero
+  lw t0,-108(fp)
+  add s3,t0,zero
+  lw t0,-112(fp)
+  add s3,t0,zero
+  lw t0,-100(fp)
+  add s3,t0,zero
   lw t0,-136(fp)
-  add t2,t0,zero
-  sw t2,-388(fp)
+  add s3,t0,zero
+  lw t0,-140(fp)
+  add s3,t0,zero
+  lw t0,-144(fp)
+  add s3,t0,zero
   lw t0,-132(fp)
-  add t2,t0,zero
-  sw t2,-384(fp)
-  lw t0,-124(fp)
-  add t2,t0,zero
-  sw t2,-380(fp)
+  add s3,t0,zero
   lw t0,-128(fp)
-  add t2,t0,zero
-  sw t2,-376(fp)
+  add s3,t0,zero
   lw t0,-120(fp)
-  add t2,t0,zero
-  sw t2,-372(fp)
-  lw t0,-172(fp)
-  add t2,t0,zero
-  sw t2,-368(fp)
-  lw t0,-176(fp)
-  add t2,t0,zero
-  sw t2,-364(fp)
-  lw t0,-180(fp)
-  add t2,t0,zero
-  sw t2,-360(fp)
+  add s3,t0,zero
+  lw t0,-124(fp)
+  add s3,t0,zero
+  lw t0,-116(fp)
+  add s3,t0,zero
   lw t0,-168(fp)
-  add t2,t0,zero
-  sw t2,-356(fp)
+  add s3,t0,zero
+  lw t0,-172(fp)
+  add s3,t0,zero
+  lw t0,-176(fp)
+  add s3,t0,zero
   lw t0,-164(fp)
-  add t2,t0,zero
-  sw t2,-352(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
-  sw t2,-348(fp)
+  add s3,t0,zero
   lw t0,-160(fp)
-  add t2,t0,zero
-  sw t2,-344(fp)
+  add s3,t0,zero
   lw t0,-152(fp)
-  add t2,t0,zero
-  sw t2,-340(fp)
+  add s3,t0,zero
+  lw t0,-156(fp)
+  add s3,t0,zero
+  lw t0,-148(fp)
+  add s3,t0,zero
+  lw t0,-184(fp)
+  add s3,t0,zero
   lw t0,-188(fp)
-  add t2,t0,zero
-  sw t2,-336(fp)
-  lw t0,-192(fp)
-  add t2,t0,zero
-  sw t2,-332(fp)
-  lw t0,-216(fp)
-  add t2,t0,zero
-  sw t2,-328(fp)
-  lw t0,-220(fp)
-  add t2,t0,zero
-  sw t2,-324(fp)
-  lw t0,-212(fp)
-  add t2,t0,zero
-  sw t2,-320(fp)
-  lw t0,-204(fp)
-  add t2,t0,zero
-  sw t2,-316(fp)
+  add s3,t0,zero
   lw t0,-208(fp)
-  add t2,t0,zero
-  sw t2,-312(fp)
+  add s3,t0,zero
+  lw t0,-212(fp)
+  add s3,t0,zero
+  lw t0,-204(fp)
+  add s3,t0,zero
+  lw t0,-196(fp)
+  add s3,t0,zero
   lw t0,-200(fp)
-  add t2,t0,zero
-  sw t2,-308(fp)
-  lw t0,-228(fp)
-  add t2,t0,zero
-  sw t2,-304(fp)
-  lw t0,-232(fp)
-  add t2,t0,zero
-  sw t2,-300(fp)
+  add s3,t0,zero
+  lw t0,-192(fp)
+  add s3,t0,zero
+  lw t0,-220(fp)
+  add s3,t0,zero
   lw t0,-224(fp)
-  add t2,t0,zero
-  sw t2,-296(fp)
-  lw t0,-240(fp)
   add s3,t0,zero
-  lw t0,-244(fp)
+  lw t0,-216(fp)
   add s3,t0,zero
-  lw t0,-268(fp)
+  lw t0,-232(fp)
   add s3,t0,zero
-  lw t0,-272(fp)
-  add s3,t0,zero
-  lw t0,-264(fp)
+  lw t0,-236(fp)
   add s3,t0,zero
   lw t0,-260(fp)
   add s3,t0,zero
-  lw t0,-252(fp)
+  lw t0,-264(fp)
   add s3,t0,zero
   lw t0,-256(fp)
   add s3,t0,zero
+  lw t0,-252(fp)
+  add s3,t0,zero
+  lw t0,-244(fp)
+  add s3,t0,zero
   lw t0,-248(fp)
   add s3,t0,zero
-  lw t0,-280(fp)
+  lw t0,-240(fp)
   add s3,t0,zero
-  lw t0,-284(fp)
+  lw t0,-272(fp)
   add s3,t0,zero
   lw t0,-276(fp)
   add s3,t0,zero
-  lw t0,-292(fp)
+  lw t0,-268(fp)
+  add s3,t0,zero
+  lw t0,-284(fp)
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
@@ -11599,17 +11344,16 @@ label55:
   add s3,a1,zero
   add s1,s1,zero
   add s1,s2,zero
+  add s1,s5,zero
   lw t0,-36(fp)
   add s1,t0,zero
-  lw t0,-40(fp)
+  lw t0,-96(fp)
   add s1,t0,zero
-  lw t0,-100(fp)
+  lw t0,-180(fp)
   add s1,t0,zero
-  lw t0,-184(fp)
+  lw t0,-228(fp)
   add s1,t0,zero
-  lw t0,-236(fp)
-  add s1,t0,zero
-  lw t0,-288(fp)
+  lw t0,-280(fp)
   add s1,t0,zero
   jal zero,label56
 label56:
@@ -11617,27 +11361,27 @@ label56:
   add a0,s1,zero
   jal zero,fun283__exit
 fun283__exit:
-  lw t0,-644(fp)
+  lw t0,-328(fp)
   add s1,t0,zero
-  lw t0,-640(fp)
+  lw t0,-324(fp)
   add s2,t0,zero
-  lw t0,-636(fp)
+  lw t0,-320(fp)
   add s3,t0,zero
-  lw t0,-632(fp)
+  lw t0,-316(fp)
   add s4,t0,zero
-  lw t0,-628(fp)
+  lw t0,-312(fp)
   add s5,t0,zero
-  lw t0,-624(fp)
+  lw t0,-308(fp)
   add s6,t0,zero
-  lw t0,-620(fp)
+  lw t0,-304(fp)
   add s7,t0,zero
-  lw t0,-616(fp)
+  lw t0,-300(fp)
   add s8,t0,zero
-  lw t0,-612(fp)
+  lw t0,-296(fp)
   add s9,t0,zero
-  lw t0,-608(fp)
+  lw t0,-292(fp)
   add s10,t0,zero
-  lw t0,-604(fp)
+  lw t0,-288(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -11763,33 +11507,33 @@ __fun266:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-632
+  addi sp,sp,-324
   add t2,a0,zero
-  sw t2,-636(fp)
+  sw t2,-328(fp)
   add t2,a1,zero
-  sw t2,-632(fp)
+  sw t2,-324(fp)
   add t2,s1,zero
-  sw t2,-628(fp)
+  sw t2,-320(fp)
   add t2,s2,zero
-  sw t2,-624(fp)
+  sw t2,-316(fp)
   add t2,s3,zero
-  sw t2,-620(fp)
+  sw t2,-312(fp)
   add t2,s4,zero
-  sw t2,-616(fp)
+  sw t2,-308(fp)
   add t2,s5,zero
-  sw t2,-612(fp)
+  sw t2,-304(fp)
   add t2,s6,zero
-  sw t2,-608(fp)
+  sw t2,-300(fp)
   add t2,s7,zero
-  sw t2,-604(fp)
+  sw t2,-296(fp)
   add t2,s8,zero
-  sw t2,-600(fp)
+  sw t2,-292(fp)
   add t2,s9,zero
-  sw t2,-596(fp)
+  sw t2,-288(fp)
   add t2,s10,zero
-  sw t2,-592(fp)
+  sw t2,-284(fp)
   add t2,s11,zero
-  sw t2,-588(fp)
+  sw t2,-280(fp)
 fun266__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -11797,7 +11541,7 @@ fun266__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-632(fp)
+  lw t0,-324(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -11810,7 +11554,7 @@ fun266__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-636(fp)
+  lw t0,-328(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -11824,260 +11568,88 @@ fun266__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-584(fp)
-  lw t0,-584(fp)
-  add s1,t0,zero
+  add s5,s3,zero
+  add s1,s5,zero
   lw t0,__lookup
   add s3,t0,zero
   addi t0,zero,0
   add s2,t0,zero
-  lw t0,-584(fp)
-  add s1,t0,zero
+  add s1,s5,zero
   add a0,s2,zero
   add a1,s1,zero
   jalr ra,s3,0
   addi s1,a0,0
-  add t2,s1,zero
-  sw t2,-580(fp)
+  add s2,s1,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s4,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
-  lw t0,-584(fp)
-  add s1,t0,zero
-  add a0,s2,zero
+  add s3,t0,zero
+  add s1,s5,zero
+  add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s4,0
   addi s1,a0,0
   add s1,s1,zero
-  add s2,s1,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
-  sub s1,s2,s1
+  sub s1,s3,s1
   sltiu s1,s1,1
   beq s1,zero,label60
   jal zero,label59
 label59:
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-576(fp)
-  lw t0,-576(fp)
-  add t2,t0,zero
-  sw t2,-572(fp)
-  lw t0,-572(fp)
-  add t2,t0,zero
-  sw t2,-568(fp)
+  add s2,t0,zero
+  add s1,s2,zero
+  add s1,s1,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-564(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-560(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-556(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-552(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-548(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-544(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-540(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-536(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-532(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-528(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-524(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-520(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-516(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-512(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-508(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-504(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-500(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-496(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-492(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-488(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-484(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-480(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-476(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-472(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-468(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-464(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-460(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-456(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-452(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-448(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-444(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-440(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-436(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-432(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-428(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-424(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-420(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-416(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-412(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-408(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-404(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-400(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-396(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-392(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-388(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-384(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-380(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-376(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-372(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-368(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-364(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-360(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-356(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-352(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-348(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-344(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-340(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-336(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-332(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-328(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-324(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-320(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-316(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-312(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-308(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-304(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-300(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-296(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-292(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-288(fp)
+  add s4,t0,zero
   addi t0,zero,0
   add s3,t0,zero
   addi t0,zero,0
@@ -12102,14 +11674,102 @@ label59:
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
-  lw t0,-576(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-568(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-584(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-572(fp)
+  addi t0,zero,0
   add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  add s3,s2,zero
+  add s3,s1,zero
+  add s3,s5,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
   addi t0,zero,0
@@ -12135,14 +11795,13 @@ label60:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-284(fp)
-  lw t0,-284(fp)
-  add t2,t0,zero
-  sw t2,-280(fp)
-  lw t0,-584(fp)
-  add t2,t0,zero
   sw t2,-276(fp)
-  lw t0,-280(fp)
+  lw t0,-276(fp)
+  add t2,t0,zero
+  sw t2,-272(fp)
+  add t2,s5,zero
+  sw t2,-268(fp)
+  lw t0,-272(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12152,37 +11811,16 @@ label60:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-272(fp)
-  lw t0,-276(fp)
-  sw t0,0(t2)
-  sw t2,-272(fp)
-  lw t0,-276(fp)
-  add t2,t0,zero
-  sw t2,-268(fp)
-  lw t0,-580(fp)
-  add t2,t0,zero
   sw t2,-264(fp)
-  lw t0,-264(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
+  lw t0,-268(fp)
+  sw t0,0(t2)
+  sw t2,-264(fp)
+  lw t0,-268(fp)
+  add t2,t0,zero
   sw t2,-260(fp)
-  lw t0,-260(fp)
-  lw t2,0(t0)
+  add t2,s2,zero
   sw t2,-256(fp)
   lw t0,-256(fp)
-  add t2,t0,zero
-  sw t2,-252(fp)
-  lw t0,-252(fp)
-  add t2,t0,zero
-  sw t2,-248(fp)
-  lw t0,-280(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12192,49 +11830,49 @@ label60:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-244(fp)
-  lw t0,-248(fp)
-  sw t0,0(t2)
-  sw t2,-244(fp)
+  sw t2,-252(fp)
+  lw t0,-252(fp)
+  lw t2,0(t0)
+  sw t2,-248(fp)
   lw t0,-248(fp)
   add t2,t0,zero
+  sw t2,-244(fp)
+  lw t0,-244(fp)
+  add t2,t0,zero
   sw t2,-240(fp)
-  lw t0,-280(fp)
+  lw t0,-272(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-236(fp)
+  lw t0,-240(fp)
+  sw t0,0(t2)
+  sw t2,-236(fp)
+  lw t0,-240(fp)
+  add t2,t0,zero
+  sw t2,-232(fp)
+  lw t0,-272(fp)
   add s1,t0,zero
   add t2,s1,zero
-  sw t2,-236(fp)
+  sw t2,-228(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-232(fp)
-  lw t0,-232(fp)
-  add t2,t0,zero
-  sw t2,-228(fp)
-  add t2,s1,zero
   sw t2,-224(fp)
-  lw t0,-228(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-220(fp)
-  lw t0,-224(fp)
-  sw t0,0(t2)
-  sw t2,-220(fp)
   lw t0,-224(fp)
   add t2,t0,zero
+  sw t2,-220(fp)
+  add t2,s1,zero
   sw t2,-216(fp)
-  lw t0,-580(fp)
-  add t2,t0,zero
-  sw t2,-212(fp)
-  lw t0,-212(fp)
+  lw t0,-220(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12244,14 +11882,33 @@ label60:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
+  sw t2,-212(fp)
+  lw t0,-216(fp)
+  sw t0,0(t2)
+  sw t2,-212(fp)
+  lw t0,-216(fp)
+  add t2,t0,zero
   sw t2,-208(fp)
-  lw t0,-208(fp)
-  lw t2,0(t0)
+  add t2,s2,zero
   sw t2,-204(fp)
   lw t0,-204(fp)
-  add t2,t0,zero
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
   sw t2,-200(fp)
-  lw t0,-228(fp)
+  lw t0,-200(fp)
+  lw t2,0(t0)
+  sw t2,-196(fp)
+  lw t0,-196(fp)
+  add t2,t0,zero
+  sw t2,-192(fp)
+  lw t0,-220(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12261,43 +11918,40 @@ label60:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-196(fp)
-  lw t0,-200(fp)
-  sw t0,0(t2)
-  sw t2,-196(fp)
-  lw t0,-200(fp)
-  add t2,t0,zero
-  sw t2,-192(fp)
-  lw t0,-228(fp)
-  add t2,t0,zero
   sw t2,-188(fp)
-  lw t0,-188(fp)
+  lw t0,-192(fp)
+  sw t0,0(t2)
+  sw t2,-188(fp)
+  lw t0,-192(fp)
   add t2,t0,zero
   sw t2,-184(fp)
+  lw t0,-220(fp)
+  add s7,t0,zero
+  add t2,s7,zero
+  sw t2,-180(fp)
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-180(fp)
+  sw t2,-176(fp)
   addi t0,zero,3
   add t2,t0,zero
-  sw t2,-176(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
   sw t2,-172(fp)
-  lw t0,-176(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-168(fp)
   lw t0,-172(fp)
+  add a0,t0,zero
+  lw t0,-168(fp)
   add a1,t0,zero
-  lw t0,-180(fp)
+  lw t0,-176(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-168(fp)
-  lw t0,-168(fp)
-  add t2,t0,zero
   sw t2,-164(fp)
   lw t0,-164(fp)
   add t2,t0,zero
   sw t2,-160(fp)
   lw t0,-160(fp)
+  add t2,t0,zero
+  sw t2,-156(fp)
+  lw t0,-156(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12307,37 +11961,36 @@ label60:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-156(fp)
-  lw t0,-156(fp)
-  lw t2,0(t0)
   sw t2,-152(fp)
   lw t0,-152(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-148(fp)
-  lw t0,__lookup
+  lw t0,-148(fp)
   add t2,t0,zero
   sw t2,-144(fp)
-  addi t0,zero,1
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-140(fp)
-  lw t0,-188(fp)
+  addi t0,zero,1
   add t2,t0,zero
   sw t2,-136(fp)
-  lw t0,-140(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-132(fp)
   lw t0,-136(fp)
+  add a0,t0,zero
+  lw t0,-132(fp)
   add a1,t0,zero
-  lw t0,-144(fp)
+  lw t0,-140(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-132(fp)
-  lw t0,-132(fp)
-  add t2,t0,zero
   sw t2,-128(fp)
-  lw t0,-164(fp)
+  lw t0,-128(fp)
   add t2,t0,zero
   sw t2,-124(fp)
-  lw t0,-124(fp)
+  lw t0,-160(fp)
+  add t2,t0,zero
+  sw t2,-120(fp)
+  lw t0,-120(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12347,42 +12000,41 @@ label60:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-120(fp)
-  lw t0,-120(fp)
-  lw t2,0(t0)
   sw t2,-116(fp)
-  lw t0,-128(fp)
-  add a0,t0,zero
   lw t0,-116(fp)
+  lw t2,0(t0)
+  sw t2,-112(fp)
+  lw t0,-124(fp)
+  add a0,t0,zero
+  lw t0,-112(fp)
   add a1,t0,zero
-  lw t0,-148(fp)
+  lw t0,-144(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-112(fp)
+  sw t2,-108(fp)
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-108(fp)
+  sw t2,-104(fp)
   addi t0,zero,4
   add t2,t0,zero
-  sw t2,-104(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
   sw t2,-100(fp)
-  lw t0,-104(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-96(fp)
   lw t0,-100(fp)
+  add a0,t0,zero
+  lw t0,-96(fp)
   add a1,t0,zero
-  lw t0,-108(fp)
+  lw t0,-104(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-96(fp)
-  lw t0,-96(fp)
-  add t2,t0,zero
   sw t2,-92(fp)
   lw t0,-92(fp)
   add t2,t0,zero
   sw t2,-88(fp)
   lw t0,-88(fp)
+  add t2,t0,zero
+  sw t2,-84(fp)
+  lw t0,-84(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12392,37 +12044,36 @@ label60:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-84(fp)
-  lw t0,-84(fp)
-  lw t2,0(t0)
   sw t2,-80(fp)
   lw t0,-80(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-76(fp)
-  lw t0,__lookup
+  lw t0,-76(fp)
   add t2,t0,zero
   sw t2,-72(fp)
-  addi t0,zero,3
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-68(fp)
-  lw t0,-188(fp)
+  addi t0,zero,3
   add t2,t0,zero
   sw t2,-64(fp)
-  lw t0,-68(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-60(fp)
   lw t0,-64(fp)
+  add a0,t0,zero
+  lw t0,-60(fp)
   add a1,t0,zero
-  lw t0,-72(fp)
+  lw t0,-68(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-60(fp)
-  lw t0,-60(fp)
-  add t2,t0,zero
   sw t2,-56(fp)
-  lw t0,-92(fp)
+  lw t0,-56(fp)
   add t2,t0,zero
   sw t2,-52(fp)
-  lw t0,-52(fp)
+  lw t0,-88(fp)
+  add t2,t0,zero
+  sw t2,-48(fp)
+  lw t0,-48(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12432,23 +12083,21 @@ label60:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-48(fp)
-  lw t0,-48(fp)
-  lw t2,0(t0)
   sw t2,-44(fp)
-  lw t0,-56(fp)
-  add a0,t0,zero
   lw t0,-44(fp)
+  lw t2,0(t0)
+  sw t2,-40(fp)
+  lw t0,-52(fp)
+  add a0,t0,zero
+  lw t0,-40(fp)
   add a1,t0,zero
-  lw t0,-76(fp)
+  lw t0,-72(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-40(fp)
-  lw t0,-40(fp)
-  add t2,t0,zero
   sw t2,-36(fp)
   lw t0,-36(fp)
-  add t2,t0,zero
+  add s5,t0,zero
+  add t2,s5,zero
   sw t2,-32(fp)
   lw t0,-32(fp)
   addi t2,t0,0
@@ -12473,8 +12122,7 @@ label60:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-12(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
+  add t2,s7,zero
   sw t2,-8(fp)
   lw t0,-12(fp)
   add a0,t0,zero
@@ -12484,8 +12132,7 @@ label60:
   jalr ra,t0,0
   addi s6,a0,0
   add s6,s6,zero
-  lw t0,-36(fp)
-  add s5,t0,zero
+  add s5,s5,zero
   addi s4,s5,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12519,7 +12166,7 @@ label60:
   add a6,a6,t1
   sw s2,0(a6)
   add a5,s2,zero
-  lw t0,-112(fp)
+  lw t0,-108(fp)
   add a4,t0,zero
   add a2,a4,zero
   addi a3,s1,0
@@ -12535,8 +12182,7 @@ label60:
   add a2,a2,zero
   add a1,s1,zero
   add a1,a1,zero
-  lw t0,-188(fp)
-  add a0,t0,zero
+  add a0,s7,zero
   addi s11,a0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -12560,219 +12206,149 @@ label60:
   add s8,s8,t1
   lw s7,0(s8)
   add s7,s7,zero
-  add t2,s8,zero
-  sw t2,-564(fp)
-  add t2,s9,zero
-  sw t2,-560(fp)
-  add t2,s7,zero
-  sw t2,-556(fp)
-  add t2,s11,zero
-  sw t2,-552(fp)
-  add t2,a0,zero
-  sw t2,-548(fp)
-  add t2,s10,zero
-  sw t2,-544(fp)
-  add t2,a1,zero
-  sw t2,-540(fp)
-  add t2,a4,zero
-  sw t2,-536(fp)
-  add t2,a3,zero
-  sw t2,-532(fp)
-  add t2,a2,zero
-  sw t2,-528(fp)
-  add t2,a2,zero
-  sw t2,-524(fp)
-  add t2,a6,zero
-  sw t2,-520(fp)
-  add t2,s2,zero
-  sw t2,-516(fp)
-  add t2,a5,zero
-  sw t2,-512(fp)
-  add t2,s1,zero
-  sw t2,-508(fp)
-  add t2,s4,zero
-  sw t2,-504(fp)
-  add t2,s5,zero
-  sw t2,-500(fp)
+  add s8,s8,zero
+  add s8,s9,zero
+  add s8,s7,zero
+  add s8,s11,zero
+  add s8,a0,zero
+  add s8,s10,zero
+  add s8,a1,zero
+  add s8,a4,zero
+  add s8,a3,zero
+  add s8,a2,zero
+  add s8,a2,zero
+  add s8,a6,zero
+  add s8,s2,zero
+  add s8,a5,zero
+  add s8,s1,zero
+  add s4,s4,zero
+  add s4,s5,zero
   lw t0,-8(fp)
-  add t2,t0,zero
-  sw t2,-496(fp)
+  add s4,t0,zero
   lw t0,-12(fp)
-  add t2,t0,zero
-  sw t2,-492(fp)
+  add s4,t0,zero
   lw t0,-16(fp)
-  add t2,t0,zero
-  sw t2,-488(fp)
-  add t2,s6,zero
-  sw t2,-484(fp)
+  add s4,t0,zero
+  add s4,s6,zero
   lw t0,-28(fp)
-  add t2,t0,zero
-  sw t2,-480(fp)
+  add s4,t0,zero
   lw t0,-32(fp)
-  add t2,t0,zero
-  sw t2,-476(fp)
+  add s4,t0,zero
   lw t0,-24(fp)
-  add t2,t0,zero
-  sw t2,-472(fp)
-  add t2,s3,zero
-  sw t2,-468(fp)
-  add t2,s6,zero
-  sw t2,-464(fp)
+  add s4,t0,zero
+  add s3,s3,zero
+  add s3,s6,zero
   lw t0,-20(fp)
-  add t2,t0,zero
-  sw t2,-460(fp)
-  lw t0,-48(fp)
-  add t2,t0,zero
-  sw t2,-456(fp)
-  lw t0,-52(fp)
-  add t2,t0,zero
-  sw t2,-452(fp)
-  lw t0,-64(fp)
-  add t2,t0,zero
-  sw t2,-448(fp)
-  lw t0,-68(fp)
-  add t2,t0,zero
-  sw t2,-444(fp)
-  lw t0,-72(fp)
-  add t2,t0,zero
-  sw t2,-440(fp)
-  lw t0,-60(fp)
-  add t2,t0,zero
-  sw t2,-436(fp)
-  lw t0,-84(fp)
-  add t2,t0,zero
-  sw t2,-432(fp)
-  lw t0,-88(fp)
-  add t2,t0,zero
-  sw t2,-428(fp)
-  lw t0,-80(fp)
-  add t2,t0,zero
-  sw t2,-424(fp)
+  add s3,t0,zero
   lw t0,-44(fp)
-  add t2,t0,zero
-  sw t2,-420(fp)
+  add s3,t0,zero
+  lw t0,-48(fp)
+  add s3,t0,zero
+  lw t0,-60(fp)
+  add s3,t0,zero
+  lw t0,-64(fp)
+  add s3,t0,zero
+  lw t0,-68(fp)
+  add s3,t0,zero
   lw t0,-56(fp)
-  add t2,t0,zero
-  sw t2,-416(fp)
+  add s3,t0,zero
+  lw t0,-80(fp)
+  add s3,t0,zero
+  lw t0,-84(fp)
+  add s3,t0,zero
   lw t0,-76(fp)
-  add t2,t0,zero
-  sw t2,-412(fp)
-  lw t0,-100(fp)
-  add t2,t0,zero
-  sw t2,-408(fp)
-  lw t0,-104(fp)
-  add t2,t0,zero
-  sw t2,-404(fp)
-  lw t0,-108(fp)
-  add t2,t0,zero
-  sw t2,-400(fp)
+  add s3,t0,zero
+  lw t0,-40(fp)
+  add s3,t0,zero
+  lw t0,-52(fp)
+  add s3,t0,zero
+  lw t0,-72(fp)
+  add s3,t0,zero
   lw t0,-96(fp)
-  add t2,t0,zero
-  sw t2,-396(fp)
-  lw t0,-120(fp)
-  add t2,t0,zero
-  sw t2,-392(fp)
-  lw t0,-124(fp)
-  add t2,t0,zero
-  sw t2,-388(fp)
-  lw t0,-136(fp)
-  add t2,t0,zero
-  sw t2,-384(fp)
-  lw t0,-140(fp)
-  add t2,t0,zero
-  sw t2,-380(fp)
-  lw t0,-144(fp)
-  add t2,t0,zero
-  sw t2,-376(fp)
-  lw t0,-132(fp)
-  add t2,t0,zero
-  sw t2,-372(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
-  sw t2,-368(fp)
-  lw t0,-160(fp)
-  add t2,t0,zero
-  sw t2,-364(fp)
-  lw t0,-152(fp)
-  add t2,t0,zero
-  sw t2,-360(fp)
+  add s3,t0,zero
+  lw t0,-100(fp)
+  add s3,t0,zero
+  lw t0,-104(fp)
+  add s3,t0,zero
+  lw t0,-92(fp)
+  add s3,t0,zero
   lw t0,-116(fp)
-  add t2,t0,zero
-  sw t2,-356(fp)
+  add s3,t0,zero
+  lw t0,-120(fp)
+  add s3,t0,zero
+  lw t0,-132(fp)
+  add s3,t0,zero
+  lw t0,-136(fp)
+  add s3,t0,zero
+  lw t0,-140(fp)
+  add s3,t0,zero
   lw t0,-128(fp)
-  add t2,t0,zero
-  sw t2,-352(fp)
+  add s3,t0,zero
+  lw t0,-152(fp)
+  add s3,t0,zero
+  lw t0,-156(fp)
+  add s3,t0,zero
   lw t0,-148(fp)
-  add t2,t0,zero
-  sw t2,-348(fp)
-  lw t0,-172(fp)
-  add t2,t0,zero
-  sw t2,-344(fp)
-  lw t0,-176(fp)
-  add t2,t0,zero
-  sw t2,-340(fp)
-  lw t0,-180(fp)
-  add t2,t0,zero
-  sw t2,-336(fp)
+  add s3,t0,zero
+  lw t0,-112(fp)
+  add s3,t0,zero
+  lw t0,-124(fp)
+  add s3,t0,zero
+  lw t0,-144(fp)
+  add s3,t0,zero
   lw t0,-168(fp)
-  add t2,t0,zero
-  sw t2,-332(fp)
-  lw t0,-184(fp)
-  add t2,t0,zero
-  sw t2,-328(fp)
-  lw t0,-208(fp)
-  add t2,t0,zero
-  sw t2,-324(fp)
-  lw t0,-212(fp)
-  add t2,t0,zero
-  sw t2,-320(fp)
-  lw t0,-204(fp)
-  add t2,t0,zero
-  sw t2,-316(fp)
-  lw t0,-196(fp)
-  add t2,t0,zero
-  sw t2,-312(fp)
+  add s3,t0,zero
+  lw t0,-172(fp)
+  add s3,t0,zero
+  lw t0,-176(fp)
+  add s3,t0,zero
+  lw t0,-164(fp)
+  add s3,t0,zero
+  lw t0,-180(fp)
+  add s3,t0,zero
   lw t0,-200(fp)
-  add t2,t0,zero
-  sw t2,-308(fp)
+  add s3,t0,zero
+  lw t0,-204(fp)
+  add s3,t0,zero
+  lw t0,-196(fp)
+  add s3,t0,zero
+  lw t0,-188(fp)
+  add s3,t0,zero
   lw t0,-192(fp)
-  add t2,t0,zero
-  sw t2,-304(fp)
-  lw t0,-220(fp)
-  add t2,t0,zero
-  sw t2,-300(fp)
-  lw t0,-224(fp)
-  add t2,t0,zero
-  sw t2,-296(fp)
+  add s3,t0,zero
+  lw t0,-184(fp)
+  add s3,t0,zero
+  lw t0,-212(fp)
+  add s3,t0,zero
   lw t0,-216(fp)
-  add t2,t0,zero
-  sw t2,-292(fp)
-  lw t0,-232(fp)
-  add t2,t0,zero
-  sw t2,-288(fp)
-  lw t0,-236(fp)
   add s3,t0,zero
-  lw t0,-260(fp)
+  lw t0,-208(fp)
   add s3,t0,zero
-  lw t0,-264(fp)
+  lw t0,-224(fp)
   add s3,t0,zero
-  lw t0,-256(fp)
+  lw t0,-228(fp)
   add s3,t0,zero
   lw t0,-252(fp)
   add s3,t0,zero
-  lw t0,-244(fp)
+  lw t0,-256(fp)
   add s3,t0,zero
   lw t0,-248(fp)
   add s3,t0,zero
+  lw t0,-244(fp)
+  add s3,t0,zero
+  lw t0,-236(fp)
+  add s3,t0,zero
   lw t0,-240(fp)
   add s3,t0,zero
-  lw t0,-272(fp)
+  lw t0,-232(fp)
   add s3,t0,zero
-  lw t0,-276(fp)
+  lw t0,-264(fp)
   add s3,t0,zero
   lw t0,-268(fp)
   add s3,t0,zero
-  lw t0,-284(fp)
+  lw t0,-260(fp)
+  add s3,t0,zero
+  lw t0,-276(fp)
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
@@ -12782,19 +12358,18 @@ label60:
   add s3,a1,zero
   add s1,s1,zero
   add s1,s2,zero
+  add s1,s5,zero
   lw t0,-36(fp)
   add s1,t0,zero
-  lw t0,-40(fp)
+  lw t0,-88(fp)
   add s1,t0,zero
-  lw t0,-92(fp)
+  lw t0,-108(fp)
   add s1,t0,zero
-  lw t0,-112(fp)
+  lw t0,-160(fp)
   add s1,t0,zero
-  lw t0,-164(fp)
+  lw t0,-220(fp)
   add s1,t0,zero
-  lw t0,-228(fp)
-  add s1,t0,zero
-  lw t0,-280(fp)
+  lw t0,-272(fp)
   add s1,t0,zero
   jal zero,label61
 label61:
@@ -12802,27 +12377,27 @@ label61:
   add a0,s1,zero
   jal zero,fun266__exit
 fun266__exit:
-  lw t0,-628(fp)
+  lw t0,-320(fp)
   add s1,t0,zero
-  lw t0,-624(fp)
+  lw t0,-316(fp)
   add s2,t0,zero
-  lw t0,-620(fp)
+  lw t0,-312(fp)
   add s3,t0,zero
-  lw t0,-616(fp)
+  lw t0,-308(fp)
   add s4,t0,zero
-  lw t0,-612(fp)
+  lw t0,-304(fp)
   add s5,t0,zero
-  lw t0,-608(fp)
+  lw t0,-300(fp)
   add s6,t0,zero
-  lw t0,-604(fp)
+  lw t0,-296(fp)
   add s7,t0,zero
-  lw t0,-600(fp)
+  lw t0,-292(fp)
   add s8,t0,zero
-  lw t0,-596(fp)
+  lw t0,-288(fp)
   add s9,t0,zero
-  lw t0,-592(fp)
+  lw t0,-284(fp)
   add s10,t0,zero
-  lw t0,-588(fp)
+  lw t0,-280(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -12948,33 +12523,33 @@ __fun248:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-632
+  addi sp,sp,-324
   add t2,a0,zero
-  sw t2,-636(fp)
+  sw t2,-328(fp)
   add t2,a1,zero
-  sw t2,-632(fp)
+  sw t2,-324(fp)
   add t2,s1,zero
-  sw t2,-628(fp)
+  sw t2,-320(fp)
   add t2,s2,zero
-  sw t2,-624(fp)
+  sw t2,-316(fp)
   add t2,s3,zero
-  sw t2,-620(fp)
+  sw t2,-312(fp)
   add t2,s4,zero
-  sw t2,-616(fp)
+  sw t2,-308(fp)
   add t2,s5,zero
-  sw t2,-612(fp)
+  sw t2,-304(fp)
   add t2,s6,zero
-  sw t2,-608(fp)
+  sw t2,-300(fp)
   add t2,s7,zero
-  sw t2,-604(fp)
+  sw t2,-296(fp)
   add t2,s8,zero
-  sw t2,-600(fp)
+  sw t2,-292(fp)
   add t2,s9,zero
-  sw t2,-596(fp)
+  sw t2,-288(fp)
   add t2,s10,zero
-  sw t2,-592(fp)
+  sw t2,-284(fp)
   add t2,s11,zero
-  sw t2,-588(fp)
+  sw t2,-280(fp)
 fun248__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -12982,7 +12557,7 @@ fun248__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-632(fp)
+  lw t0,-324(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -12995,7 +12570,7 @@ fun248__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-636(fp)
+  lw t0,-328(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -13009,260 +12584,88 @@ fun248__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-584(fp)
-  lw t0,-584(fp)
-  add s1,t0,zero
+  add s5,s3,zero
+  add s1,s5,zero
   lw t0,__lookup
   add s3,t0,zero
   addi t0,zero,0
   add s2,t0,zero
-  lw t0,-584(fp)
-  add s1,t0,zero
+  add s1,s5,zero
   add a0,s2,zero
   add a1,s1,zero
   jalr ra,s3,0
   addi s1,a0,0
-  add t2,s1,zero
-  sw t2,-580(fp)
+  add s2,s1,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s4,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
-  lw t0,-584(fp)
-  add s1,t0,zero
-  add a0,s2,zero
+  add s3,t0,zero
+  add s1,s5,zero
+  add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s4,0
   addi s1,a0,0
   add s1,s1,zero
-  add s2,s1,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
-  sub s1,s2,s1
+  sub s1,s3,s1
   sltiu s1,s1,1
   beq s1,zero,label65
   jal zero,label64
 label64:
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-576(fp)
-  lw t0,-576(fp)
-  add t2,t0,zero
-  sw t2,-572(fp)
-  lw t0,-572(fp)
-  add t2,t0,zero
-  sw t2,-568(fp)
+  add s2,t0,zero
+  add s1,s2,zero
+  add s1,s1,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-564(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-560(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-556(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-552(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-548(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-544(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-540(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-536(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-532(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-528(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-524(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-520(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-516(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-512(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-508(fp)
+  add s8,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-504(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-500(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-496(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-492(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-488(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-484(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-480(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-476(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-472(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-468(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-464(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-460(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-456(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-452(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-448(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-444(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-440(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-436(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-432(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-428(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-424(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-420(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-416(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-412(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-408(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-404(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-400(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-396(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-392(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-388(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-384(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-380(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-376(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-372(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-368(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-364(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-360(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-356(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-352(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-348(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-344(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-340(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-336(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-332(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-328(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-324(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-320(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-316(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-312(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-308(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-304(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-300(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-296(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-292(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-288(fp)
+  add s4,t0,zero
   addi t0,zero,0
   add s3,t0,zero
   addi t0,zero,0
@@ -13287,14 +12690,102 @@ label64:
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
-  lw t0,-576(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-568(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-584(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-572(fp)
+  addi t0,zero,0
   add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  add s3,s2,zero
+  add s3,s1,zero
+  add s3,s5,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
   addi t0,zero,0
@@ -13320,14 +12811,13 @@ label65:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-284(fp)
-  lw t0,-284(fp)
-  add t2,t0,zero
-  sw t2,-280(fp)
-  lw t0,-584(fp)
-  add t2,t0,zero
   sw t2,-276(fp)
-  lw t0,-280(fp)
+  lw t0,-276(fp)
+  add t2,t0,zero
+  sw t2,-272(fp)
+  add t2,s5,zero
+  sw t2,-268(fp)
+  lw t0,-272(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13337,37 +12827,16 @@ label65:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-272(fp)
-  lw t0,-276(fp)
-  sw t0,0(t2)
-  sw t2,-272(fp)
-  lw t0,-276(fp)
-  add t2,t0,zero
-  sw t2,-268(fp)
-  lw t0,-580(fp)
-  add t2,t0,zero
   sw t2,-264(fp)
-  lw t0,-264(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
+  lw t0,-268(fp)
+  sw t0,0(t2)
+  sw t2,-264(fp)
+  lw t0,-268(fp)
+  add t2,t0,zero
   sw t2,-260(fp)
-  lw t0,-260(fp)
-  lw t2,0(t0)
+  add t2,s2,zero
   sw t2,-256(fp)
   lw t0,-256(fp)
-  add t2,t0,zero
-  sw t2,-252(fp)
-  lw t0,-252(fp)
-  add t2,t0,zero
-  sw t2,-248(fp)
-  lw t0,-280(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13377,49 +12846,49 @@ label65:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-244(fp)
-  lw t0,-248(fp)
-  sw t0,0(t2)
-  sw t2,-244(fp)
+  sw t2,-252(fp)
+  lw t0,-252(fp)
+  lw t2,0(t0)
+  sw t2,-248(fp)
   lw t0,-248(fp)
   add t2,t0,zero
+  sw t2,-244(fp)
+  lw t0,-244(fp)
+  add t2,t0,zero
   sw t2,-240(fp)
-  lw t0,-280(fp)
+  lw t0,-272(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-236(fp)
+  lw t0,-240(fp)
+  sw t0,0(t2)
+  sw t2,-236(fp)
+  lw t0,-240(fp)
+  add t2,t0,zero
+  sw t2,-232(fp)
+  lw t0,-272(fp)
   add s1,t0,zero
   add t2,s1,zero
-  sw t2,-236(fp)
+  sw t2,-228(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-232(fp)
-  lw t0,-232(fp)
-  add t2,t0,zero
-  sw t2,-228(fp)
-  add t2,s1,zero
   sw t2,-224(fp)
-  lw t0,-228(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-220(fp)
-  lw t0,-224(fp)
-  sw t0,0(t2)
-  sw t2,-220(fp)
   lw t0,-224(fp)
   add t2,t0,zero
+  sw t2,-220(fp)
+  add t2,s1,zero
   sw t2,-216(fp)
-  lw t0,-580(fp)
-  add t2,t0,zero
-  sw t2,-212(fp)
-  lw t0,-212(fp)
+  lw t0,-220(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13429,14 +12898,33 @@ label65:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
+  sw t2,-212(fp)
+  lw t0,-216(fp)
+  sw t0,0(t2)
+  sw t2,-212(fp)
+  lw t0,-216(fp)
+  add t2,t0,zero
   sw t2,-208(fp)
-  lw t0,-208(fp)
-  lw t2,0(t0)
+  add t2,s2,zero
   sw t2,-204(fp)
   lw t0,-204(fp)
-  add t2,t0,zero
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
   sw t2,-200(fp)
-  lw t0,-228(fp)
+  lw t0,-200(fp)
+  lw t2,0(t0)
+  sw t2,-196(fp)
+  lw t0,-196(fp)
+  add t2,t0,zero
+  sw t2,-192(fp)
+  lw t0,-220(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13446,43 +12934,40 @@ label65:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-196(fp)
-  lw t0,-200(fp)
-  sw t0,0(t2)
-  sw t2,-196(fp)
-  lw t0,-200(fp)
-  add t2,t0,zero
-  sw t2,-192(fp)
-  lw t0,-228(fp)
-  add t2,t0,zero
   sw t2,-188(fp)
-  lw t0,-188(fp)
+  lw t0,-192(fp)
+  sw t0,0(t2)
+  sw t2,-188(fp)
+  lw t0,-192(fp)
   add t2,t0,zero
   sw t2,-184(fp)
+  lw t0,-220(fp)
+  add s7,t0,zero
+  add t2,s7,zero
+  sw t2,-180(fp)
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-180(fp)
+  sw t2,-176(fp)
   addi t0,zero,3
   add t2,t0,zero
-  sw t2,-176(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
   sw t2,-172(fp)
-  lw t0,-176(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-168(fp)
   lw t0,-172(fp)
+  add a0,t0,zero
+  lw t0,-168(fp)
   add a1,t0,zero
-  lw t0,-180(fp)
+  lw t0,-176(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-168(fp)
-  lw t0,-168(fp)
-  add t2,t0,zero
   sw t2,-164(fp)
   lw t0,-164(fp)
   add t2,t0,zero
   sw t2,-160(fp)
   lw t0,-160(fp)
+  add t2,t0,zero
+  sw t2,-156(fp)
+  lw t0,-156(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13492,37 +12977,36 @@ label65:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-156(fp)
-  lw t0,-156(fp)
-  lw t2,0(t0)
   sw t2,-152(fp)
   lw t0,-152(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-148(fp)
-  lw t0,__lookup
+  lw t0,-148(fp)
   add t2,t0,zero
   sw t2,-144(fp)
-  addi t0,zero,1
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-140(fp)
-  lw t0,-188(fp)
+  addi t0,zero,1
   add t2,t0,zero
   sw t2,-136(fp)
-  lw t0,-140(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-132(fp)
   lw t0,-136(fp)
+  add a0,t0,zero
+  lw t0,-132(fp)
   add a1,t0,zero
-  lw t0,-144(fp)
+  lw t0,-140(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-132(fp)
-  lw t0,-132(fp)
-  add t2,t0,zero
   sw t2,-128(fp)
-  lw t0,-164(fp)
+  lw t0,-128(fp)
   add t2,t0,zero
   sw t2,-124(fp)
-  lw t0,-124(fp)
+  lw t0,-160(fp)
+  add t2,t0,zero
+  sw t2,-120(fp)
+  lw t0,-120(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13532,42 +13016,41 @@ label65:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-120(fp)
-  lw t0,-120(fp)
-  lw t2,0(t0)
   sw t2,-116(fp)
-  lw t0,-128(fp)
-  add a0,t0,zero
   lw t0,-116(fp)
+  lw t2,0(t0)
+  sw t2,-112(fp)
+  lw t0,-124(fp)
+  add a0,t0,zero
+  lw t0,-112(fp)
   add a1,t0,zero
-  lw t0,-148(fp)
+  lw t0,-144(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-112(fp)
+  sw t2,-108(fp)
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-108(fp)
+  sw t2,-104(fp)
   addi t0,zero,4
   add t2,t0,zero
-  sw t2,-104(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
   sw t2,-100(fp)
-  lw t0,-104(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-96(fp)
   lw t0,-100(fp)
+  add a0,t0,zero
+  lw t0,-96(fp)
   add a1,t0,zero
-  lw t0,-108(fp)
+  lw t0,-104(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-96(fp)
-  lw t0,-96(fp)
-  add t2,t0,zero
   sw t2,-92(fp)
   lw t0,-92(fp)
   add t2,t0,zero
   sw t2,-88(fp)
   lw t0,-88(fp)
+  add t2,t0,zero
+  sw t2,-84(fp)
+  lw t0,-84(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13577,37 +13060,36 @@ label65:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-84(fp)
-  lw t0,-84(fp)
-  lw t2,0(t0)
   sw t2,-80(fp)
   lw t0,-80(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-76(fp)
-  lw t0,__lookup
+  lw t0,-76(fp)
   add t2,t0,zero
   sw t2,-72(fp)
-  addi t0,zero,3
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-68(fp)
-  lw t0,-188(fp)
+  addi t0,zero,3
   add t2,t0,zero
   sw t2,-64(fp)
-  lw t0,-68(fp)
-  add a0,t0,zero
+  add t2,s7,zero
+  sw t2,-60(fp)
   lw t0,-64(fp)
+  add a0,t0,zero
+  lw t0,-60(fp)
   add a1,t0,zero
-  lw t0,-72(fp)
+  lw t0,-68(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-60(fp)
-  lw t0,-60(fp)
-  add t2,t0,zero
   sw t2,-56(fp)
-  lw t0,-92(fp)
+  lw t0,-56(fp)
   add t2,t0,zero
   sw t2,-52(fp)
-  lw t0,-52(fp)
+  lw t0,-88(fp)
+  add t2,t0,zero
+  sw t2,-48(fp)
+  lw t0,-48(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13617,23 +13099,21 @@ label65:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-48(fp)
-  lw t0,-48(fp)
-  lw t2,0(t0)
   sw t2,-44(fp)
-  lw t0,-56(fp)
-  add a0,t0,zero
   lw t0,-44(fp)
+  lw t2,0(t0)
+  sw t2,-40(fp)
+  lw t0,-52(fp)
+  add a0,t0,zero
+  lw t0,-40(fp)
   add a1,t0,zero
-  lw t0,-76(fp)
+  lw t0,-72(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-40(fp)
-  lw t0,-40(fp)
-  add t2,t0,zero
   sw t2,-36(fp)
   lw t0,-36(fp)
-  add t2,t0,zero
+  add s5,t0,zero
+  add t2,s5,zero
   sw t2,-32(fp)
   lw t0,-32(fp)
   addi t2,t0,0
@@ -13658,8 +13138,7 @@ label65:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-12(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
+  add t2,s7,zero
   sw t2,-8(fp)
   lw t0,-12(fp)
   add a0,t0,zero
@@ -13669,8 +13148,7 @@ label65:
   jalr ra,t0,0
   addi s6,a0,0
   add s6,s6,zero
-  lw t0,-36(fp)
-  add s5,t0,zero
+  add s5,s5,zero
   addi s4,s5,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13704,7 +13182,7 @@ label65:
   add a6,a6,t1
   sw s2,0(a6)
   add a5,s2,zero
-  lw t0,-112(fp)
+  lw t0,-108(fp)
   add a4,t0,zero
   add a2,a4,zero
   addi a3,s1,0
@@ -13720,8 +13198,7 @@ label65:
   add a2,a2,zero
   add a1,s1,zero
   add a1,a1,zero
-  lw t0,-188(fp)
-  add a0,t0,zero
+  add a0,s7,zero
   addi s11,a0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -13745,219 +13222,149 @@ label65:
   add s8,s8,t1
   lw s7,0(s8)
   add s7,s7,zero
-  add t2,s8,zero
-  sw t2,-564(fp)
-  add t2,s9,zero
-  sw t2,-560(fp)
-  add t2,s7,zero
-  sw t2,-556(fp)
-  add t2,s11,zero
-  sw t2,-552(fp)
-  add t2,a0,zero
-  sw t2,-548(fp)
-  add t2,s10,zero
-  sw t2,-544(fp)
-  add t2,a1,zero
-  sw t2,-540(fp)
-  add t2,a4,zero
-  sw t2,-536(fp)
-  add t2,a3,zero
-  sw t2,-532(fp)
-  add t2,a2,zero
-  sw t2,-528(fp)
-  add t2,a2,zero
-  sw t2,-524(fp)
-  add t2,a6,zero
-  sw t2,-520(fp)
-  add t2,s2,zero
-  sw t2,-516(fp)
-  add t2,a5,zero
-  sw t2,-512(fp)
-  add t2,s1,zero
-  sw t2,-508(fp)
-  add t2,s4,zero
-  sw t2,-504(fp)
-  add t2,s5,zero
-  sw t2,-500(fp)
+  add s8,s8,zero
+  add s8,s9,zero
+  add s8,s7,zero
+  add s8,s11,zero
+  add s8,a0,zero
+  add s8,s10,zero
+  add s8,a1,zero
+  add s8,a4,zero
+  add s8,a3,zero
+  add s8,a2,zero
+  add s8,a2,zero
+  add s8,a6,zero
+  add s8,s2,zero
+  add s8,a5,zero
+  add s8,s1,zero
+  add s4,s4,zero
+  add s4,s5,zero
   lw t0,-8(fp)
-  add t2,t0,zero
-  sw t2,-496(fp)
+  add s4,t0,zero
   lw t0,-12(fp)
-  add t2,t0,zero
-  sw t2,-492(fp)
+  add s4,t0,zero
   lw t0,-16(fp)
-  add t2,t0,zero
-  sw t2,-488(fp)
-  add t2,s6,zero
-  sw t2,-484(fp)
+  add s4,t0,zero
+  add s4,s6,zero
   lw t0,-28(fp)
-  add t2,t0,zero
-  sw t2,-480(fp)
+  add s4,t0,zero
   lw t0,-32(fp)
-  add t2,t0,zero
-  sw t2,-476(fp)
+  add s4,t0,zero
   lw t0,-24(fp)
-  add t2,t0,zero
-  sw t2,-472(fp)
-  add t2,s3,zero
-  sw t2,-468(fp)
-  add t2,s6,zero
-  sw t2,-464(fp)
+  add s4,t0,zero
+  add s3,s3,zero
+  add s3,s6,zero
   lw t0,-20(fp)
-  add t2,t0,zero
-  sw t2,-460(fp)
-  lw t0,-48(fp)
-  add t2,t0,zero
-  sw t2,-456(fp)
-  lw t0,-52(fp)
-  add t2,t0,zero
-  sw t2,-452(fp)
-  lw t0,-64(fp)
-  add t2,t0,zero
-  sw t2,-448(fp)
-  lw t0,-68(fp)
-  add t2,t0,zero
-  sw t2,-444(fp)
-  lw t0,-72(fp)
-  add t2,t0,zero
-  sw t2,-440(fp)
-  lw t0,-60(fp)
-  add t2,t0,zero
-  sw t2,-436(fp)
-  lw t0,-84(fp)
-  add t2,t0,zero
-  sw t2,-432(fp)
-  lw t0,-88(fp)
-  add t2,t0,zero
-  sw t2,-428(fp)
-  lw t0,-80(fp)
-  add t2,t0,zero
-  sw t2,-424(fp)
+  add s3,t0,zero
   lw t0,-44(fp)
-  add t2,t0,zero
-  sw t2,-420(fp)
+  add s3,t0,zero
+  lw t0,-48(fp)
+  add s3,t0,zero
+  lw t0,-60(fp)
+  add s3,t0,zero
+  lw t0,-64(fp)
+  add s3,t0,zero
+  lw t0,-68(fp)
+  add s3,t0,zero
   lw t0,-56(fp)
-  add t2,t0,zero
-  sw t2,-416(fp)
+  add s3,t0,zero
+  lw t0,-80(fp)
+  add s3,t0,zero
+  lw t0,-84(fp)
+  add s3,t0,zero
   lw t0,-76(fp)
-  add t2,t0,zero
-  sw t2,-412(fp)
-  lw t0,-100(fp)
-  add t2,t0,zero
-  sw t2,-408(fp)
-  lw t0,-104(fp)
-  add t2,t0,zero
-  sw t2,-404(fp)
-  lw t0,-108(fp)
-  add t2,t0,zero
-  sw t2,-400(fp)
+  add s3,t0,zero
+  lw t0,-40(fp)
+  add s3,t0,zero
+  lw t0,-52(fp)
+  add s3,t0,zero
+  lw t0,-72(fp)
+  add s3,t0,zero
   lw t0,-96(fp)
-  add t2,t0,zero
-  sw t2,-396(fp)
-  lw t0,-120(fp)
-  add t2,t0,zero
-  sw t2,-392(fp)
-  lw t0,-124(fp)
-  add t2,t0,zero
-  sw t2,-388(fp)
-  lw t0,-136(fp)
-  add t2,t0,zero
-  sw t2,-384(fp)
-  lw t0,-140(fp)
-  add t2,t0,zero
-  sw t2,-380(fp)
-  lw t0,-144(fp)
-  add t2,t0,zero
-  sw t2,-376(fp)
-  lw t0,-132(fp)
-  add t2,t0,zero
-  sw t2,-372(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
-  sw t2,-368(fp)
-  lw t0,-160(fp)
-  add t2,t0,zero
-  sw t2,-364(fp)
-  lw t0,-152(fp)
-  add t2,t0,zero
-  sw t2,-360(fp)
+  add s3,t0,zero
+  lw t0,-100(fp)
+  add s3,t0,zero
+  lw t0,-104(fp)
+  add s3,t0,zero
+  lw t0,-92(fp)
+  add s3,t0,zero
   lw t0,-116(fp)
-  add t2,t0,zero
-  sw t2,-356(fp)
+  add s3,t0,zero
+  lw t0,-120(fp)
+  add s3,t0,zero
+  lw t0,-132(fp)
+  add s3,t0,zero
+  lw t0,-136(fp)
+  add s3,t0,zero
+  lw t0,-140(fp)
+  add s3,t0,zero
   lw t0,-128(fp)
-  add t2,t0,zero
-  sw t2,-352(fp)
+  add s3,t0,zero
+  lw t0,-152(fp)
+  add s3,t0,zero
+  lw t0,-156(fp)
+  add s3,t0,zero
   lw t0,-148(fp)
-  add t2,t0,zero
-  sw t2,-348(fp)
-  lw t0,-172(fp)
-  add t2,t0,zero
-  sw t2,-344(fp)
-  lw t0,-176(fp)
-  add t2,t0,zero
-  sw t2,-340(fp)
-  lw t0,-180(fp)
-  add t2,t0,zero
-  sw t2,-336(fp)
+  add s3,t0,zero
+  lw t0,-112(fp)
+  add s3,t0,zero
+  lw t0,-124(fp)
+  add s3,t0,zero
+  lw t0,-144(fp)
+  add s3,t0,zero
   lw t0,-168(fp)
-  add t2,t0,zero
-  sw t2,-332(fp)
-  lw t0,-184(fp)
-  add t2,t0,zero
-  sw t2,-328(fp)
-  lw t0,-208(fp)
-  add t2,t0,zero
-  sw t2,-324(fp)
-  lw t0,-212(fp)
-  add t2,t0,zero
-  sw t2,-320(fp)
-  lw t0,-204(fp)
-  add t2,t0,zero
-  sw t2,-316(fp)
-  lw t0,-196(fp)
-  add t2,t0,zero
-  sw t2,-312(fp)
+  add s3,t0,zero
+  lw t0,-172(fp)
+  add s3,t0,zero
+  lw t0,-176(fp)
+  add s3,t0,zero
+  lw t0,-164(fp)
+  add s3,t0,zero
+  lw t0,-180(fp)
+  add s3,t0,zero
   lw t0,-200(fp)
-  add t2,t0,zero
-  sw t2,-308(fp)
+  add s3,t0,zero
+  lw t0,-204(fp)
+  add s3,t0,zero
+  lw t0,-196(fp)
+  add s3,t0,zero
+  lw t0,-188(fp)
+  add s3,t0,zero
   lw t0,-192(fp)
-  add t2,t0,zero
-  sw t2,-304(fp)
-  lw t0,-220(fp)
-  add t2,t0,zero
-  sw t2,-300(fp)
-  lw t0,-224(fp)
-  add t2,t0,zero
-  sw t2,-296(fp)
+  add s3,t0,zero
+  lw t0,-184(fp)
+  add s3,t0,zero
+  lw t0,-212(fp)
+  add s3,t0,zero
   lw t0,-216(fp)
-  add t2,t0,zero
-  sw t2,-292(fp)
-  lw t0,-232(fp)
-  add t2,t0,zero
-  sw t2,-288(fp)
-  lw t0,-236(fp)
   add s3,t0,zero
-  lw t0,-260(fp)
+  lw t0,-208(fp)
   add s3,t0,zero
-  lw t0,-264(fp)
+  lw t0,-224(fp)
   add s3,t0,zero
-  lw t0,-256(fp)
+  lw t0,-228(fp)
   add s3,t0,zero
   lw t0,-252(fp)
   add s3,t0,zero
-  lw t0,-244(fp)
+  lw t0,-256(fp)
   add s3,t0,zero
   lw t0,-248(fp)
   add s3,t0,zero
+  lw t0,-244(fp)
+  add s3,t0,zero
+  lw t0,-236(fp)
+  add s3,t0,zero
   lw t0,-240(fp)
   add s3,t0,zero
-  lw t0,-272(fp)
+  lw t0,-232(fp)
   add s3,t0,zero
-  lw t0,-276(fp)
+  lw t0,-264(fp)
   add s3,t0,zero
   lw t0,-268(fp)
   add s3,t0,zero
-  lw t0,-284(fp)
+  lw t0,-260(fp)
+  add s3,t0,zero
+  lw t0,-276(fp)
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
@@ -13967,19 +13374,18 @@ label65:
   add s3,a1,zero
   add s1,s1,zero
   add s1,s2,zero
+  add s1,s5,zero
   lw t0,-36(fp)
   add s1,t0,zero
-  lw t0,-40(fp)
+  lw t0,-88(fp)
   add s1,t0,zero
-  lw t0,-92(fp)
+  lw t0,-108(fp)
   add s1,t0,zero
-  lw t0,-112(fp)
+  lw t0,-160(fp)
   add s1,t0,zero
-  lw t0,-164(fp)
+  lw t0,-220(fp)
   add s1,t0,zero
-  lw t0,-228(fp)
-  add s1,t0,zero
-  lw t0,-280(fp)
+  lw t0,-272(fp)
   add s1,t0,zero
   jal zero,label66
 label66:
@@ -13987,27 +13393,27 @@ label66:
   add a0,s1,zero
   jal zero,fun248__exit
 fun248__exit:
-  lw t0,-628(fp)
+  lw t0,-320(fp)
   add s1,t0,zero
-  lw t0,-624(fp)
+  lw t0,-316(fp)
   add s2,t0,zero
-  lw t0,-620(fp)
+  lw t0,-312(fp)
   add s3,t0,zero
-  lw t0,-616(fp)
+  lw t0,-308(fp)
   add s4,t0,zero
-  lw t0,-612(fp)
+  lw t0,-304(fp)
   add s5,t0,zero
-  lw t0,-608(fp)
+  lw t0,-300(fp)
   add s6,t0,zero
-  lw t0,-604(fp)
+  lw t0,-296(fp)
   add s7,t0,zero
-  lw t0,-600(fp)
+  lw t0,-292(fp)
   add s8,t0,zero
-  lw t0,-596(fp)
+  lw t0,-288(fp)
   add s9,t0,zero
-  lw t0,-592(fp)
+  lw t0,-284(fp)
   add s10,t0,zero
-  lw t0,-588(fp)
+  lw t0,-280(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -14133,33 +13539,33 @@ __fun230:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-952
+  addi sp,sp,-508
   add t2,a0,zero
-  sw t2,-956(fp)
+  sw t2,-512(fp)
   add t2,a1,zero
-  sw t2,-952(fp)
+  sw t2,-508(fp)
   add t2,s1,zero
-  sw t2,-948(fp)
+  sw t2,-504(fp)
   add t2,s2,zero
-  sw t2,-944(fp)
+  sw t2,-500(fp)
   add t2,s3,zero
-  sw t2,-940(fp)
+  sw t2,-496(fp)
   add t2,s4,zero
-  sw t2,-936(fp)
+  sw t2,-492(fp)
   add t2,s5,zero
-  sw t2,-932(fp)
+  sw t2,-488(fp)
   add t2,s6,zero
-  sw t2,-928(fp)
+  sw t2,-484(fp)
   add t2,s7,zero
-  sw t2,-924(fp)
+  sw t2,-480(fp)
   add t2,s8,zero
-  sw t2,-920(fp)
+  sw t2,-476(fp)
   add t2,s9,zero
-  sw t2,-916(fp)
+  sw t2,-472(fp)
   add t2,s10,zero
-  sw t2,-912(fp)
+  sw t2,-468(fp)
   add t2,s11,zero
-  sw t2,-908(fp)
+  sw t2,-464(fp)
 fun230__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -14167,7 +13573,7 @@ fun230__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-952(fp)
+  lw t0,-508(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -14180,7 +13586,7 @@ fun230__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-956(fp)
+  lw t0,-512(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -14194,342 +13600,59 @@ fun230__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-904(fp)
-  lw t0,-904(fp)
-  add s1,t0,zero
+  add s5,s3,zero
+  add s1,s5,zero
   lw t0,__lookup
   add s3,t0,zero
   addi t0,zero,0
   add s2,t0,zero
-  lw t0,-904(fp)
-  add s1,t0,zero
+  add s1,s5,zero
   add a0,s2,zero
   add a1,s1,zero
   jalr ra,s3,0
   addi s1,a0,0
-  add t2,s1,zero
-  sw t2,-900(fp)
+  add s2,s1,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s4,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
-  lw t0,-904(fp)
-  add s1,t0,zero
-  add a0,s2,zero
+  add s3,t0,zero
+  add s1,s5,zero
+  add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s4,0
   addi s1,a0,0
   add s1,s1,zero
-  add s2,s1,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
-  sub s1,s2,s1
+  sub s1,s3,s1
   sltiu s1,s1,1
   beq s1,zero,label70
   jal zero,label69
 label69:
   addi t0,zero,1
-  add t2,t0,zero
-  sw t2,-896(fp)
+  add s4,t0,zero
   addi t0,zero,0
-  lw t1,-896(fp)
-  sub t2,t0,t1
-  sw t2,-892(fp)
-  lw t0,-892(fp)
-  add t2,t0,zero
-  sw t2,-888(fp)
+  sub s3,t0,s4
+  add s3,s3,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-884(fp)
+  add a4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-880(fp)
+  add a4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-876(fp)
+  add a4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-872(fp)
+  add a4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-868(fp)
+  add a4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-864(fp)
+  add a4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-860(fp)
+  add a4,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-856(fp)
+  add s2,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-852(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-848(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-844(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-840(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-836(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-832(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-828(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-824(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-820(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-816(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-812(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-808(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-804(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-800(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-796(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-792(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-788(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-784(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-780(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-776(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-772(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-768(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-764(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-760(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-756(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-752(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-748(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-744(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-740(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-736(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-732(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-728(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-724(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-720(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-716(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-712(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-708(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-704(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-700(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-696(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-692(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-688(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-684(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-680(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-676(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-672(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-668(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-664(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-660(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-656(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-652(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-648(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-644(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-640(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-636(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-632(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-628(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-624(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-620(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-616(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-612(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-608(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-604(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-600(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-596(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-592(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-588(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-584(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-580(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-576(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-572(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-568(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-564(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-560(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-556(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-552(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-548(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-544(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-540(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-536(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-532(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-528(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-524(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-520(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-516(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-512(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-508(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-504(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-500(fp)
+  add s2,t0,zero
   addi t0,zero,0
   add s1,t0,zero
   addi t0,zero,0
@@ -14550,14 +13673,186 @@ label69:
   add s1,t0,zero
   addi t0,zero,0
   add s1,t0,zero
-  lw t0,-896(fp)
+  addi t0,zero,0
   add s1,t0,zero
-  lw t0,-888(fp)
+  addi t0,zero,0
   add s1,t0,zero
-  lw t0,-904(fp)
+  addi t0,zero,0
   add s1,t0,zero
-  lw t0,-892(fp)
+  addi t0,zero,0
   add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  add s1,s4,zero
+  add s1,s3,zero
+  add s1,s5,zero
+  add s1,s3,zero
   addi t0,zero,0
   add s2,t0,zero
   addi t0,zero,0
@@ -14587,14 +13882,13 @@ label70:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-496(fp)
-  lw t0,-496(fp)
+  sw t2,-460(fp)
+  lw t0,-460(fp)
   add t2,t0,zero
-  sw t2,-492(fp)
-  lw t0,-904(fp)
-  add t2,t0,zero
-  sw t2,-488(fp)
-  lw t0,-492(fp)
+  sw t2,-456(fp)
+  add t2,s5,zero
+  sw t2,-452(fp)
+  lw t0,-456(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -14604,157 +13898,68 @@ label70:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-484(fp)
-  lw t0,-488(fp)
-  sw t0,0(t2)
-  sw t2,-484(fp)
-  lw t0,-488(fp)
-  add t2,t0,zero
-  sw t2,-480(fp)
-  lw t0,-900(fp)
-  add t2,t0,zero
-  sw t2,-476(fp)
-  lw t0,-476(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-472(fp)
-  lw t0,-472(fp)
-  lw t2,0(t0)
-  sw t2,-468(fp)
-  lw t0,-468(fp)
-  add t2,t0,zero
-  sw t2,-464(fp)
-  lw t0,-464(fp)
-  add t2,t0,zero
-  sw t2,-460(fp)
-  lw t0,-492(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-456(fp)
-  lw t0,-460(fp)
-  sw t0,0(t2)
-  sw t2,-456(fp)
-  lw t0,-460(fp)
-  add t2,t0,zero
-  sw t2,-452(fp)
-  lw t0,-492(fp)
-  add s1,t0,zero
-  add t2,s1,zero
   sw t2,-448(fp)
-  addi t0,zero,8
-  add a0,t0,zero
-  lw t0,malloc
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-444(fp)
-  lw t0,-444(fp)
+  lw t0,-452(fp)
+  sw t0,0(t2)
+  sw t2,-448(fp)
+  lw t0,-452(fp)
   add t2,t0,zero
+  sw t2,-444(fp)
+  add t2,s2,zero
   sw t2,-440(fp)
-  add t2,s1,zero
-  sw t2,-436(fp)
   lw t0,-440(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
   mul t0,t0,t1
   add t2,t2,t0
-  addi t1,zero,1
+  addi t1,zero,0
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-432(fp)
+  sw t2,-436(fp)
   lw t0,-436(fp)
-  sw t0,0(t2)
+  lw t2,0(t0)
   sw t2,-432(fp)
-  lw t0,-436(fp)
+  lw t0,-432(fp)
   add t2,t0,zero
   sw t2,-428(fp)
-  lw t0,-900(fp)
+  lw t0,-428(fp)
   add t2,t0,zero
   sw t2,-424(fp)
-  lw t0,-424(fp)
+  lw t0,-456(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
   mul t0,t0,t1
   add t2,t2,t0
-  addi t1,zero,1
+  addi t1,zero,0
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
   sw t2,-420(fp)
-  lw t0,-420(fp)
-  lw t2,0(t0)
-  sw t2,-416(fp)
-  lw t0,-416(fp)
-  add t2,t0,zero
-  sw t2,-412(fp)
-  lw t0,-440(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-408(fp)
-  lw t0,-412(fp)
+  lw t0,-424(fp)
   sw t0,0(t2)
-  sw t2,-408(fp)
-  lw t0,-412(fp)
+  sw t2,-420(fp)
+  lw t0,-424(fp)
   add t2,t0,zero
-  sw t2,-404(fp)
-  lw t0,-440(fp)
+  sw t2,-416(fp)
+  lw t0,-456(fp)
   add s1,t0,zero
   add t2,s1,zero
-  sw t2,-400(fp)
-  lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-396(fp)
-  addi t0,zero,1
-  add t2,t0,zero
-  sw t2,-392(fp)
-  add t2,s1,zero
-  sw t2,-388(fp)
-  lw t0,-392(fp)
-  add a0,t0,zero
-  lw t0,-388(fp)
-  add a1,t0,zero
-  lw t0,-396(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-384(fp)
-  lw t0,-384(fp)
-  add t2,t0,zero
-  sw t2,-380(fp)
+  sw t2,-412(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-376(fp)
-  lw t0,-376(fp)
+  sw t2,-408(fp)
+  lw t0,-408(fp)
   add t2,t0,zero
-  sw t2,-372(fp)
+  sw t2,-404(fp)
   add t2,s1,zero
-  sw t2,-368(fp)
-  lw t0,-372(fp)
+  sw t2,-400(fp)
+  lw t0,-404(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -14764,17 +13969,33 @@ label70:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-364(fp)
-  lw t0,-368(fp)
+  sw t2,-396(fp)
+  lw t0,-400(fp)
   sw t0,0(t2)
-  sw t2,-364(fp)
-  lw t0,-368(fp)
+  sw t2,-396(fp)
+  lw t0,-400(fp)
   add t2,t0,zero
-  sw t2,-360(fp)
+  sw t2,-392(fp)
+  add t2,s2,zero
+  sw t2,-388(fp)
+  lw t0,-388(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-384(fp)
+  lw t0,-384(fp)
+  lw t2,0(t0)
+  sw t2,-380(fp)
   lw t0,-380(fp)
   add t2,t0,zero
-  sw t2,-356(fp)
-  lw t0,-356(fp)
+  sw t2,-376(fp)
+  lw t0,-404(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -14784,83 +14005,68 @@ label70:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
+  sw t2,-372(fp)
+  lw t0,-376(fp)
+  sw t0,0(t2)
+  sw t2,-372(fp)
+  lw t0,-376(fp)
+  add t2,t0,zero
+  sw t2,-368(fp)
+  lw t0,-404(fp)
+  add s1,t0,zero
+  add t2,s1,zero
+  sw t2,-364(fp)
+  lw t0,__lookup
+  add t2,t0,zero
+  sw t2,-360(fp)
+  addi t0,zero,1
+  add t2,t0,zero
+  sw t2,-356(fp)
+  add t2,s1,zero
   sw t2,-352(fp)
+  lw t0,-356(fp)
+  add a0,t0,zero
   lw t0,-352(fp)
-  lw t2,0(t0)
+  add a1,t0,zero
+  lw t0,-360(fp)
+  jalr ra,t0,0
+  addi t2,a0,0
   sw t2,-348(fp)
   lw t0,-348(fp)
   add t2,t0,zero
   sw t2,-344(fp)
-  lw t0,-372(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-340(fp)
-  lw t0,-344(fp)
-  sw t0,0(t2)
-  sw t2,-340(fp)
-  lw t0,-344(fp)
-  add t2,t0,zero
-  sw t2,-336(fp)
-  lw t0,-372(fp)
-  add s1,t0,zero
-  add t2,s1,zero
-  sw t2,-332(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
+  sw t2,-340(fp)
+  lw t0,-340(fp)
+  add t2,t0,zero
+  sw t2,-336(fp)
+  add t2,s1,zero
+  sw t2,-332(fp)
+  lw t0,-336(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
   sw t2,-328(fp)
-  lw t0,-328(fp)
+  lw t0,-332(fp)
+  sw t0,0(t2)
+  sw t2,-328(fp)
+  lw t0,-332(fp)
   add t2,t0,zero
   sw t2,-324(fp)
-  add t2,s1,zero
+  lw t0,-344(fp)
+  add t2,t0,zero
   sw t2,-320(fp)
-  lw t0,-324(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-316(fp)
   lw t0,-320(fp)
-  sw t0,0(t2)
-  sw t2,-316(fp)
-  lw t0,-320(fp)
-  add t2,t0,zero
-  sw t2,-312(fp)
-  lw t0,-380(fp)
-  add t2,t0,zero
-  sw t2,-308(fp)
-  lw t0,-308(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-304(fp)
-  lw t0,-304(fp)
-  lw t2,0(t0)
-  sw t2,-300(fp)
-  lw t0,-300(fp)
-  add t2,t0,zero
-  sw t2,-296(fp)
-  lw t0,-324(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -14870,65 +14076,151 @@ label70:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-292(fp)
-  lw t0,-296(fp)
+  sw t2,-316(fp)
+  lw t0,-316(fp)
+  lw t2,0(t0)
+  sw t2,-312(fp)
+  lw t0,-312(fp)
+  add t2,t0,zero
+  sw t2,-308(fp)
+  lw t0,-336(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-304(fp)
+  lw t0,-308(fp)
   sw t0,0(t2)
-  sw t2,-292(fp)
-  lw t0,-296(fp)
+  sw t2,-304(fp)
+  lw t0,-308(fp)
   add t2,t0,zero
-  sw t2,-288(fp)
-  lw t0,-324(fp)
-  add t2,t0,zero
-  sw t2,-284(fp)
-  lw t0,-284(fp)
-  add t2,t0,zero
-  sw t2,-280(fp)
-  lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-276(fp)
-  addi t0,zero,1
-  add t2,t0,zero
-  sw t2,-272(fp)
-  lw t0,-284(fp)
-  add t2,t0,zero
-  sw t2,-268(fp)
-  lw t0,-272(fp)
+  sw t2,-300(fp)
+  lw t0,-336(fp)
+  add s1,t0,zero
+  add t2,s1,zero
+  sw t2,-296(fp)
+  addi t0,zero,8
   add a0,t0,zero
-  lw t0,-268(fp)
-  add a1,t0,zero
-  lw t0,-276(fp)
+  lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
+  sw t2,-292(fp)
+  lw t0,-292(fp)
+  add t2,t0,zero
+  sw t2,-288(fp)
+  add t2,s1,zero
+  sw t2,-284(fp)
+  lw t0,-288(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-280(fp)
+  lw t0,-284(fp)
+  sw t0,0(t2)
+  sw t2,-280(fp)
+  lw t0,-284(fp)
+  add t2,t0,zero
+  sw t2,-276(fp)
+  lw t0,-344(fp)
+  add t2,t0,zero
+  sw t2,-272(fp)
+  lw t0,-272(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-268(fp)
+  lw t0,-268(fp)
+  lw t2,0(t0)
   sw t2,-264(fp)
   lw t0,-264(fp)
   add t2,t0,zero
   sw t2,-260(fp)
-  lw t0,__lookup
-  add t2,t0,zero
+  lw t0,-288(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
   sw t2,-256(fp)
-  addi t0,zero,5
+  lw t0,-260(fp)
+  sw t0,0(t2)
+  sw t2,-256(fp)
+  lw t0,-260(fp)
   add t2,t0,zero
   sw t2,-252(fp)
-  lw t0,-284(fp)
+  lw t0,-288(fp)
   add t2,t0,zero
   sw t2,-248(fp)
-  lw t0,-252(fp)
-  add a0,t0,zero
   lw t0,-248(fp)
-  add a1,t0,zero
-  lw t0,-256(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
+  add t2,t0,zero
   sw t2,-244(fp)
-  lw t0,-244(fp)
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-240(fp)
-  lw t0,-260(fp)
-  lw t1,-240(fp)
+  addi t0,zero,1
+  add t2,t0,zero
+  sw t2,-236(fp)
+  lw t0,-248(fp)
+  add t2,t0,zero
+  sw t2,-232(fp)
+  lw t0,-236(fp)
+  add a0,t0,zero
+  lw t0,-232(fp)
+  add a1,t0,zero
+  lw t0,-240(fp)
+  jalr ra,t0,0
+  addi t2,a0,0
+  sw t2,-228(fp)
+  lw t0,-228(fp)
+  add t2,t0,zero
+  sw t2,-224(fp)
+  lw t0,__lookup
+  add t2,t0,zero
+  sw t2,-220(fp)
+  addi t0,zero,5
+  add t2,t0,zero
+  sw t2,-216(fp)
+  lw t0,-248(fp)
+  add t2,t0,zero
+  sw t2,-212(fp)
+  lw t0,-216(fp)
+  add a0,t0,zero
+  lw t0,-212(fp)
+  add a1,t0,zero
+  lw t0,-220(fp)
+  jalr ra,t0,0
+  addi t2,a0,0
+  sw t2,-208(fp)
+  lw t0,-208(fp)
+  add t2,t0,zero
+  sw t2,-204(fp)
+  lw t0,-224(fp)
+  lw t1,-204(fp)
   sub t2,t0,t1
   sltiu t2,t2,1
-  sw t2,-236(fp)
-  lw t0,-236(fp)
+  sw t2,-200(fp)
+  lw t0,-200(fp)
   beq t0,zero,label73
   jal zero,label72
 label71:
@@ -14937,37 +14229,17 @@ label71:
   jal zero,fun230__exit
 label72:
   lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-232(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-228(fp)
-  lw t0,-284(fp)
-  add t2,t0,zero
-  sw t2,-224(fp)
-  lw t0,-228(fp)
-  add a0,t0,zero
-  lw t0,-224(fp)
-  add a1,t0,zero
-  lw t0,-232(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-220(fp)
-  lw t0,-220(fp)
-  add t2,t0,zero
-  sw t2,-216(fp)
-  lw t0,-216(fp)
-  add t2,t0,zero
-  sw t2,-212(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-208(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-204(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-200(fp)
+  add s4,t0,zero
+  lw t0,-248(fp)
+  add s3,t0,zero
+  add a0,s4,zero
+  add a1,s3,zero
+  jalr ra,s5,0
+  addi s2,a0,0
+  add s1,s2,zero
+  add s1,s1,zero
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-196(fp)
@@ -15046,20 +14318,21 @@ label72:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-96(fp)
-  lw t0,-224(fp)
+  addi t0,zero,0
   add t2,t0,zero
   sw t2,-92(fp)
-  lw t0,-228(fp)
+  addi t0,zero,0
   add t2,t0,zero
   sw t2,-88(fp)
-  lw t0,-232(fp)
-  add a3,t0,zero
-  lw t0,-220(fp)
-  add a2,t0,zero
-  lw t0,-212(fp)
-  add a1,t0,zero
-  lw t0,-216(fp)
-  add a0,t0,zero
+  addi t0,zero,0
+  add t2,t0,zero
+  sw t2,-84(fp)
+  add t6,s3,zero
+  add t5,s4,zero
+  add a3,s5,zero
+  add a2,s2,zero
+  add a1,s1,zero
+  add a0,s1,zero
   addi t0,zero,0
   add s10,t0,zero
   addi t0,zero,0
@@ -15072,26 +14345,24 @@ label72:
 label73:
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-84(fp)
+  sw t2,-80(fp)
   addi t0,zero,6
   add t2,t0,zero
-  sw t2,-80(fp)
-  lw t0,-284(fp)
-  add t2,t0,zero
   sw t2,-76(fp)
-  lw t0,-80(fp)
-  add a0,t0,zero
+  lw t0,-248(fp)
+  add t2,t0,zero
+  sw t2,-72(fp)
   lw t0,-76(fp)
+  add a0,t0,zero
+  lw t0,-72(fp)
   add a1,t0,zero
-  lw t0,-84(fp)
+  lw t0,-80(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-72(fp)
-  lw t0,-72(fp)
-  add t2,t0,zero
   sw t2,-68(fp)
   lw t0,-68(fp)
-  add t2,t0,zero
+  add s6,t0,zero
+  add t2,s6,zero
   sw t2,-64(fp)
   lw t0,-64(fp)
   addi t2,t0,0
@@ -15115,7 +14386,7 @@ label73:
   sw t2,-48(fp)
   addi t0,zero,5
   add s9,t0,zero
-  lw t0,-284(fp)
+  lw t0,-248(fp)
   add s8,t0,zero
   add a0,s9,zero
   add a1,s8,zero
@@ -15123,8 +14394,7 @@ label73:
   jalr ra,t0,0
   addi s7,a0,0
   add s7,s7,zero
-  lw t0,-68(fp)
-  add s6,t0,zero
+  add s6,s6,zero
   addi s5,s6,0
   addi t0,zero,0
   addi t1,zero,8
@@ -15162,7 +14432,7 @@ label73:
   addi t0,zero,2
   add t2,t0,zero
   sw t2,-32(fp)
-  lw t0,-284(fp)
+  lw t0,-248(fp)
   add t2,t0,zero
   sw t2,-28(fp)
   lw t0,-32(fp)
@@ -15202,88 +14472,86 @@ label73:
   add s10,s11,zero
   add s10,s10,zero
   add t2,s10,zero
-  sw t2,-208(fp)
+  sw t2,-196(fp)
   lw t0,-12(fp)
   add t2,t0,zero
-  sw t2,-204(fp)
+  sw t2,-192(fp)
   lw t0,-16(fp)
   add t2,t0,zero
-  sw t2,-200(fp)
+  sw t2,-188(fp)
   lw t0,-28(fp)
   add t2,t0,zero
-  sw t2,-196(fp)
+  sw t2,-184(fp)
   lw t0,-32(fp)
   add t2,t0,zero
-  sw t2,-192(fp)
+  sw t2,-180(fp)
   lw t0,-36(fp)
   add t2,t0,zero
-  sw t2,-188(fp)
+  sw t2,-176(fp)
   lw t0,-24(fp)
   add t2,t0,zero
-  sw t2,-184(fp)
+  sw t2,-172(fp)
   add t2,s1,zero
-  sw t2,-180(fp)
+  sw t2,-168(fp)
   add t2,s2,zero
-  sw t2,-176(fp)
+  sw t2,-164(fp)
   lw t0,-44(fp)
   add t2,t0,zero
-  sw t2,-172(fp)
+  sw t2,-160(fp)
   lw t0,-8(fp)
   add t2,t0,zero
-  sw t2,-168(fp)
+  sw t2,-156(fp)
   lw t0,-20(fp)
   add t2,t0,zero
-  sw t2,-164(fp)
+  sw t2,-152(fp)
   lw t0,-40(fp)
   add t2,t0,zero
-  sw t2,-160(fp)
-  add t2,s5,zero
-  sw t2,-156(fp)
-  add t2,s6,zero
-  sw t2,-152(fp)
-  add t2,s8,zero
   sw t2,-148(fp)
-  add t2,s9,zero
+  add t2,s5,zero
   sw t2,-144(fp)
+  add t2,s6,zero
+  sw t2,-140(fp)
+  add t2,s8,zero
+  sw t2,-136(fp)
+  add t2,s9,zero
+  sw t2,-132(fp)
   lw t0,-48(fp)
   add t2,t0,zero
-  sw t2,-140(fp)
+  sw t2,-128(fp)
   add t2,s7,zero
-  sw t2,-136(fp)
+  sw t2,-124(fp)
   lw t0,-60(fp)
   add t2,t0,zero
-  sw t2,-132(fp)
+  sw t2,-120(fp)
   lw t0,-64(fp)
   add t2,t0,zero
-  sw t2,-128(fp)
+  sw t2,-116(fp)
   lw t0,-56(fp)
   add t2,t0,zero
-  sw t2,-124(fp)
-  add t2,s4,zero
-  sw t2,-120(fp)
-  add t2,s7,zero
-  sw t2,-116(fp)
-  lw t0,-52(fp)
-  add t2,t0,zero
   sw t2,-112(fp)
-  lw t0,-76(fp)
-  add t2,t0,zero
+  add t2,s4,zero
   sw t2,-108(fp)
-  lw t0,-80(fp)
-  add t2,t0,zero
+  add t2,s7,zero
   sw t2,-104(fp)
-  lw t0,-84(fp)
+  lw t0,-52(fp)
   add t2,t0,zero
   sw t2,-100(fp)
   lw t0,-72(fp)
   add t2,t0,zero
   sw t2,-96(fp)
-  addi t0,zero,0
+  lw t0,-76(fp)
   add t2,t0,zero
   sw t2,-92(fp)
-  addi t0,zero,0
+  lw t0,-80(fp)
   add t2,t0,zero
   sw t2,-88(fp)
+  lw t0,-68(fp)
+  add t2,t0,zero
+  sw t2,-84(fp)
+  addi t0,zero,0
+  add t6,t0,zero
+  addi t0,zero,0
+  add t5,t0,zero
   addi t0,zero,0
   add a3,t0,zero
   addi t0,zero,0
@@ -15294,12 +14562,11 @@ label73:
   add s10,s11,zero
   add s9,s2,zero
   add s8,s3,zero
-  lw t0,-68(fp)
-  add s7,t0,zero
+  add s7,s6,zero
   jal zero,label74
 label74:
   add a0,a0,zero
-  lw t0,-284(fp)
+  lw t0,-248(fp)
   add s6,t0,zero
   addi s5,s6,0
   addi t0,zero,0
@@ -15350,300 +14617,201 @@ label74:
   add a4,a4,t1
   lw s11,0(a4)
   add s11,s11,zero
-  add t2,a4,zero
-  sw t2,-884(fp)
-  add t2,a5,zero
-  sw t2,-880(fp)
-  add t2,s11,zero
-  sw t2,-876(fp)
-  add t2,a7,zero
-  sw t2,-872(fp)
-  add t2,t3,zero
-  sw t2,-868(fp)
-  add t2,a6,zero
-  sw t2,-864(fp)
-  add t2,t4,zero
-  sw t2,-860(fp)
-  add t2,s2,zero
-  sw t2,-856(fp)
-  add t2,s3,zero
-  sw t2,-852(fp)
-  add t2,s1,zero
-  sw t2,-848(fp)
-  add t2,s5,zero
-  sw t2,-844(fp)
-  add t2,s6,zero
-  sw t2,-840(fp)
-  add t2,s4,zero
-  sw t2,-836(fp)
-  lw t0,-248(fp)
-  add t2,t0,zero
-  sw t2,-832(fp)
-  lw t0,-252(fp)
-  add t2,t0,zero
-  sw t2,-828(fp)
-  lw t0,-256(fp)
-  add t2,t0,zero
-  sw t2,-824(fp)
-  lw t0,-244(fp)
-  add t2,t0,zero
-  sw t2,-820(fp)
-  lw t0,-268(fp)
-  add t2,t0,zero
-  sw t2,-816(fp)
-  lw t0,-272(fp)
-  add t2,t0,zero
-  sw t2,-812(fp)
-  lw t0,-276(fp)
-  add t2,t0,zero
-  sw t2,-808(fp)
-  lw t0,-264(fp)
-  add t2,t0,zero
-  sw t2,-804(fp)
-  lw t0,-240(fp)
-  add t2,t0,zero
-  sw t2,-800(fp)
-  lw t0,-260(fp)
-  add t2,t0,zero
-  sw t2,-796(fp)
-  lw t0,-236(fp)
-  add t2,t0,zero
-  sw t2,-792(fp)
+  add a4,a4,zero
+  add a4,a5,zero
+  add a4,s11,zero
+  add a4,a7,zero
+  add a4,t3,zero
+  add a4,a6,zero
+  add a4,t4,zero
+  add s2,s2,zero
+  add s2,s3,zero
+  add s1,s1,zero
+  add s1,s5,zero
+  add s1,s6,zero
+  add s1,s4,zero
+  lw t0,-212(fp)
+  add s1,t0,zero
+  lw t0,-216(fp)
+  add s1,t0,zero
+  lw t0,-220(fp)
+  add s1,t0,zero
   lw t0,-208(fp)
-  add t2,t0,zero
-  sw t2,-788(fp)
+  add s1,t0,zero
+  lw t0,-232(fp)
+  add s1,t0,zero
+  lw t0,-236(fp)
+  add s1,t0,zero
+  lw t0,-240(fp)
+  add s1,t0,zero
+  lw t0,-228(fp)
+  add s1,t0,zero
   lw t0,-204(fp)
-  add t2,t0,zero
-  sw t2,-784(fp)
+  add s1,t0,zero
+  lw t0,-224(fp)
+  add s1,t0,zero
   lw t0,-200(fp)
-  add t2,t0,zero
-  sw t2,-780(fp)
+  add s1,t0,zero
   lw t0,-196(fp)
-  add t2,t0,zero
-  sw t2,-776(fp)
+  add s1,t0,zero
   lw t0,-192(fp)
-  add t2,t0,zero
-  sw t2,-772(fp)
+  add s1,t0,zero
   lw t0,-188(fp)
-  add t2,t0,zero
-  sw t2,-768(fp)
+  add s1,t0,zero
   lw t0,-184(fp)
-  add t2,t0,zero
-  sw t2,-764(fp)
+  add s1,t0,zero
   lw t0,-180(fp)
-  add t2,t0,zero
-  sw t2,-760(fp)
+  add s1,t0,zero
   lw t0,-176(fp)
-  add t2,t0,zero
-  sw t2,-756(fp)
+  add s1,t0,zero
   lw t0,-172(fp)
-  add t2,t0,zero
-  sw t2,-752(fp)
+  add s1,t0,zero
   lw t0,-168(fp)
-  add t2,t0,zero
-  sw t2,-748(fp)
+  add s1,t0,zero
   lw t0,-164(fp)
-  add t2,t0,zero
-  sw t2,-744(fp)
+  add s1,t0,zero
   lw t0,-160(fp)
-  add t2,t0,zero
-  sw t2,-740(fp)
+  add s1,t0,zero
   lw t0,-156(fp)
-  add t2,t0,zero
-  sw t2,-736(fp)
+  add s1,t0,zero
   lw t0,-152(fp)
-  add t2,t0,zero
-  sw t2,-732(fp)
+  add s1,t0,zero
   lw t0,-148(fp)
-  add t2,t0,zero
-  sw t2,-728(fp)
+  add s1,t0,zero
   lw t0,-144(fp)
-  add t2,t0,zero
-  sw t2,-724(fp)
+  add s1,t0,zero
   lw t0,-140(fp)
-  add t2,t0,zero
-  sw t2,-720(fp)
+  add s1,t0,zero
   lw t0,-136(fp)
-  add t2,t0,zero
-  sw t2,-716(fp)
+  add s1,t0,zero
   lw t0,-132(fp)
-  add t2,t0,zero
-  sw t2,-712(fp)
+  add s1,t0,zero
   lw t0,-128(fp)
-  add t2,t0,zero
-  sw t2,-708(fp)
+  add s1,t0,zero
   lw t0,-124(fp)
-  add t2,t0,zero
-  sw t2,-704(fp)
+  add s1,t0,zero
   lw t0,-120(fp)
-  add t2,t0,zero
-  sw t2,-700(fp)
+  add s1,t0,zero
   lw t0,-116(fp)
-  add t2,t0,zero
-  sw t2,-696(fp)
+  add s1,t0,zero
   lw t0,-112(fp)
-  add t2,t0,zero
-  sw t2,-692(fp)
+  add s1,t0,zero
   lw t0,-108(fp)
-  add t2,t0,zero
-  sw t2,-688(fp)
+  add s1,t0,zero
   lw t0,-104(fp)
-  add t2,t0,zero
-  sw t2,-684(fp)
+  add s1,t0,zero
   lw t0,-100(fp)
-  add t2,t0,zero
-  sw t2,-680(fp)
+  add s1,t0,zero
   lw t0,-96(fp)
-  add t2,t0,zero
-  sw t2,-676(fp)
+  add s1,t0,zero
   lw t0,-92(fp)
-  add t2,t0,zero
-  sw t2,-672(fp)
+  add s1,t0,zero
   lw t0,-88(fp)
-  add t2,t0,zero
-  sw t2,-668(fp)
-  add t2,a3,zero
-  sw t2,-664(fp)
-  add t2,a2,zero
-  sw t2,-660(fp)
-  add t2,a1,zero
-  sw t2,-656(fp)
+  add s1,t0,zero
+  lw t0,-84(fp)
+  add s1,t0,zero
+  add s1,t6,zero
+  add s1,t5,zero
+  add s1,a3,zero
+  add s1,a2,zero
+  add s1,a1,zero
+  lw t0,-244(fp)
+  add s1,t0,zero
+  lw t0,-268(fp)
+  add s1,t0,zero
+  lw t0,-272(fp)
+  add s1,t0,zero
+  lw t0,-264(fp)
+  add s1,t0,zero
+  lw t0,-256(fp)
+  add s1,t0,zero
+  lw t0,-260(fp)
+  add s1,t0,zero
+  lw t0,-252(fp)
+  add s1,t0,zero
   lw t0,-280(fp)
-  add t2,t0,zero
-  sw t2,-652(fp)
-  lw t0,-304(fp)
-  add t2,t0,zero
-  sw t2,-648(fp)
-  lw t0,-308(fp)
-  add t2,t0,zero
-  sw t2,-644(fp)
-  lw t0,-300(fp)
-  add t2,t0,zero
-  sw t2,-640(fp)
+  add s1,t0,zero
+  lw t0,-284(fp)
+  add s1,t0,zero
+  lw t0,-276(fp)
+  add s1,t0,zero
   lw t0,-292(fp)
-  add t2,t0,zero
-  sw t2,-636(fp)
+  add s1,t0,zero
   lw t0,-296(fp)
-  add t2,t0,zero
-  sw t2,-632(fp)
-  lw t0,-288(fp)
-  add t2,t0,zero
-  sw t2,-628(fp)
+  add s1,t0,zero
   lw t0,-316(fp)
-  add t2,t0,zero
-  sw t2,-624(fp)
+  add s1,t0,zero
   lw t0,-320(fp)
-  add t2,t0,zero
-  sw t2,-620(fp)
+  add s1,t0,zero
   lw t0,-312(fp)
-  add t2,t0,zero
-  sw t2,-616(fp)
+  add s1,t0,zero
+  lw t0,-304(fp)
+  add s1,t0,zero
+  lw t0,-308(fp)
+  add s1,t0,zero
+  lw t0,-300(fp)
+  add s1,t0,zero
   lw t0,-328(fp)
-  add t2,t0,zero
-  sw t2,-612(fp)
+  add s1,t0,zero
   lw t0,-332(fp)
-  add t2,t0,zero
-  sw t2,-608(fp)
-  lw t0,-352(fp)
-  add t2,t0,zero
-  sw t2,-604(fp)
-  lw t0,-356(fp)
-  add t2,t0,zero
-  sw t2,-600(fp)
-  lw t0,-348(fp)
-  add t2,t0,zero
-  sw t2,-596(fp)
+  add s1,t0,zero
+  lw t0,-324(fp)
+  add s1,t0,zero
   lw t0,-340(fp)
-  add t2,t0,zero
-  sw t2,-592(fp)
-  lw t0,-344(fp)
-  add t2,t0,zero
-  sw t2,-588(fp)
-  lw t0,-336(fp)
-  add t2,t0,zero
-  sw t2,-584(fp)
-  lw t0,-364(fp)
-  add t2,t0,zero
-  sw t2,-580(fp)
-  lw t0,-368(fp)
-  add t2,t0,zero
-  sw t2,-576(fp)
+  add s1,t0,zero
+  lw t0,-352(fp)
+  add s1,t0,zero
+  lw t0,-356(fp)
+  add s1,t0,zero
   lw t0,-360(fp)
-  add t2,t0,zero
-  sw t2,-572(fp)
-  lw t0,-376(fp)
-  add t2,t0,zero
-  sw t2,-568(fp)
-  lw t0,-388(fp)
-  add t2,t0,zero
-  sw t2,-564(fp)
-  lw t0,-392(fp)
-  add t2,t0,zero
-  sw t2,-560(fp)
-  lw t0,-396(fp)
-  add t2,t0,zero
-  sw t2,-556(fp)
+  add s1,t0,zero
+  lw t0,-348(fp)
+  add s1,t0,zero
+  lw t0,-364(fp)
+  add s1,t0,zero
   lw t0,-384(fp)
-  add t2,t0,zero
-  sw t2,-552(fp)
+  add s1,t0,zero
+  lw t0,-388(fp)
+  add s1,t0,zero
+  lw t0,-380(fp)
+  add s1,t0,zero
+  lw t0,-372(fp)
+  add s1,t0,zero
+  lw t0,-376(fp)
+  add s1,t0,zero
+  lw t0,-368(fp)
+  add s1,t0,zero
+  lw t0,-396(fp)
+  add s1,t0,zero
   lw t0,-400(fp)
-  add t2,t0,zero
-  sw t2,-548(fp)
-  lw t0,-420(fp)
-  add t2,t0,zero
-  sw t2,-544(fp)
-  lw t0,-424(fp)
-  add t2,t0,zero
-  sw t2,-540(fp)
-  lw t0,-416(fp)
-  add t2,t0,zero
-  sw t2,-536(fp)
+  add s1,t0,zero
+  lw t0,-392(fp)
+  add s1,t0,zero
   lw t0,-408(fp)
-  add t2,t0,zero
-  sw t2,-532(fp)
+  add s1,t0,zero
   lw t0,-412(fp)
-  add t2,t0,zero
-  sw t2,-528(fp)
-  lw t0,-404(fp)
-  add t2,t0,zero
-  sw t2,-524(fp)
-  lw t0,-432(fp)
-  add t2,t0,zero
-  sw t2,-520(fp)
+  add s1,t0,zero
   lw t0,-436(fp)
-  add t2,t0,zero
-  sw t2,-516(fp)
+  add s1,t0,zero
+  lw t0,-440(fp)
+  add s1,t0,zero
+  lw t0,-432(fp)
+  add s1,t0,zero
   lw t0,-428(fp)
-  add t2,t0,zero
-  sw t2,-512(fp)
-  lw t0,-444(fp)
-  add t2,t0,zero
-  sw t2,-508(fp)
+  add s1,t0,zero
+  lw t0,-420(fp)
+  add s1,t0,zero
+  lw t0,-424(fp)
+  add s1,t0,zero
+  lw t0,-416(fp)
+  add s1,t0,zero
   lw t0,-448(fp)
-  add t2,t0,zero
-  sw t2,-504(fp)
-  lw t0,-472(fp)
-  add t2,t0,zero
-  sw t2,-500(fp)
-  lw t0,-476(fp)
-  add s1,t0,zero
-  lw t0,-468(fp)
-  add s1,t0,zero
-  lw t0,-464(fp)
-  add s1,t0,zero
-  lw t0,-456(fp)
-  add s1,t0,zero
-  lw t0,-460(fp)
   add s1,t0,zero
   lw t0,-452(fp)
   add s1,t0,zero
-  lw t0,-484(fp)
+  lw t0,-444(fp)
   add s1,t0,zero
-  lw t0,-488(fp)
-  add s1,t0,zero
-  lw t0,-480(fp)
-  add s1,t0,zero
-  lw t0,-496(fp)
+  lw t0,-460(fp)
   add s1,t0,zero
   addi t0,zero,0
   add s1,t0,zero
@@ -15657,39 +14825,39 @@ label74:
   add s2,s9,zero
   add s2,s8,zero
   add s2,s7,zero
-  lw t0,-324(fp)
+  lw t0,-288(fp)
   add s2,t0,zero
-  lw t0,-372(fp)
+  lw t0,-336(fp)
   add s2,t0,zero
-  lw t0,-380(fp)
+  lw t0,-344(fp)
   add s2,t0,zero
-  lw t0,-440(fp)
+  lw t0,-404(fp)
   add s2,t0,zero
-  lw t0,-492(fp)
+  lw t0,-456(fp)
   add s2,t0,zero
   jal zero,label71
 fun230__exit:
-  lw t0,-948(fp)
+  lw t0,-504(fp)
   add s1,t0,zero
-  lw t0,-944(fp)
+  lw t0,-500(fp)
   add s2,t0,zero
-  lw t0,-940(fp)
+  lw t0,-496(fp)
   add s3,t0,zero
-  lw t0,-936(fp)
+  lw t0,-492(fp)
   add s4,t0,zero
-  lw t0,-932(fp)
+  lw t0,-488(fp)
   add s5,t0,zero
-  lw t0,-928(fp)
+  lw t0,-484(fp)
   add s6,t0,zero
-  lw t0,-924(fp)
+  lw t0,-480(fp)
   add s7,t0,zero
-  lw t0,-920(fp)
+  lw t0,-476(fp)
   add s8,t0,zero
-  lw t0,-916(fp)
+  lw t0,-472(fp)
   add s9,t0,zero
-  lw t0,-912(fp)
+  lw t0,-468(fp)
   add s10,t0,zero
-  lw t0,-908(fp)
+  lw t0,-464(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -15815,33 +14983,33 @@ __fun210:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-1280
+  addi sp,sp,-864
   add t2,a0,zero
-  sw t2,-1284(fp)
+  sw t2,-868(fp)
   add t2,a1,zero
-  sw t2,-1280(fp)
+  sw t2,-864(fp)
   add t2,s1,zero
-  sw t2,-1276(fp)
+  sw t2,-860(fp)
   add t2,s2,zero
-  sw t2,-1272(fp)
+  sw t2,-856(fp)
   add t2,s3,zero
-  sw t2,-1268(fp)
+  sw t2,-852(fp)
   add t2,s4,zero
-  sw t2,-1264(fp)
+  sw t2,-848(fp)
   add t2,s5,zero
-  sw t2,-1260(fp)
+  sw t2,-844(fp)
   add t2,s6,zero
-  sw t2,-1256(fp)
+  sw t2,-840(fp)
   add t2,s7,zero
-  sw t2,-1252(fp)
+  sw t2,-836(fp)
   add t2,s8,zero
-  sw t2,-1248(fp)
+  sw t2,-832(fp)
   add t2,s9,zero
-  sw t2,-1244(fp)
+  sw t2,-828(fp)
   add t2,s10,zero
-  sw t2,-1240(fp)
+  sw t2,-824(fp)
   add t2,s11,zero
-  sw t2,-1236(fp)
+  sw t2,-820(fp)
 fun210__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -15849,7 +15017,7 @@ fun210__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-1280(fp)
+  lw t0,-864(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -15862,7 +15030,7 @@ fun210__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-1284(fp)
+  lw t0,-868(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -15876,93 +15044,86 @@ fun210__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-1232(fp)
-  lw t0,-1232(fp)
-  add s1,t0,zero
+  add s3,s3,zero
+  add s1,s3,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s4,t0,zero
   addi t0,zero,1
   add s2,t0,zero
-  lw t0,-1232(fp)
-  add s1,t0,zero
+  add s1,s3,zero
   add a0,s2,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s4,0
   addi s1,a0,0
-  add t2,s1,zero
-  sw t2,-1228(fp)
+  add s2,s1,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s5,t0,zero
   addi t0,zero,1
-  add s2,t0,zero
-  lw t0,-1232(fp)
-  add s1,t0,zero
-  add a0,s2,zero
+  add s4,t0,zero
+  add s1,s3,zero
+  add a0,s4,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s5,0
   addi s1,a0,0
   add s1,s1,zero
-  add s2,s1,zero
+  add s4,s1,zero
   addi t0,zero,0
   add s1,t0,zero
-  sub s1,s2,s1
+  sub s1,s4,s1
   sltiu s1,s1,1
   beq s1,zero,label78
   jal zero,label77
 label77:
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-1224(fp)
+  sw t2,-816(fp)
   addi t0,zero,0
   add t2,t0,zero
-  sw t2,-1220(fp)
-  lw t0,-1232(fp)
-  add t2,t0,zero
-  sw t2,-1216(fp)
-  lw t0,-1220(fp)
+  sw t2,-812(fp)
+  add t2,s3,zero
+  sw t2,-808(fp)
+  lw t0,-812(fp)
   add a0,t0,zero
-  lw t0,-1216(fp)
+  lw t0,-808(fp)
   add a1,t0,zero
-  lw t0,-1224(fp)
+  lw t0,-816(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-1212(fp)
-  lw t0,-1212(fp)
+  sw t2,-804(fp)
+  lw t0,-804(fp)
   add t2,t0,zero
-  sw t2,-1208(fp)
+  sw t2,-800(fp)
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-1204(fp)
+  sw t2,-796(fp)
   addi t0,zero,0
   add t2,t0,zero
-  sw t2,-1200(fp)
-  lw t0,-1232(fp)
-  add t2,t0,zero
-  sw t2,-1196(fp)
-  lw t0,-1200(fp)
+  sw t2,-792(fp)
+  add t2,s3,zero
+  sw t2,-788(fp)
+  lw t0,-792(fp)
   add a0,t0,zero
-  lw t0,-1196(fp)
+  lw t0,-788(fp)
   add a1,t0,zero
-  lw t0,-1204(fp)
+  lw t0,-796(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-1192(fp)
-  lw t0,-1192(fp)
+  sw t2,-784(fp)
+  lw t0,-784(fp)
   add t2,t0,zero
-  sw t2,-1188(fp)
-  lw t0,-1188(fp)
+  sw t2,-780(fp)
+  lw t0,-780(fp)
   add t2,t0,zero
-  sw t2,-1184(fp)
+  sw t2,-776(fp)
   addi t0,zero,0
   add t2,t0,zero
-  sw t2,-1180(fp)
-  lw t0,-1184(fp)
-  lw t1,-1180(fp)
+  sw t2,-772(fp)
+  lw t0,-776(fp)
+  lw t1,-772(fp)
   sub t2,t0,t1
   sltiu t2,t2,1
-  sw t2,-1176(fp)
-  lw t0,-1176(fp)
+  sw t2,-768(fp)
+  lw t0,-768(fp)
   beq t0,zero,label81
   jal zero,label80
 label78:
@@ -15971,14 +15132,13 @@ label78:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-1172(fp)
-  lw t0,-1172(fp)
+  sw t2,-764(fp)
+  lw t0,-764(fp)
   add t2,t0,zero
-  sw t2,-1168(fp)
-  lw t0,-1232(fp)
-  add t2,t0,zero
-  sw t2,-1164(fp)
-  lw t0,-1168(fp)
+  sw t2,-760(fp)
+  add t2,s3,zero
+  sw t2,-756(fp)
+  lw t0,-760(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -15988,17 +15148,16 @@ label78:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-1160(fp)
-  lw t0,-1164(fp)
+  sw t2,-752(fp)
+  lw t0,-756(fp)
   sw t0,0(t2)
-  sw t2,-1160(fp)
-  lw t0,-1164(fp)
+  sw t2,-752(fp)
+  lw t0,-756(fp)
   add t2,t0,zero
-  sw t2,-1156(fp)
-  lw t0,-1228(fp)
-  add t2,t0,zero
-  sw t2,-1152(fp)
-  lw t0,-1152(fp)
+  sw t2,-748(fp)
+  add t2,s2,zero
+  sw t2,-744(fp)
+  lw t0,-744(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -16008,17 +15167,17 @@ label78:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-1148(fp)
-  lw t0,-1148(fp)
+  sw t2,-740(fp)
+  lw t0,-740(fp)
   lw t2,0(t0)
-  sw t2,-1144(fp)
-  lw t0,-1144(fp)
+  sw t2,-736(fp)
+  lw t0,-736(fp)
   add t2,t0,zero
-  sw t2,-1140(fp)
-  lw t0,-1140(fp)
+  sw t2,-732(fp)
+  lw t0,-732(fp)
   add t2,t0,zero
-  sw t2,-1136(fp)
-  lw t0,-1168(fp)
+  sw t2,-728(fp)
+  lw t0,-760(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -16028,29 +15187,29 @@ label78:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-1132(fp)
-  lw t0,-1136(fp)
+  sw t2,-724(fp)
+  lw t0,-728(fp)
   sw t0,0(t2)
-  sw t2,-1132(fp)
-  lw t0,-1136(fp)
+  sw t2,-724(fp)
+  lw t0,-728(fp)
   add t2,t0,zero
-  sw t2,-1128(fp)
-  lw t0,-1168(fp)
+  sw t2,-720(fp)
+  lw t0,-760(fp)
   add s1,t0,zero
   add t2,s1,zero
-  sw t2,-1124(fp)
+  sw t2,-716(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-1120(fp)
-  lw t0,-1120(fp)
+  sw t2,-712(fp)
+  lw t0,-712(fp)
   add t2,t0,zero
-  sw t2,-1116(fp)
+  sw t2,-708(fp)
   add t2,s1,zero
-  sw t2,-1112(fp)
-  lw t0,-1116(fp)
+  sw t2,-704(fp)
+  lw t0,-708(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -16060,17 +15219,16 @@ label78:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-1108(fp)
-  lw t0,-1112(fp)
+  sw t2,-700(fp)
+  lw t0,-704(fp)
   sw t0,0(t2)
-  sw t2,-1108(fp)
-  lw t0,-1112(fp)
+  sw t2,-700(fp)
+  lw t0,-704(fp)
   add t2,t0,zero
-  sw t2,-1104(fp)
-  lw t0,-1228(fp)
-  add t2,t0,zero
-  sw t2,-1100(fp)
-  lw t0,-1100(fp)
+  sw t2,-696(fp)
+  add t2,s2,zero
+  sw t2,-692(fp)
+  lw t0,-692(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -16080,14 +15238,14 @@ label78:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-1096(fp)
-  lw t0,-1096(fp)
+  sw t2,-688(fp)
+  lw t0,-688(fp)
   lw t2,0(t0)
-  sw t2,-1092(fp)
-  lw t0,-1092(fp)
+  sw t2,-684(fp)
+  lw t0,-684(fp)
   add t2,t0,zero
-  sw t2,-1088(fp)
-  lw t0,-1116(fp)
+  sw t2,-680(fp)
+  lw t0,-708(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -16097,71 +15255,67 @@ label78:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-1084(fp)
-  lw t0,-1088(fp)
+  sw t2,-676(fp)
+  lw t0,-680(fp)
   sw t0,0(t2)
-  sw t2,-1084(fp)
-  lw t0,-1088(fp)
+  sw t2,-676(fp)
+  lw t0,-680(fp)
   add t2,t0,zero
-  sw t2,-1080(fp)
-  lw t0,-1116(fp)
-  add t2,t0,zero
-  sw t2,-1076(fp)
-  lw t0,-1076(fp)
-  add t2,t0,zero
-  sw t2,-1072(fp)
+  sw t2,-672(fp)
+  lw t0,-708(fp)
+  add s7,t0,zero
+  add t2,s7,zero
+  sw t2,-668(fp)
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-1068(fp)
+  sw t2,-664(fp)
   addi t0,zero,2
   add t2,t0,zero
-  sw t2,-1064(fp)
-  lw t0,-1076(fp)
-  add t2,t0,zero
-  sw t2,-1060(fp)
-  lw t0,-1064(fp)
+  sw t2,-660(fp)
+  add t2,s7,zero
+  sw t2,-656(fp)
+  lw t0,-660(fp)
   add a0,t0,zero
-  lw t0,-1060(fp)
+  lw t0,-656(fp)
   add a1,t0,zero
-  lw t0,-1068(fp)
+  lw t0,-664(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-1056(fp)
-  lw t0,-1056(fp)
+  sw t2,-652(fp)
+  lw t0,-652(fp)
   add t2,t0,zero
-  sw t2,-1052(fp)
+  sw t2,-648(fp)
   lw t0,__lookup
   add t2,t0,zero
-  sw t2,-1048(fp)
+  sw t2,-644(fp)
   addi t0,zero,2
   add t2,t0,zero
-  sw t2,-1044(fp)
-  lw t0,-1076(fp)
-  add t2,t0,zero
-  sw t2,-1040(fp)
-  lw t0,-1044(fp)
+  sw t2,-640(fp)
+  add t2,s7,zero
+  sw t2,-636(fp)
+  lw t0,-640(fp)
   add a0,t0,zero
-  lw t0,-1040(fp)
+  lw t0,-636(fp)
   add a1,t0,zero
-  lw t0,-1048(fp)
+  lw t0,-644(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-1036(fp)
-  lw t0,-1036(fp)
+  sw t2,-632(fp)
+  lw t0,-632(fp)
   add t2,t0,zero
-  sw t2,-1032(fp)
-  lw t0,-1032(fp)
+  sw t2,-628(fp)
+  lw t0,-628(fp)
   add t2,t0,zero
-  sw t2,-1028(fp)
+  sw t2,-624(fp)
   addi t0,zero,0
   add t2,t0,zero
-  sw t2,-1024(fp)
-  lw t0,-1028(fp)
-  lw t1,-1024(fp)
+  sw t2,-620(fp)
+  lw t0,-624(fp)
+  lw t1,-620(fp)
   sub t2,t0,t1
   sltiu t2,t2,1
-  sw t2,-1020(fp)
-  lw t0,-1020(fp)
+  sw t2,-616(fp)
+  lw t0,-616(fp)
   beq t0,zero,label84
   jal zero,label83
 label79:
@@ -16170,509 +15324,9 @@ label79:
   jal zero,fun210__exit
 label80:
   addi t0,zero,1
-  add t2,t0,zero
-  sw t2,-1016(fp)
-  lw t0,-1016(fp)
-  add t2,t0,zero
-  sw t2,-1012(fp)
-  lw t0,-1012(fp)
-  add t2,t0,zero
-  sw t2,-1008(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-1004(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-1000(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-996(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-992(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-988(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-984(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-980(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-976(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-972(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-968(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-964(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-960(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-956(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-952(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-948(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-944(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-940(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-936(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-932(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-928(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-924(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-920(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-916(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-912(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-908(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-904(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-900(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-896(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-892(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-888(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-884(fp)
-  lw t0,-1016(fp)
-  add t2,t0,zero
-  sw t2,-880(fp)
-  lw t0,-1008(fp)
-  add t2,t0,zero
-  sw t2,-876(fp)
-  lw t0,-1232(fp)
-  add t2,t0,zero
-  sw t2,-872(fp)
-  lw t0,-1012(fp)
-  add t2,t0,zero
-  sw t2,-868(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-864(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-860(fp)
-  jal zero,label82
-label81:
-  addi t0,zero,8
-  add a0,t0,zero
-  lw t0,malloc
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-856(fp)
-  lw t0,-856(fp)
-  add t2,t0,zero
-  sw t2,-852(fp)
-  lw t0,-1232(fp)
-  add t2,t0,zero
-  sw t2,-848(fp)
-  lw t0,-852(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-844(fp)
-  lw t0,-848(fp)
-  sw t0,0(t2)
-  sw t2,-844(fp)
-  lw t0,-848(fp)
-  add t2,t0,zero
-  sw t2,-840(fp)
-  lw t0,-1208(fp)
-  add t2,t0,zero
-  sw t2,-836(fp)
-  lw t0,-836(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-832(fp)
-  lw t0,-832(fp)
-  lw t2,0(t0)
-  sw t2,-828(fp)
-  lw t0,-828(fp)
-  add t2,t0,zero
-  sw t2,-824(fp)
-  lw t0,-824(fp)
-  add t2,t0,zero
-  sw t2,-820(fp)
-  lw t0,-852(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
-  sw t2,-816(fp)
-  lw t0,-820(fp)
-  sw t0,0(t2)
-  sw t2,-816(fp)
-  lw t0,-820(fp)
-  add s3,t0,zero
-  lw t0,-852(fp)
   add s2,t0,zero
-  add s2,s2,zero
-  addi t0,zero,8
-  add a0,t0,zero
-  lw t0,malloc
-  jalr ra,t0,0
-  addi s1,a0,0
+  add s1,s2,zero
   add s1,s1,zero
-  add s10,s2,zero
-  addi s11,s1,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add s11,s11,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add s11,s11,t1
-  sw s10,0(s11)
-  add s10,s10,zero
-  lw t0,-1208(fp)
-  add s9,t0,zero
-  addi s8,s9,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add s8,s8,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add s8,s8,t1
-  lw s7,0(s8)
-  add s5,s7,zero
-  addi s6,s1,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add s6,s6,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add s6,s6,t1
-  sw s5,0(s6)
-  add s5,s5,zero
-  add s4,s1,zero
-  add s4,s4,zero
-  addi t0,zero,0
-  add a7,t0,zero
-  add a6,a7,zero
-  add a6,a6,zero
-  add a5,s4,zero
-  addi a4,a5,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add a4,a4,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add a4,a4,t1
-  lw a0,0(a4)
-  add a3,a0,zero
-  add a2,a0,zero
-  addi a1,a2,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add a1,a1,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add a1,a1,t1
-  lw a0,0(a1)
-  add a0,a0,zero
-  add t2,a1,zero
-  sw t2,-1004(fp)
-  add t2,a2,zero
-  sw t2,-1000(fp)
-  add t2,a0,zero
-  sw t2,-996(fp)
-  add t2,a4,zero
-  sw t2,-992(fp)
-  add t2,a5,zero
-  sw t2,-988(fp)
-  add t2,a3,zero
-  sw t2,-984(fp)
-  add t2,a7,zero
-  sw t2,-980(fp)
-  add t2,a6,zero
-  sw t2,-976(fp)
-  add t2,s4,zero
-  sw t2,-972(fp)
-  add t2,s8,zero
-  sw t2,-968(fp)
-  add t2,s9,zero
-  sw t2,-964(fp)
-  add t2,s7,zero
-  sw t2,-960(fp)
-  add t2,s6,zero
-  sw t2,-956(fp)
-  add t2,s5,zero
-  sw t2,-952(fp)
-  add t2,s5,zero
-  sw t2,-948(fp)
-  add t2,s11,zero
-  sw t2,-944(fp)
-  add t2,s10,zero
-  sw t2,-940(fp)
-  add t2,s10,zero
-  sw t2,-936(fp)
-  add t2,s1,zero
-  sw t2,-932(fp)
-  add t2,s2,zero
-  sw t2,-928(fp)
-  lw t0,-832(fp)
-  add t2,t0,zero
-  sw t2,-924(fp)
-  lw t0,-836(fp)
-  add t2,t0,zero
-  sw t2,-920(fp)
-  lw t0,-828(fp)
-  add t2,t0,zero
-  sw t2,-916(fp)
-  lw t0,-824(fp)
-  add t2,t0,zero
-  sw t2,-912(fp)
-  lw t0,-816(fp)
-  add t2,t0,zero
-  sw t2,-908(fp)
-  lw t0,-820(fp)
-  add t2,t0,zero
-  sw t2,-904(fp)
-  add t2,s3,zero
-  sw t2,-900(fp)
-  lw t0,-844(fp)
-  add t2,t0,zero
-  sw t2,-896(fp)
-  lw t0,-848(fp)
-  add t2,t0,zero
-  sw t2,-892(fp)
-  lw t0,-840(fp)
-  add t2,t0,zero
-  sw t2,-888(fp)
-  lw t0,-856(fp)
-  add t2,t0,zero
-  sw t2,-884(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-880(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-876(fp)
-  add t2,a0,zero
-  sw t2,-872(fp)
-  add t2,a6,zero
-  sw t2,-868(fp)
-  add t2,s1,zero
-  sw t2,-864(fp)
-  lw t0,-852(fp)
-  add t2,t0,zero
-  sw t2,-860(fp)
-  jal zero,label82
-label82:
-  lw t0,-868(fp)
-  add t2,t0,zero
-  sw t2,-812(fp)
-  lw t0,-812(fp)
-  add t2,t0,zero
-  sw t2,-808(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-804(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-800(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-796(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-792(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-788(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-784(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-780(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-776(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-772(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-768(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-764(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-760(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-756(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-752(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-748(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-744(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-740(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-736(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-732(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-728(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-724(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-720(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-716(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-712(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-708(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-704(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-700(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-696(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-692(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-688(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-684(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-680(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-676(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-672(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-668(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-664(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-660(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-656(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-652(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-648(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-644(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-640(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-636(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-632(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-628(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-624(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-620(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-616(fp)
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-612(fp)
@@ -16734,17 +15388,393 @@ label82:
   add t2,t0,zero
   sw t2,-536(fp)
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-532(fp)
+  add t6,t0,zero
   addi t0,zero,0
+  add t5,t0,zero
+  addi t0,zero,0
+  add t4,t0,zero
+  addi t0,zero,0
+  add t3,t0,zero
+  addi t0,zero,0
+  add a7,t0,zero
+  addi t0,zero,0
+  add a4,t0,zero
+  addi t0,zero,0
+  add a3,t0,zero
+  addi t0,zero,0
+  add a2,t0,zero
+  addi t0,zero,0
+  add a1,t0,zero
+  addi t0,zero,0
+  add s11,t0,zero
+  addi t0,zero,0
+  add s8,t0,zero
+  add s7,s2,zero
+  add s6,s1,zero
+  add s5,s3,zero
+  add s4,s1,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s2,t0,zero
+  jal zero,label82
+label81:
+  addi t0,zero,8
+  add a0,t0,zero
+  lw t0,malloc
+  jalr ra,t0,0
+  addi t2,a0,0
+  sw t2,-532(fp)
+  lw t0,-532(fp)
   add t2,t0,zero
   sw t2,-528(fp)
-  addi t0,zero,0
-  add t2,t0,zero
+  add t2,s3,zero
   sw t2,-524(fp)
+  lw t0,-528(fp)
+  addi t2,t0,0
   addi t0,zero,0
-  add t2,t0,zero
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
   sw t2,-520(fp)
+  lw t0,-524(fp)
+  sw t0,0(t2)
+  sw t2,-520(fp)
+  lw t0,-524(fp)
+  add t2,t0,zero
+  sw t2,-516(fp)
+  lw t0,-800(fp)
+  add t2,t0,zero
+  sw t2,-512(fp)
+  lw t0,-512(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-508(fp)
+  lw t0,-508(fp)
+  lw t2,0(t0)
+  sw t2,-504(fp)
+  lw t0,-504(fp)
+  add t2,t0,zero
+  sw t2,-500(fp)
+  lw t0,-500(fp)
+  add s3,t0,zero
+  lw t0,-528(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-496(fp)
+  sw s3,0(t2)
+  sw t2,-496(fp)
+  add s3,s3,zero
+  lw t0,-528(fp)
+  add s2,t0,zero
+  add s2,s2,zero
+  addi t0,zero,8
+  add a0,t0,zero
+  lw t0,malloc
+  jalr ra,t0,0
+  addi s1,a0,0
+  add s1,s1,zero
+  add s10,s2,zero
+  addi s11,s1,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add s11,s11,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add s11,s11,t1
+  sw s10,0(s11)
+  add s10,s10,zero
+  lw t0,-800(fp)
+  add s9,t0,zero
+  addi s8,s9,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add s8,s8,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add s8,s8,t1
+  lw s7,0(s8)
+  add s5,s7,zero
+  addi s6,s1,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add s6,s6,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add s6,s6,t1
+  sw s5,0(s6)
+  add s5,s5,zero
+  add s4,s1,zero
+  add s4,s4,zero
+  addi t0,zero,0
+  add a7,t0,zero
+  add a6,a7,zero
+  add a6,a6,zero
+  add a5,s4,zero
+  addi a4,a5,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add a4,a4,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add a4,a4,t1
+  lw a0,0(a4)
+  add a3,a0,zero
+  add a2,a0,zero
+  addi a1,a2,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add a1,a1,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add a1,a1,t1
+  lw a0,0(a1)
+  add a0,a0,zero
+  add t2,a1,zero
+  sw t2,-612(fp)
+  add t2,a2,zero
+  sw t2,-608(fp)
+  add t2,a0,zero
+  sw t2,-604(fp)
+  add t2,a4,zero
+  sw t2,-600(fp)
+  add t2,a5,zero
+  sw t2,-596(fp)
+  add t2,a3,zero
+  sw t2,-592(fp)
+  add t2,a7,zero
+  sw t2,-588(fp)
+  add t2,a6,zero
+  sw t2,-584(fp)
+  add t2,s4,zero
+  sw t2,-580(fp)
+  add t2,s8,zero
+  sw t2,-576(fp)
+  add t2,s9,zero
+  sw t2,-572(fp)
+  add t2,s7,zero
+  sw t2,-568(fp)
+  add t2,s6,zero
+  sw t2,-564(fp)
+  add t2,s5,zero
+  sw t2,-560(fp)
+  add t2,s5,zero
+  sw t2,-556(fp)
+  add t2,s11,zero
+  sw t2,-552(fp)
+  add t2,s10,zero
+  sw t2,-548(fp)
+  add t2,s10,zero
+  sw t2,-544(fp)
+  add t2,s1,zero
+  sw t2,-540(fp)
+  add t2,s2,zero
+  sw t2,-536(fp)
+  lw t0,-508(fp)
+  add t6,t0,zero
+  lw t0,-512(fp)
+  add t5,t0,zero
+  lw t0,-504(fp)
+  add t4,t0,zero
+  lw t0,-500(fp)
+  add t3,t0,zero
+  lw t0,-496(fp)
+  add a7,t0,zero
+  add a4,s3,zero
+  add a3,s3,zero
+  lw t0,-520(fp)
+  add a2,t0,zero
+  lw t0,-524(fp)
+  add a1,t0,zero
+  lw t0,-516(fp)
+  add s11,t0,zero
+  lw t0,-532(fp)
+  add s8,t0,zero
+  addi t0,zero,0
+  add s7,t0,zero
+  addi t0,zero,0
+  add s6,t0,zero
+  add s5,a0,zero
+  add s4,a6,zero
+  add s3,s1,zero
+  lw t0,-528(fp)
+  add s2,t0,zero
+  jal zero,label82
+label82:
+  add s1,s4,zero
+  add s1,s1,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
+  addi t0,zero,0
+  add a5,t0,zero
   addi t0,zero,0
   add a5,t0,zero
   addi t0,zero,0
@@ -16764,213 +15794,180 @@ label82:
   addi t0,zero,0
   add s9,t0,zero
   addi t0,zero,0
-  add s8,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  addi t0,zero,0
+  add s9,t0,zero
+  add s9,s1,zero
+  lw t0,-788(fp)
+  add s9,t0,zero
+  lw t0,-792(fp)
+  add s9,t0,zero
+  lw t0,-796(fp)
+  add s9,t0,zero
+  lw t0,-784(fp)
+  add s9,t0,zero
+  lw t0,-780(fp)
+  add s9,t0,zero
+  lw t0,-772(fp)
+  add s9,t0,zero
+  lw t0,-776(fp)
+  add s9,t0,zero
+  lw t0,-768(fp)
+  add s9,t0,zero
+  lw t0,-612(fp)
+  add s9,t0,zero
+  lw t0,-608(fp)
+  add s9,t0,zero
+  lw t0,-604(fp)
+  add s9,t0,zero
+  lw t0,-600(fp)
+  add s9,t0,zero
+  lw t0,-596(fp)
+  add s9,t0,zero
+  lw t0,-592(fp)
+  add s9,t0,zero
+  lw t0,-588(fp)
+  add s9,t0,zero
+  lw t0,-584(fp)
+  add s9,t0,zero
+  lw t0,-580(fp)
+  add s9,t0,zero
+  lw t0,-576(fp)
+  add s9,t0,zero
+  lw t0,-572(fp)
+  add s9,t0,zero
+  lw t0,-568(fp)
+  add s9,t0,zero
+  lw t0,-564(fp)
+  add s9,t0,zero
+  lw t0,-560(fp)
+  add s9,t0,zero
+  lw t0,-556(fp)
+  add s9,t0,zero
+  lw t0,-552(fp)
+  add s9,t0,zero
+  lw t0,-548(fp)
+  add s9,t0,zero
+  lw t0,-544(fp)
+  add s9,t0,zero
+  lw t0,-540(fp)
+  add s9,t0,zero
+  lw t0,-536(fp)
+  add s9,t0,zero
+  add s9,t6,zero
+  add s9,t5,zero
+  add s9,t4,zero
+  add s9,t3,zero
+  add s9,a7,zero
+  add s9,a4,zero
+  add s9,a3,zero
+  add s9,a2,zero
+  add s9,a1,zero
+  add s9,s11,zero
+  add s8,s8,zero
+  add s8,s7,zero
+  add s6,s6,zero
+  lw t0,-808(fp)
   add s6,t0,zero
+  lw t0,-812(fp)
+  add s6,t0,zero
+  lw t0,-816(fp)
+  add s6,t0,zero
+  lw t0,-804(fp)
+  add s6,t0,zero
+  add s5,s5,zero
+  add s1,s1,zero
   addi t0,zero,0
   add s5,t0,zero
   addi t0,zero,0
-  add s3,t0,zero
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  lw t0,-808(fp)
-  add s2,t0,zero
-  lw t0,-1196(fp)
-  add s2,t0,zero
-  lw t0,-1200(fp)
-  add s2,t0,zero
-  lw t0,-1204(fp)
-  add s2,t0,zero
-  lw t0,-1192(fp)
-  add s2,t0,zero
-  lw t0,-1188(fp)
-  add s2,t0,zero
-  lw t0,-1180(fp)
-  add s2,t0,zero
-  lw t0,-1184(fp)
-  add s2,t0,zero
-  lw t0,-1176(fp)
-  add s2,t0,zero
-  lw t0,-1004(fp)
-  add s2,t0,zero
-  lw t0,-1000(fp)
-  add s2,t0,zero
-  lw t0,-996(fp)
-  add s2,t0,zero
-  lw t0,-992(fp)
-  add s2,t0,zero
-  lw t0,-988(fp)
-  add s2,t0,zero
-  lw t0,-984(fp)
-  add s2,t0,zero
-  lw t0,-980(fp)
-  add s2,t0,zero
-  lw t0,-976(fp)
-  add s2,t0,zero
-  lw t0,-972(fp)
-  add s2,t0,zero
-  lw t0,-968(fp)
-  add s2,t0,zero
-  lw t0,-964(fp)
-  add s2,t0,zero
-  lw t0,-960(fp)
-  add s2,t0,zero
-  lw t0,-956(fp)
-  add s2,t0,zero
-  lw t0,-952(fp)
-  add s2,t0,zero
-  lw t0,-948(fp)
-  add s2,t0,zero
-  lw t0,-944(fp)
-  add s2,t0,zero
-  lw t0,-940(fp)
-  add s2,t0,zero
-  lw t0,-936(fp)
-  add s2,t0,zero
-  lw t0,-932(fp)
-  add s2,t0,zero
-  lw t0,-928(fp)
-  add s2,t0,zero
-  lw t0,-924(fp)
-  add s2,t0,zero
-  lw t0,-920(fp)
-  add s2,t0,zero
-  lw t0,-916(fp)
-  add s2,t0,zero
-  lw t0,-912(fp)
-  add s2,t0,zero
-  lw t0,-908(fp)
-  add s2,t0,zero
-  lw t0,-904(fp)
-  add s2,t0,zero
-  lw t0,-900(fp)
-  add s2,t0,zero
-  lw t0,-896(fp)
-  add s2,t0,zero
-  lw t0,-892(fp)
-  add s2,t0,zero
-  lw t0,-888(fp)
-  add s2,t0,zero
-  lw t0,-884(fp)
-  add s2,t0,zero
-  lw t0,-880(fp)
-  add s2,t0,zero
-  lw t0,-876(fp)
-  add s2,t0,zero
-  lw t0,-1216(fp)
-  add s2,t0,zero
-  lw t0,-1220(fp)
-  add s2,t0,zero
-  lw t0,-1224(fp)
-  add s2,t0,zero
-  lw t0,-1212(fp)
-  add s2,t0,zero
-  lw t0,-872(fp)
-  add s1,t0,zero
-  lw t0,-812(fp)
-  add s1,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  addi t0,zero,0
-  add s2,t0,zero
-  lw t0,-868(fp)
-  add s2,t0,zero
-  lw t0,-864(fp)
-  add s2,t0,zero
-  lw t0,-860(fp)
-  add s2,t0,zero
-  lw t0,-1208(fp)
+  add s5,t0,zero
+  add s4,s4,zero
+  add s3,s3,zero
+  add s2,s2,zero
+  lw t0,-800(fp)
   add s2,t0,zero
   jal zero,label79
 label83:
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-516(fp)
-  lw t0,-516(fp)
-  add t2,t0,zero
-  sw t2,-512(fp)
-  lw t0,-512(fp)
-  add t2,t0,zero
-  sw t2,-508(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-504(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-500(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-496(fp)
+  add s2,t0,zero
+  add s4,s2,zero
+  add s1,s4,zero
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-492(fp)
@@ -17155,6 +16152,13 @@ label83:
   add t2,t0,zero
   sw t2,-252(fp)
   addi t0,zero,0
+  add t2,t0,zero
+  sw t2,-248(fp)
+  addi t0,zero,0
+  add t6,t0,zero
+  addi t0,zero,0
+  add t5,t0,zero
+  addi t0,zero,0
   add s10,t0,zero
   addi t0,zero,0
   add s9,t0,zero
@@ -17164,14 +16168,10 @@ label83:
   add s6,t0,zero
   addi t0,zero,0
   add s5,t0,zero
-  lw t0,-516(fp)
-  add s3,t0,zero
-  lw t0,-508(fp)
-  add s2,t0,zero
-  lw t0,-1076(fp)
-  add s1,t0,zero
-  lw t0,-512(fp)
-  add a4,t0,zero
+  add s3,s2,zero
+  add s2,s1,zero
+  add s1,s7,zero
+  add a4,s4,zero
   addi t0,zero,0
   add a3,t0,zero
   addi t0,zero,0
@@ -17191,14 +16191,13 @@ label84:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-248(fp)
-  lw t0,-248(fp)
-  add t2,t0,zero
   sw t2,-244(fp)
-  lw t0,-1076(fp)
+  lw t0,-244(fp)
   add t2,t0,zero
   sw t2,-240(fp)
-  lw t0,-244(fp)
+  add t2,s7,zero
+  sw t2,-236(fp)
+  lw t0,-240(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -17208,17 +16207,17 @@ label84:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-236(fp)
-  lw t0,-240(fp)
-  sw t0,0(t2)
-  sw t2,-236(fp)
-  lw t0,-240(fp)
-  add t2,t0,zero
   sw t2,-232(fp)
-  lw t0,-1052(fp)
+  lw t0,-236(fp)
+  sw t0,0(t2)
+  sw t2,-232(fp)
+  lw t0,-236(fp)
   add t2,t0,zero
   sw t2,-228(fp)
-  lw t0,-228(fp)
+  lw t0,-648(fp)
+  add t2,t0,zero
+  sw t2,-224(fp)
+  lw t0,-224(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -17228,17 +16227,17 @@ label84:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-224(fp)
-  lw t0,-224(fp)
-  lw t2,0(t0)
   sw t2,-220(fp)
   lw t0,-220(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-216(fp)
   lw t0,-216(fp)
   add t2,t0,zero
   sw t2,-212(fp)
-  lw t0,-244(fp)
+  lw t0,-212(fp)
+  add t2,t0,zero
+  sw t2,-208(fp)
+  lw t0,-240(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -17248,29 +16247,29 @@ label84:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-208(fp)
-  lw t0,-212(fp)
-  sw t0,0(t2)
-  sw t2,-208(fp)
-  lw t0,-212(fp)
-  add t2,t0,zero
   sw t2,-204(fp)
-  lw t0,-244(fp)
+  lw t0,-208(fp)
+  sw t0,0(t2)
+  sw t2,-204(fp)
+  lw t0,-208(fp)
+  add t2,t0,zero
+  sw t2,-200(fp)
+  lw t0,-240(fp)
   add s1,t0,zero
   add t2,s1,zero
-  sw t2,-200(fp)
+  sw t2,-196(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-196(fp)
-  lw t0,-196(fp)
-  add t2,t0,zero
   sw t2,-192(fp)
-  add t2,s1,zero
-  sw t2,-188(fp)
   lw t0,-192(fp)
+  add t2,t0,zero
+  sw t2,-188(fp)
+  add t2,s1,zero
+  sw t2,-184(fp)
+  lw t0,-188(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -17280,17 +16279,17 @@ label84:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-184(fp)
-  lw t0,-188(fp)
-  sw t0,0(t2)
-  sw t2,-184(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
   sw t2,-180(fp)
-  lw t0,-1052(fp)
+  lw t0,-184(fp)
+  sw t0,0(t2)
+  sw t2,-180(fp)
+  lw t0,-184(fp)
   add t2,t0,zero
   sw t2,-176(fp)
-  lw t0,-176(fp)
+  lw t0,-648(fp)
+  add t2,t0,zero
+  sw t2,-172(fp)
+  lw t0,-172(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -17300,14 +16299,14 @@ label84:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-172(fp)
-  lw t0,-172(fp)
-  lw t2,0(t0)
   sw t2,-168(fp)
   lw t0,-168(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-164(fp)
-  lw t0,-192(fp)
+  lw t0,-164(fp)
+  add t2,t0,zero
+  sw t2,-160(fp)
+  lw t0,-188(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -17317,18 +16316,16 @@ label84:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-160(fp)
-  lw t0,-164(fp)
-  sw t0,0(t2)
-  sw t2,-160(fp)
-  lw t0,-164(fp)
-  add t2,t0,zero
   sw t2,-156(fp)
-  lw t0,-192(fp)
+  lw t0,-160(fp)
+  sw t0,0(t2)
+  sw t2,-156(fp)
+  lw t0,-160(fp)
   add t2,t0,zero
   sw t2,-152(fp)
-  lw t0,-152(fp)
-  add t2,t0,zero
+  lw t0,-188(fp)
+  add s1,t0,zero
+  add t2,s1,zero
   sw t2,-148(fp)
   lw t0,__lookup
   add t2,t0,zero
@@ -17336,8 +16333,7 @@ label84:
   addi t0,zero,6
   add t2,t0,zero
   sw t2,-140(fp)
-  lw t0,-152(fp)
-  add t2,t0,zero
+  add t2,s1,zero
   sw t2,-136(fp)
   lw t0,-140(fp)
   add a0,t0,zero
@@ -17376,8 +16372,7 @@ label84:
   addi t0,zero,2
   add t2,t0,zero
   sw t2,-104(fp)
-  lw t0,-152(fp)
-  add t2,t0,zero
+  add t2,s1,zero
   sw t2,-100(fp)
   lw t0,-104(fp)
   add a0,t0,zero
@@ -17444,8 +16439,7 @@ label84:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-48(fp)
-  lw t0,-152(fp)
-  add t2,t0,zero
+  add t2,s1,zero
   sw t2,-44(fp)
   lw t0,-48(fp)
   add a0,t0,zero
@@ -17482,8 +16476,7 @@ label84:
   add s3,t0,zero
   addi t0,zero,3
   add s2,t0,zero
-  lw t0,-152(fp)
-  add s1,t0,zero
+  add s1,s1,zero
   add a0,s2,zero
   add a1,s1,zero
   jalr ra,s3,0
@@ -17498,8 +16491,7 @@ label84:
   addi t0,zero,1
   add t2,t0,zero
   sw t2,-16(fp)
-  lw t0,-152(fp)
-  add t2,t0,zero
+  add t2,s1,zero
   sw t2,-12(fp)
   lw t0,-16(fp)
   add a0,t0,zero
@@ -17543,215 +16535,137 @@ label85:
   add a5,a5,t1
   lw s1,0(a5)
   add s1,s1,zero
-  add t2,a5,zero
-  sw t2,-804(fp)
-  add t2,a6,zero
-  sw t2,-800(fp)
-  add t2,s1,zero
-  sw t2,-796(fp)
-  add t2,t3,zero
-  sw t2,-792(fp)
-  add t2,t4,zero
-  sw t2,-788(fp)
-  add t2,a7,zero
-  sw t2,-784(fp)
-  add t2,s4,zero
-  sw t2,-780(fp)
-  lw t0,-1040(fp)
-  add t2,t0,zero
-  sw t2,-776(fp)
-  lw t0,-1044(fp)
-  add t2,t0,zero
-  sw t2,-772(fp)
-  lw t0,-1048(fp)
-  add t2,t0,zero
-  sw t2,-768(fp)
-  lw t0,-1036(fp)
-  add t2,t0,zero
-  sw t2,-764(fp)
-  lw t0,-1032(fp)
-  add t2,t0,zero
-  sw t2,-760(fp)
-  lw t0,-1024(fp)
-  add t2,t0,zero
-  sw t2,-756(fp)
-  lw t0,-1028(fp)
-  add t2,t0,zero
-  sw t2,-752(fp)
-  lw t0,-1020(fp)
-  add t2,t0,zero
-  sw t2,-748(fp)
-  lw t0,-504(fp)
-  add t2,t0,zero
-  sw t2,-744(fp)
-  lw t0,-500(fp)
-  add t2,t0,zero
-  sw t2,-740(fp)
-  lw t0,-496(fp)
-  add t2,t0,zero
-  sw t2,-736(fp)
+  add a5,a5,zero
+  add a5,a6,zero
+  add a5,s1,zero
+  add a5,t3,zero
+  add a5,t4,zero
+  add a5,a7,zero
+  add a5,s4,zero
+  lw t0,-636(fp)
+  add a5,t0,zero
+  lw t0,-640(fp)
+  add a5,t0,zero
+  lw t0,-644(fp)
+  add a5,t0,zero
+  lw t0,-632(fp)
+  add a5,t0,zero
+  lw t0,-628(fp)
+  add a5,t0,zero
+  lw t0,-620(fp)
+  add a5,t0,zero
+  lw t0,-624(fp)
+  add a5,t0,zero
+  lw t0,-616(fp)
+  add a5,t0,zero
   lw t0,-492(fp)
-  add t2,t0,zero
-  sw t2,-732(fp)
+  add a5,t0,zero
   lw t0,-488(fp)
-  add t2,t0,zero
-  sw t2,-728(fp)
+  add a5,t0,zero
   lw t0,-484(fp)
-  add t2,t0,zero
-  sw t2,-724(fp)
+  add a5,t0,zero
   lw t0,-480(fp)
-  add t2,t0,zero
-  sw t2,-720(fp)
+  add a5,t0,zero
   lw t0,-476(fp)
-  add t2,t0,zero
-  sw t2,-716(fp)
+  add a5,t0,zero
   lw t0,-472(fp)
-  add t2,t0,zero
-  sw t2,-712(fp)
+  add a5,t0,zero
   lw t0,-468(fp)
-  add t2,t0,zero
-  sw t2,-708(fp)
+  add a5,t0,zero
   lw t0,-464(fp)
-  add t2,t0,zero
-  sw t2,-704(fp)
+  add a5,t0,zero
   lw t0,-460(fp)
-  add t2,t0,zero
-  sw t2,-700(fp)
+  add a5,t0,zero
   lw t0,-456(fp)
-  add t2,t0,zero
-  sw t2,-696(fp)
+  add a5,t0,zero
   lw t0,-452(fp)
-  add t2,t0,zero
-  sw t2,-692(fp)
+  add a5,t0,zero
   lw t0,-448(fp)
-  add t2,t0,zero
-  sw t2,-688(fp)
+  add a5,t0,zero
   lw t0,-444(fp)
-  add t2,t0,zero
-  sw t2,-684(fp)
+  add a5,t0,zero
   lw t0,-440(fp)
-  add t2,t0,zero
-  sw t2,-680(fp)
+  add a5,t0,zero
   lw t0,-436(fp)
-  add t2,t0,zero
-  sw t2,-676(fp)
+  add a5,t0,zero
   lw t0,-432(fp)
-  add t2,t0,zero
-  sw t2,-672(fp)
+  add a5,t0,zero
   lw t0,-428(fp)
-  add t2,t0,zero
-  sw t2,-668(fp)
+  add a5,t0,zero
   lw t0,-424(fp)
-  add t2,t0,zero
-  sw t2,-664(fp)
+  add a5,t0,zero
   lw t0,-420(fp)
-  add t2,t0,zero
-  sw t2,-660(fp)
+  add a5,t0,zero
   lw t0,-416(fp)
-  add t2,t0,zero
-  sw t2,-656(fp)
+  add a5,t0,zero
   lw t0,-412(fp)
-  add t2,t0,zero
-  sw t2,-652(fp)
+  add a5,t0,zero
   lw t0,-408(fp)
-  add t2,t0,zero
-  sw t2,-648(fp)
+  add a5,t0,zero
   lw t0,-404(fp)
-  add t2,t0,zero
-  sw t2,-644(fp)
+  add a5,t0,zero
   lw t0,-400(fp)
-  add t2,t0,zero
-  sw t2,-640(fp)
+  add a5,t0,zero
   lw t0,-396(fp)
-  add t2,t0,zero
-  sw t2,-636(fp)
+  add a5,t0,zero
   lw t0,-392(fp)
-  add t2,t0,zero
-  sw t2,-632(fp)
+  add a5,t0,zero
   lw t0,-388(fp)
-  add t2,t0,zero
-  sw t2,-628(fp)
+  add a5,t0,zero
   lw t0,-384(fp)
-  add t2,t0,zero
-  sw t2,-624(fp)
+  add a5,t0,zero
   lw t0,-380(fp)
-  add t2,t0,zero
-  sw t2,-620(fp)
+  add a5,t0,zero
   lw t0,-376(fp)
-  add t2,t0,zero
-  sw t2,-616(fp)
+  add a5,t0,zero
   lw t0,-372(fp)
-  add t2,t0,zero
-  sw t2,-612(fp)
+  add a5,t0,zero
   lw t0,-368(fp)
-  add t2,t0,zero
-  sw t2,-608(fp)
+  add a5,t0,zero
   lw t0,-364(fp)
-  add t2,t0,zero
-  sw t2,-604(fp)
+  add a5,t0,zero
   lw t0,-360(fp)
-  add t2,t0,zero
-  sw t2,-600(fp)
+  add a5,t0,zero
   lw t0,-356(fp)
-  add t2,t0,zero
-  sw t2,-596(fp)
+  add a5,t0,zero
   lw t0,-352(fp)
-  add t2,t0,zero
-  sw t2,-592(fp)
+  add a5,t0,zero
   lw t0,-348(fp)
-  add t2,t0,zero
-  sw t2,-588(fp)
+  add a5,t0,zero
   lw t0,-344(fp)
-  add t2,t0,zero
-  sw t2,-584(fp)
+  add a5,t0,zero
   lw t0,-340(fp)
-  add t2,t0,zero
-  sw t2,-580(fp)
+  add a5,t0,zero
   lw t0,-336(fp)
-  add t2,t0,zero
-  sw t2,-576(fp)
+  add a5,t0,zero
   lw t0,-332(fp)
-  add t2,t0,zero
-  sw t2,-572(fp)
+  add a5,t0,zero
   lw t0,-328(fp)
-  add t2,t0,zero
-  sw t2,-568(fp)
+  add a5,t0,zero
   lw t0,-324(fp)
-  add t2,t0,zero
-  sw t2,-564(fp)
+  add a5,t0,zero
   lw t0,-320(fp)
-  add t2,t0,zero
-  sw t2,-560(fp)
+  add a5,t0,zero
   lw t0,-316(fp)
-  add t2,t0,zero
-  sw t2,-556(fp)
+  add a5,t0,zero
   lw t0,-312(fp)
-  add t2,t0,zero
-  sw t2,-552(fp)
+  add a5,t0,zero
   lw t0,-308(fp)
-  add t2,t0,zero
-  sw t2,-548(fp)
+  add a5,t0,zero
   lw t0,-304(fp)
-  add t2,t0,zero
-  sw t2,-544(fp)
+  add a5,t0,zero
   lw t0,-300(fp)
-  add t2,t0,zero
-  sw t2,-540(fp)
+  add a5,t0,zero
   lw t0,-296(fp)
-  add t2,t0,zero
-  sw t2,-536(fp)
+  add a5,t0,zero
   lw t0,-292(fp)
-  add t2,t0,zero
-  sw t2,-532(fp)
+  add a5,t0,zero
   lw t0,-288(fp)
-  add t2,t0,zero
-  sw t2,-528(fp)
+  add a5,t0,zero
   lw t0,-284(fp)
-  add t2,t0,zero
-  sw t2,-524(fp)
+  add a5,t0,zero
   lw t0,-280(fp)
-  add t2,t0,zero
-  sw t2,-520(fp)
+  add a5,t0,zero
   lw t0,-276(fp)
   add a5,t0,zero
   lw t0,-272(fp)
@@ -17766,178 +16680,182 @@ label85:
   add a5,t0,zero
   lw t0,-252(fp)
   add a5,t0,zero
+  lw t0,-248(fp)
+  add a5,t0,zero
+  add a5,t6,zero
+  add a5,t5,zero
   add s10,s10,zero
   add s9,s9,zero
-  add s8,s8,zero
-  add s6,s6,zero
-  add s5,s5,zero
-  add s3,s3,zero
-  add s2,s2,zero
-  lw t0,-1060(fp)
-  add s2,t0,zero
-  lw t0,-1064(fp)
-  add s2,t0,zero
-  lw t0,-1068(fp)
-  add s2,t0,zero
-  lw t0,-1056(fp)
-  add s2,t0,zero
-  lw t0,-1072(fp)
-  add s2,t0,zero
-  lw t0,-1096(fp)
-  add s2,t0,zero
-  lw t0,-1100(fp)
-  add s2,t0,zero
-  lw t0,-1092(fp)
-  add s2,t0,zero
-  lw t0,-1084(fp)
-  add s2,t0,zero
-  lw t0,-1088(fp)
-  add s2,t0,zero
-  lw t0,-1080(fp)
-  add s2,t0,zero
-  lw t0,-1108(fp)
-  add s2,t0,zero
-  lw t0,-1112(fp)
-  add s2,t0,zero
-  lw t0,-1104(fp)
-  add s2,t0,zero
-  lw t0,-1120(fp)
-  add s2,t0,zero
-  lw t0,-1124(fp)
-  add s2,t0,zero
-  lw t0,-1148(fp)
-  add s2,t0,zero
-  lw t0,-1152(fp)
-  add s2,t0,zero
-  lw t0,-1144(fp)
-  add s2,t0,zero
-  lw t0,-1140(fp)
-  add s2,t0,zero
-  lw t0,-1132(fp)
-  add s2,t0,zero
-  lw t0,-1136(fp)
-  add s2,t0,zero
-  lw t0,-1128(fp)
-  add s2,t0,zero
-  lw t0,-1160(fp)
-  add s2,t0,zero
-  lw t0,-1164(fp)
-  add s2,t0,zero
-  lw t0,-1156(fp)
-  add s2,t0,zero
-  lw t0,-1172(fp)
-  add s2,t0,zero
+  add s9,s8,zero
+  add s9,s6,zero
+  add s9,s5,zero
+  add s9,s3,zero
+  add s9,s2,zero
+  lw t0,-656(fp)
+  add s9,t0,zero
+  lw t0,-660(fp)
+  add s9,t0,zero
+  lw t0,-664(fp)
+  add s9,t0,zero
+  lw t0,-652(fp)
+  add s9,t0,zero
+  lw t0,-668(fp)
+  add s9,t0,zero
+  lw t0,-688(fp)
+  add s9,t0,zero
+  lw t0,-692(fp)
+  add s9,t0,zero
+  lw t0,-684(fp)
+  add s9,t0,zero
+  lw t0,-676(fp)
+  add s9,t0,zero
+  lw t0,-680(fp)
+  add s9,t0,zero
+  lw t0,-672(fp)
+  add s9,t0,zero
+  lw t0,-700(fp)
+  add s9,t0,zero
+  lw t0,-704(fp)
+  add s9,t0,zero
+  lw t0,-696(fp)
+  add s9,t0,zero
+  lw t0,-712(fp)
+  add s9,t0,zero
+  lw t0,-716(fp)
+  add s9,t0,zero
+  lw t0,-740(fp)
+  add s9,t0,zero
+  lw t0,-744(fp)
+  add s9,t0,zero
+  lw t0,-736(fp)
+  add s9,t0,zero
+  lw t0,-732(fp)
+  add s9,t0,zero
+  lw t0,-724(fp)
+  add s9,t0,zero
+  lw t0,-728(fp)
+  add s9,t0,zero
+  lw t0,-720(fp)
+  add s9,t0,zero
+  lw t0,-752(fp)
+  add s9,t0,zero
+  lw t0,-756(fp)
+  add s9,t0,zero
+  lw t0,-748(fp)
+  add s9,t0,zero
+  lw t0,-764(fp)
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s9,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s8,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s8,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s6,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s6,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s6,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s6,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
-  add s1,s1,zero
+  add s6,t0,zero
+  add s5,s1,zero
   add s1,s4,zero
-  add s2,a4,zero
-  add s2,a3,zero
-  add s2,a2,zero
-  add s2,a1,zero
-  add s2,a0,zero
-  add s2,s11,zero
-  add s2,s7,zero
-  lw t0,-1052(fp)
-  add s2,t0,zero
-  lw t0,-1116(fp)
-  add s2,t0,zero
-  lw t0,-1168(fp)
-  add s2,t0,zero
+  add s5,a4,zero
+  add s5,a3,zero
+  add s5,a2,zero
+  add s5,a1,zero
+  add s5,a0,zero
+  add s5,s11,zero
+  add s5,s7,zero
+  lw t0,-648(fp)
+  add s5,t0,zero
+  lw t0,-708(fp)
+  add s5,t0,zero
+  lw t0,-760(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s4,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
+  add s3,t0,zero
   addi t0,zero,0
   add s2,t0,zero
   addi t0,zero,0
@@ -17954,8 +16872,7 @@ label87:
   jal zero,label88
 label88:
   add a1,a1,zero
-  lw t0,-152(fp)
-  add a0,t0,zero
+  add a0,s1,zero
   addi s11,a0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -17980,192 +16897,190 @@ label88:
   lw s7,0(s8)
   add s7,s7,zero
   add t2,s8,zero
-  sw t2,-504(fp)
-  add t2,s9,zero
-  sw t2,-500(fp)
-  add t2,s7,zero
-  sw t2,-496(fp)
-  add t2,s11,zero
   sw t2,-492(fp)
-  add t2,a0,zero
+  add t2,s9,zero
   sw t2,-488(fp)
-  add t2,s10,zero
+  add t2,s7,zero
   sw t2,-484(fp)
+  add t2,s11,zero
+  sw t2,-480(fp)
+  add t2,a0,zero
+  sw t2,-476(fp)
+  add t2,s10,zero
+  sw t2,-472(fp)
   lw t0,-12(fp)
   add t2,t0,zero
-  sw t2,-480(fp)
+  sw t2,-468(fp)
   lw t0,-16(fp)
   add t2,t0,zero
-  sw t2,-476(fp)
+  sw t2,-464(fp)
   lw t0,-20(fp)
   add t2,t0,zero
-  sw t2,-472(fp)
+  sw t2,-460(fp)
   lw t0,-8(fp)
   add t2,t0,zero
-  sw t2,-468(fp)
-  add t2,s1,zero
-  sw t2,-464(fp)
-  add t2,s2,zero
-  sw t2,-460(fp)
-  add t2,s3,zero
   sw t2,-456(fp)
+  add t2,s1,zero
+  sw t2,-452(fp)
+  add t2,s2,zero
+  sw t2,-448(fp)
+  add t2,s3,zero
+  sw t2,-444(fp)
   lw t0,-28(fp)
   add t2,t0,zero
-  sw t2,-452(fp)
+  sw t2,-440(fp)
   add t2,a3,zero
-  sw t2,-448(fp)
+  sw t2,-436(fp)
   lw t0,-24(fp)
   add t2,t0,zero
-  sw t2,-444(fp)
-  add t2,a2,zero
-  sw t2,-440(fp)
-  add t2,a1,zero
-  sw t2,-436(fp)
-  add t2,s6,zero
   sw t2,-432(fp)
+  add t2,a2,zero
+  sw t2,-428(fp)
+  add t2,a1,zero
+  sw t2,-424(fp)
+  add t2,s6,zero
+  sw t2,-420(fp)
   lw t0,-32(fp)
   add t2,t0,zero
-  sw t2,-428(fp)
+  sw t2,-416(fp)
   lw t0,-44(fp)
   add t2,t0,zero
-  sw t2,-424(fp)
+  sw t2,-412(fp)
   lw t0,-48(fp)
   add t2,t0,zero
-  sw t2,-420(fp)
+  sw t2,-408(fp)
   lw t0,-52(fp)
   add t2,t0,zero
-  sw t2,-416(fp)
+  sw t2,-404(fp)
   lw t0,-40(fp)
   add t2,t0,zero
-  sw t2,-412(fp)
+  sw t2,-400(fp)
   lw t0,-64(fp)
   add t2,t0,zero
-  sw t2,-408(fp)
+  sw t2,-396(fp)
   lw t0,-68(fp)
   add t2,t0,zero
-  sw t2,-404(fp)
+  sw t2,-392(fp)
   lw t0,-60(fp)
   add t2,t0,zero
-  sw t2,-400(fp)
+  sw t2,-388(fp)
   add t2,s5,zero
-  sw t2,-396(fp)
+  sw t2,-384(fp)
   lw t0,-36(fp)
   add t2,t0,zero
-  sw t2,-392(fp)
+  sw t2,-380(fp)
   lw t0,-56(fp)
   add t2,t0,zero
-  sw t2,-388(fp)
+  sw t2,-376(fp)
   lw t0,-84(fp)
   add t2,t0,zero
-  sw t2,-384(fp)
+  sw t2,-372(fp)
   lw t0,-88(fp)
   add t2,t0,zero
-  sw t2,-380(fp)
+  sw t2,-368(fp)
   lw t0,-100(fp)
   add t2,t0,zero
-  sw t2,-376(fp)
+  sw t2,-364(fp)
   lw t0,-104(fp)
   add t2,t0,zero
-  sw t2,-372(fp)
+  sw t2,-360(fp)
   lw t0,-108(fp)
   add t2,t0,zero
-  sw t2,-368(fp)
+  sw t2,-356(fp)
   lw t0,-96(fp)
   add t2,t0,zero
-  sw t2,-364(fp)
+  sw t2,-352(fp)
   lw t0,-120(fp)
   add t2,t0,zero
-  sw t2,-360(fp)
+  sw t2,-348(fp)
   lw t0,-124(fp)
   add t2,t0,zero
-  sw t2,-356(fp)
+  sw t2,-344(fp)
   lw t0,-116(fp)
   add t2,t0,zero
-  sw t2,-352(fp)
+  sw t2,-340(fp)
   lw t0,-80(fp)
   add t2,t0,zero
-  sw t2,-348(fp)
+  sw t2,-336(fp)
   lw t0,-92(fp)
   add t2,t0,zero
-  sw t2,-344(fp)
+  sw t2,-332(fp)
   lw t0,-112(fp)
   add t2,t0,zero
-  sw t2,-340(fp)
+  sw t2,-328(fp)
   lw t0,-136(fp)
   add t2,t0,zero
-  sw t2,-336(fp)
+  sw t2,-324(fp)
   lw t0,-140(fp)
   add t2,t0,zero
-  sw t2,-332(fp)
+  sw t2,-320(fp)
   lw t0,-144(fp)
   add t2,t0,zero
-  sw t2,-328(fp)
+  sw t2,-316(fp)
   lw t0,-132(fp)
   add t2,t0,zero
-  sw t2,-324(fp)
+  sw t2,-312(fp)
   lw t0,-148(fp)
   add t2,t0,zero
-  sw t2,-320(fp)
-  lw t0,-172(fp)
-  add t2,t0,zero
-  sw t2,-316(fp)
-  lw t0,-176(fp)
-  add t2,t0,zero
-  sw t2,-312(fp)
+  sw t2,-308(fp)
   lw t0,-168(fp)
   add t2,t0,zero
-  sw t2,-308(fp)
-  lw t0,-160(fp)
-  add t2,t0,zero
   sw t2,-304(fp)
-  lw t0,-164(fp)
+  lw t0,-172(fp)
   add t2,t0,zero
   sw t2,-300(fp)
-  lw t0,-156(fp)
+  lw t0,-164(fp)
   add t2,t0,zero
   sw t2,-296(fp)
-  lw t0,-184(fp)
+  lw t0,-156(fp)
   add t2,t0,zero
   sw t2,-292(fp)
-  lw t0,-188(fp)
+  lw t0,-160(fp)
   add t2,t0,zero
   sw t2,-288(fp)
-  lw t0,-180(fp)
+  lw t0,-152(fp)
   add t2,t0,zero
   sw t2,-284(fp)
-  lw t0,-196(fp)
+  lw t0,-180(fp)
   add t2,t0,zero
   sw t2,-280(fp)
-  lw t0,-200(fp)
+  lw t0,-184(fp)
   add t2,t0,zero
   sw t2,-276(fp)
-  lw t0,-224(fp)
+  lw t0,-176(fp)
   add t2,t0,zero
   sw t2,-272(fp)
-  lw t0,-228(fp)
+  lw t0,-192(fp)
   add t2,t0,zero
   sw t2,-268(fp)
-  lw t0,-220(fp)
+  lw t0,-196(fp)
   add t2,t0,zero
   sw t2,-264(fp)
-  lw t0,-216(fp)
+  lw t0,-220(fp)
   add t2,t0,zero
   sw t2,-260(fp)
-  lw t0,-208(fp)
+  lw t0,-224(fp)
   add t2,t0,zero
   sw t2,-256(fp)
-  lw t0,-212(fp)
+  lw t0,-216(fp)
   add t2,t0,zero
   sw t2,-252(fp)
+  lw t0,-212(fp)
+  add t2,t0,zero
+  sw t2,-248(fp)
   lw t0,-204(fp)
+  add t6,t0,zero
+  lw t0,-208(fp)
+  add t5,t0,zero
+  lw t0,-200(fp)
   add s10,t0,zero
-  lw t0,-236(fp)
-  add s9,t0,zero
-  lw t0,-240(fp)
-  add s8,t0,zero
   lw t0,-232(fp)
+  add s9,t0,zero
+  lw t0,-236(fp)
+  add s8,t0,zero
+  lw t0,-228(fp)
   add s6,t0,zero
-  lw t0,-248(fp)
+  lw t0,-244(fp)
   add s5,t0,zero
   addi t0,zero,0
   add s3,t0,zero
@@ -18180,33 +17095,33 @@ label88:
   add a1,t0,zero
   lw t0,-128(fp)
   add a0,t0,zero
-  lw t0,-192(fp)
+  lw t0,-188(fp)
   add s11,t0,zero
-  lw t0,-244(fp)
+  lw t0,-240(fp)
   add s7,t0,zero
   jal zero,label85
 fun210__exit:
-  lw t0,-1276(fp)
+  lw t0,-860(fp)
   add s1,t0,zero
-  lw t0,-1272(fp)
+  lw t0,-856(fp)
   add s2,t0,zero
-  lw t0,-1268(fp)
+  lw t0,-852(fp)
   add s3,t0,zero
-  lw t0,-1264(fp)
+  lw t0,-848(fp)
   add s4,t0,zero
-  lw t0,-1260(fp)
+  lw t0,-844(fp)
   add s5,t0,zero
-  lw t0,-1256(fp)
+  lw t0,-840(fp)
   add s6,t0,zero
-  lw t0,-1252(fp)
+  lw t0,-836(fp)
   add s7,t0,zero
-  lw t0,-1248(fp)
+  lw t0,-832(fp)
   add s8,t0,zero
-  lw t0,-1244(fp)
+  lw t0,-828(fp)
   add s9,t0,zero
-  lw t0,-1240(fp)
+  lw t0,-824(fp)
   add s10,t0,zero
-  lw t0,-1236(fp)
+  lw t0,-820(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -18332,33 +17247,33 @@ __fun187:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-556
+  addi sp,sp,-296
   add t2,a0,zero
-  sw t2,-560(fp)
+  sw t2,-300(fp)
   add t2,a1,zero
-  sw t2,-556(fp)
+  sw t2,-296(fp)
   add t2,s1,zero
-  sw t2,-552(fp)
+  sw t2,-292(fp)
   add t2,s2,zero
-  sw t2,-548(fp)
+  sw t2,-288(fp)
   add t2,s3,zero
-  sw t2,-544(fp)
+  sw t2,-284(fp)
   add t2,s4,zero
-  sw t2,-540(fp)
+  sw t2,-280(fp)
   add t2,s5,zero
-  sw t2,-536(fp)
+  sw t2,-276(fp)
   add t2,s6,zero
-  sw t2,-532(fp)
+  sw t2,-272(fp)
   add t2,s7,zero
-  sw t2,-528(fp)
+  sw t2,-268(fp)
   add t2,s8,zero
-  sw t2,-524(fp)
+  sw t2,-264(fp)
   add t2,s9,zero
-  sw t2,-520(fp)
+  sw t2,-260(fp)
   add t2,s10,zero
-  sw t2,-516(fp)
+  sw t2,-256(fp)
   add t2,s11,zero
-  sw t2,-512(fp)
+  sw t2,-252(fp)
 fun187__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -18366,7 +17281,7 @@ fun187__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-556(fp)
+  lw t0,-296(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -18379,7 +17294,7 @@ fun187__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-560(fp)
+  lw t0,-300(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -18393,232 +17308,103 @@ fun187__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-508(fp)
-  lw t0,-508(fp)
-  add s1,t0,zero
+  add s4,s3,zero
+  add s1,s4,zero
   lw t0,__lookup
   add s3,t0,zero
   addi t0,zero,1
   add s2,t0,zero
-  lw t0,-508(fp)
-  add s1,t0,zero
+  add s1,s4,zero
   add a0,s2,zero
   add a1,s1,zero
   jalr ra,s3,0
   addi s1,a0,0
-  add t2,s1,zero
-  sw t2,-504(fp)
+  add s2,s1,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s5,t0,zero
   addi t0,zero,1
-  add s2,t0,zero
-  lw t0,-508(fp)
-  add s1,t0,zero
-  add a0,s2,zero
+  add s3,t0,zero
+  add s1,s4,zero
+  add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s5,0
   addi s1,a0,0
   add s1,s1,zero
-  add s2,s1,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
-  sub s1,s2,s1
+  sub s1,s3,s1
   sltiu s1,s1,1
   beq s1,zero,label92
   jal zero,label91
 label91:
   lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-500(fp)
+  add s7,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-496(fp)
-  lw t0,-508(fp)
-  add t2,t0,zero
-  sw t2,-492(fp)
-  lw t0,-496(fp)
-  add a0,t0,zero
-  lw t0,-492(fp)
-  add a1,t0,zero
-  lw t0,-500(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-488(fp)
-  lw t0,-488(fp)
-  add t2,t0,zero
-  sw t2,-484(fp)
-  lw t0,-484(fp)
-  add t2,t0,zero
-  sw t2,-480(fp)
+  add s6,t0,zero
+  add s4,s4,zero
+  add a0,s6,zero
+  add a1,s4,zero
+  jalr ra,s7,0
+  addi s2,a0,0
+  add s1,s2,zero
+  add s1,s1,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-476(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-472(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-468(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-464(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-460(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-456(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-452(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-448(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-444(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-440(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-436(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-432(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-428(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-424(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-420(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-416(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-412(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-408(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-404(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-400(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-396(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-392(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-388(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-384(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-380(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-376(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-372(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-368(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-364(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-360(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-356(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-352(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-348(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-344(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-340(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-336(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-332(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-328(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-324(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-320(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-316(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-312(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-308(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-304(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-300(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-296(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-292(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-288(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-284(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-280(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-276(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-272(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-268(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-264(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-260(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-256(fp)
+  add s5,t0,zero
   addi t0,zero,0
   add s3,t0,zero
   addi t0,zero,0
@@ -18647,20 +17433,69 @@ label91:
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
-  lw t0,-492(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-496(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-500(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-488(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-480(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-508(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-484(fp)
+  addi t0,zero,0
   add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  add s3,s4,zero
+  add s3,s6,zero
+  add s3,s7,zero
+  add s3,s2,zero
+  add s3,s1,zero
+  add s3,s4,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
   addi t0,zero,0
@@ -18682,14 +17517,13 @@ label92:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-252(fp)
-  lw t0,-252(fp)
-  add t2,t0,zero
   sw t2,-248(fp)
-  lw t0,-508(fp)
+  lw t0,-248(fp)
   add t2,t0,zero
   sw t2,-244(fp)
-  lw t0,-248(fp)
+  add t2,s4,zero
+  sw t2,-240(fp)
+  lw t0,-244(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -18699,17 +17533,16 @@ label92:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-240(fp)
-  lw t0,-244(fp)
-  sw t0,0(t2)
-  sw t2,-240(fp)
-  lw t0,-244(fp)
-  add t2,t0,zero
   sw t2,-236(fp)
-  lw t0,-504(fp)
+  lw t0,-240(fp)
+  sw t0,0(t2)
+  sw t2,-236(fp)
+  lw t0,-240(fp)
   add t2,t0,zero
   sw t2,-232(fp)
-  lw t0,-232(fp)
+  add t2,s2,zero
+  sw t2,-228(fp)
+  lw t0,-228(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -18719,17 +17552,17 @@ label92:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-228(fp)
-  lw t0,-228(fp)
-  lw t2,0(t0)
   sw t2,-224(fp)
   lw t0,-224(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-220(fp)
   lw t0,-220(fp)
   add t2,t0,zero
   sw t2,-216(fp)
-  lw t0,-248(fp)
+  lw t0,-216(fp)
+  add t2,t0,zero
+  sw t2,-212(fp)
+  lw t0,-244(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -18739,29 +17572,29 @@ label92:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-212(fp)
-  lw t0,-216(fp)
-  sw t0,0(t2)
-  sw t2,-212(fp)
-  lw t0,-216(fp)
-  add t2,t0,zero
   sw t2,-208(fp)
-  lw t0,-248(fp)
+  lw t0,-212(fp)
+  sw t0,0(t2)
+  sw t2,-208(fp)
+  lw t0,-212(fp)
+  add t2,t0,zero
+  sw t2,-204(fp)
+  lw t0,-244(fp)
   add s1,t0,zero
   add t2,s1,zero
-  sw t2,-204(fp)
+  sw t2,-200(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-200(fp)
-  lw t0,-200(fp)
-  add t2,t0,zero
   sw t2,-196(fp)
-  add t2,s1,zero
-  sw t2,-192(fp)
   lw t0,-196(fp)
+  add t2,t0,zero
+  sw t2,-192(fp)
+  add t2,s1,zero
+  sw t2,-188(fp)
+  lw t0,-192(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -18771,17 +17604,16 @@ label92:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-188(fp)
-  lw t0,-192(fp)
-  sw t0,0(t2)
-  sw t2,-188(fp)
-  lw t0,-192(fp)
-  add t2,t0,zero
   sw t2,-184(fp)
-  lw t0,-504(fp)
+  lw t0,-188(fp)
+  sw t0,0(t2)
+  sw t2,-184(fp)
+  lw t0,-188(fp)
   add t2,t0,zero
   sw t2,-180(fp)
-  lw t0,-180(fp)
+  add t2,s2,zero
+  sw t2,-176(fp)
+  lw t0,-176(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -18791,14 +17623,14 @@ label92:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-176(fp)
-  lw t0,-176(fp)
-  lw t2,0(t0)
   sw t2,-172(fp)
   lw t0,-172(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-168(fp)
-  lw t0,-196(fp)
+  lw t0,-168(fp)
+  add t2,t0,zero
+  sw t2,-164(fp)
+  lw t0,-192(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -18808,18 +17640,16 @@ label92:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-164(fp)
-  lw t0,-168(fp)
-  sw t0,0(t2)
-  sw t2,-164(fp)
-  lw t0,-168(fp)
-  add t2,t0,zero
   sw t2,-160(fp)
-  lw t0,-196(fp)
+  lw t0,-164(fp)
+  sw t0,0(t2)
+  sw t2,-160(fp)
+  lw t0,-164(fp)
   add t2,t0,zero
   sw t2,-156(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  lw t0,-192(fp)
+  add s4,t0,zero
+  add t2,s4,zero
   sw t2,-152(fp)
   lw t0,__lookup
   add t2,t0,zero
@@ -18827,8 +17657,7 @@ label92:
   addi t0,zero,4
   add t2,t0,zero
   sw t2,-144(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  add t2,s4,zero
   sw t2,-140(fp)
   lw t0,-144(fp)
   add a0,t0,zero
@@ -18867,8 +17696,7 @@ label92:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-108(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  add t2,s4,zero
   sw t2,-104(fp)
   lw t0,-108(fp)
   add a0,t0,zero
@@ -18935,8 +17763,7 @@ label92:
   addi t0,zero,2
   add t2,t0,zero
   sw t2,-52(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  add t2,s4,zero
   sw t2,-48(fp)
   lw t0,-52(fp)
   add a0,t0,zero
@@ -18998,8 +17825,7 @@ label92:
   addi t0,zero,1
   add t2,t0,zero
   sw t2,-16(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  add t2,s4,zero
   sw t2,-12(fp)
   lw t0,-16(fp)
   add a0,t0,zero
@@ -19025,8 +17851,7 @@ label92:
   add s11,s11,zero
   add s10,s1,zero
   add s10,s10,zero
-  lw t0,-156(fp)
-  add s9,t0,zero
+  add s9,s4,zero
   addi s8,s9,0
   addi t0,zero,0
   addi t1,zero,8
@@ -19050,187 +17875,131 @@ label92:
   add s5,s5,t1
   lw s4,0(s5)
   add s4,s4,zero
-  add t2,s5,zero
-  sw t2,-476(fp)
-  add t2,s6,zero
-  sw t2,-472(fp)
-  add t2,s4,zero
-  sw t2,-468(fp)
-  add t2,s8,zero
-  sw t2,-464(fp)
-  add t2,s9,zero
-  sw t2,-460(fp)
-  add t2,s7,zero
-  sw t2,-456(fp)
-  add t2,s10,zero
-  sw t2,-452(fp)
+  add s5,s5,zero
+  add s5,s6,zero
+  add s5,s4,zero
+  add s5,s8,zero
+  add s5,s9,zero
+  add s5,s7,zero
+  add s5,s10,zero
   lw t0,-12(fp)
-  add t2,t0,zero
-  sw t2,-448(fp)
+  add s5,t0,zero
   lw t0,-16(fp)
-  add t2,t0,zero
-  sw t2,-444(fp)
+  add s5,t0,zero
   lw t0,-20(fp)
-  add t2,t0,zero
-  sw t2,-440(fp)
+  add s5,t0,zero
   lw t0,-8(fp)
-  add t2,t0,zero
-  sw t2,-436(fp)
-  add t2,a1,zero
-  sw t2,-432(fp)
-  add t2,a0,zero
-  sw t2,-428(fp)
-  add t2,s11,zero
-  sw t2,-424(fp)
-  add t2,s11,zero
-  sw t2,-420(fp)
+  add s5,t0,zero
+  add s5,a1,zero
+  add s5,a0,zero
+  add s5,s11,zero
+  add s5,s11,zero
   lw t0,-28(fp)
-  add t2,t0,zero
-  sw t2,-416(fp)
-  add t2,s2,zero
-  sw t2,-412(fp)
+  add s5,t0,zero
+  add s5,s2,zero
   lw t0,-24(fp)
-  add t2,t0,zero
-  sw t2,-408(fp)
-  add t2,s1,zero
-  sw t2,-404(fp)
+  add s5,t0,zero
+  add s5,s1,zero
   lw t0,-32(fp)
-  add t2,t0,zero
-  sw t2,-400(fp)
+  add s5,t0,zero
   lw t0,-36(fp)
-  add t2,t0,zero
-  sw t2,-396(fp)
+  add s5,t0,zero
   lw t0,-48(fp)
-  add t2,t0,zero
-  sw t2,-392(fp)
+  add s5,t0,zero
   lw t0,-52(fp)
-  add t2,t0,zero
-  sw t2,-388(fp)
+  add s5,t0,zero
   lw t0,-56(fp)
-  add t2,t0,zero
-  sw t2,-384(fp)
+  add s5,t0,zero
   lw t0,-44(fp)
-  add t2,t0,zero
-  sw t2,-380(fp)
+  add s5,t0,zero
   lw t0,-68(fp)
-  add t2,t0,zero
-  sw t2,-376(fp)
+  add s5,t0,zero
   lw t0,-72(fp)
-  add t2,t0,zero
-  sw t2,-372(fp)
+  add s5,t0,zero
   lw t0,-64(fp)
-  add t2,t0,zero
-  sw t2,-368(fp)
-  add t2,s3,zero
-  sw t2,-364(fp)
+  add s5,t0,zero
+  add s3,s3,zero
   lw t0,-40(fp)
-  add t2,t0,zero
-  sw t2,-360(fp)
+  add s3,t0,zero
   lw t0,-60(fp)
-  add t2,t0,zero
-  sw t2,-356(fp)
+  add s3,t0,zero
   lw t0,-88(fp)
-  add t2,t0,zero
-  sw t2,-352(fp)
+  add s3,t0,zero
   lw t0,-92(fp)
-  add t2,t0,zero
-  sw t2,-348(fp)
+  add s3,t0,zero
   lw t0,-104(fp)
-  add t2,t0,zero
-  sw t2,-344(fp)
+  add s3,t0,zero
   lw t0,-108(fp)
-  add t2,t0,zero
-  sw t2,-340(fp)
+  add s3,t0,zero
   lw t0,-112(fp)
-  add t2,t0,zero
-  sw t2,-336(fp)
+  add s3,t0,zero
   lw t0,-100(fp)
-  add t2,t0,zero
-  sw t2,-332(fp)
+  add s3,t0,zero
   lw t0,-124(fp)
-  add t2,t0,zero
-  sw t2,-328(fp)
+  add s3,t0,zero
   lw t0,-128(fp)
-  add t2,t0,zero
-  sw t2,-324(fp)
+  add s3,t0,zero
   lw t0,-120(fp)
-  add t2,t0,zero
-  sw t2,-320(fp)
+  add s3,t0,zero
   lw t0,-84(fp)
-  add t2,t0,zero
-  sw t2,-316(fp)
+  add s3,t0,zero
   lw t0,-96(fp)
-  add t2,t0,zero
-  sw t2,-312(fp)
+  add s3,t0,zero
   lw t0,-116(fp)
-  add t2,t0,zero
-  sw t2,-308(fp)
+  add s3,t0,zero
   lw t0,-140(fp)
-  add t2,t0,zero
-  sw t2,-304(fp)
+  add s3,t0,zero
   lw t0,-144(fp)
-  add t2,t0,zero
-  sw t2,-300(fp)
+  add s3,t0,zero
   lw t0,-148(fp)
-  add t2,t0,zero
-  sw t2,-296(fp)
+  add s3,t0,zero
   lw t0,-136(fp)
-  add t2,t0,zero
-  sw t2,-292(fp)
+  add s3,t0,zero
   lw t0,-152(fp)
-  add t2,t0,zero
-  sw t2,-288(fp)
-  lw t0,-176(fp)
-  add t2,t0,zero
-  sw t2,-284(fp)
-  lw t0,-180(fp)
-  add t2,t0,zero
-  sw t2,-280(fp)
+  add s3,t0,zero
   lw t0,-172(fp)
-  add t2,t0,zero
-  sw t2,-276(fp)
-  lw t0,-164(fp)
-  add t2,t0,zero
-  sw t2,-272(fp)
+  add s3,t0,zero
+  lw t0,-176(fp)
+  add s3,t0,zero
   lw t0,-168(fp)
-  add t2,t0,zero
-  sw t2,-268(fp)
+  add s3,t0,zero
   lw t0,-160(fp)
-  add t2,t0,zero
-  sw t2,-264(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
-  sw t2,-260(fp)
-  lw t0,-192(fp)
-  add t2,t0,zero
-  sw t2,-256(fp)
+  add s3,t0,zero
+  lw t0,-164(fp)
+  add s3,t0,zero
+  lw t0,-156(fp)
+  add s3,t0,zero
   lw t0,-184(fp)
+  add s3,t0,zero
+  lw t0,-188(fp)
+  add s3,t0,zero
+  lw t0,-180(fp)
+  add s3,t0,zero
+  lw t0,-196(fp)
   add s3,t0,zero
   lw t0,-200(fp)
   add s3,t0,zero
-  lw t0,-204(fp)
+  lw t0,-224(fp)
   add s3,t0,zero
   lw t0,-228(fp)
   add s3,t0,zero
-  lw t0,-232(fp)
-  add s3,t0,zero
-  lw t0,-224(fp)
-  add s3,t0,zero
   lw t0,-220(fp)
-  add s3,t0,zero
-  lw t0,-212(fp)
   add s3,t0,zero
   lw t0,-216(fp)
   add s3,t0,zero
   lw t0,-208(fp)
   add s3,t0,zero
-  lw t0,-240(fp)
+  lw t0,-212(fp)
   add s3,t0,zero
-  lw t0,-244(fp)
+  lw t0,-204(fp)
   add s3,t0,zero
   lw t0,-236(fp)
   add s3,t0,zero
-  lw t0,-252(fp)
+  lw t0,-240(fp)
+  add s3,t0,zero
+  lw t0,-232(fp)
+  add s3,t0,zero
+  lw t0,-248(fp)
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
@@ -19252,9 +18021,9 @@ label92:
   add s1,t0,zero
   lw t0,-132(fp)
   add s1,t0,zero
-  lw t0,-196(fp)
+  lw t0,-192(fp)
   add s1,t0,zero
-  lw t0,-248(fp)
+  lw t0,-244(fp)
   add s1,t0,zero
   jal zero,label93
 label93:
@@ -19262,27 +18031,27 @@ label93:
   add a0,s1,zero
   jal zero,fun187__exit
 fun187__exit:
-  lw t0,-552(fp)
+  lw t0,-292(fp)
   add s1,t0,zero
-  lw t0,-548(fp)
+  lw t0,-288(fp)
   add s2,t0,zero
-  lw t0,-544(fp)
+  lw t0,-284(fp)
   add s3,t0,zero
-  lw t0,-540(fp)
+  lw t0,-280(fp)
   add s4,t0,zero
-  lw t0,-536(fp)
+  lw t0,-276(fp)
   add s5,t0,zero
-  lw t0,-532(fp)
+  lw t0,-272(fp)
   add s6,t0,zero
-  lw t0,-528(fp)
+  lw t0,-268(fp)
   add s7,t0,zero
-  lw t0,-524(fp)
+  lw t0,-264(fp)
   add s8,t0,zero
-  lw t0,-520(fp)
+  lw t0,-260(fp)
   add s9,t0,zero
-  lw t0,-516(fp)
+  lw t0,-256(fp)
   add s10,t0,zero
-  lw t0,-512(fp)
+  lw t0,-252(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -19408,33 +18177,33 @@ __fun171:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-556
+  addi sp,sp,-296
   add t2,a0,zero
-  sw t2,-560(fp)
+  sw t2,-300(fp)
   add t2,a1,zero
-  sw t2,-556(fp)
+  sw t2,-296(fp)
   add t2,s1,zero
-  sw t2,-552(fp)
+  sw t2,-292(fp)
   add t2,s2,zero
-  sw t2,-548(fp)
+  sw t2,-288(fp)
   add t2,s3,zero
-  sw t2,-544(fp)
+  sw t2,-284(fp)
   add t2,s4,zero
-  sw t2,-540(fp)
+  sw t2,-280(fp)
   add t2,s5,zero
-  sw t2,-536(fp)
+  sw t2,-276(fp)
   add t2,s6,zero
-  sw t2,-532(fp)
+  sw t2,-272(fp)
   add t2,s7,zero
-  sw t2,-528(fp)
+  sw t2,-268(fp)
   add t2,s8,zero
-  sw t2,-524(fp)
+  sw t2,-264(fp)
   add t2,s9,zero
-  sw t2,-520(fp)
+  sw t2,-260(fp)
   add t2,s10,zero
-  sw t2,-516(fp)
+  sw t2,-256(fp)
   add t2,s11,zero
-  sw t2,-512(fp)
+  sw t2,-252(fp)
 fun171__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -19442,7 +18211,7 @@ fun171__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-556(fp)
+  lw t0,-296(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -19455,7 +18224,7 @@ fun171__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-560(fp)
+  lw t0,-300(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -19469,232 +18238,103 @@ fun171__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-508(fp)
-  lw t0,-508(fp)
-  add s1,t0,zero
+  add s4,s3,zero
+  add s1,s4,zero
   lw t0,__lookup
   add s3,t0,zero
   addi t0,zero,1
   add s2,t0,zero
-  lw t0,-508(fp)
-  add s1,t0,zero
+  add s1,s4,zero
   add a0,s2,zero
   add a1,s1,zero
   jalr ra,s3,0
   addi s1,a0,0
-  add t2,s1,zero
-  sw t2,-504(fp)
+  add s2,s1,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s5,t0,zero
   addi t0,zero,1
-  add s2,t0,zero
-  lw t0,-508(fp)
-  add s1,t0,zero
-  add a0,s2,zero
+  add s3,t0,zero
+  add s1,s4,zero
+  add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s5,0
   addi s1,a0,0
   add s1,s1,zero
-  add s2,s1,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
-  sub s1,s2,s1
+  sub s1,s3,s1
   sltiu s1,s1,1
   beq s1,zero,label97
   jal zero,label96
 label96:
   lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-500(fp)
+  add s7,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-496(fp)
-  lw t0,-508(fp)
-  add t2,t0,zero
-  sw t2,-492(fp)
-  lw t0,-496(fp)
-  add a0,t0,zero
-  lw t0,-492(fp)
-  add a1,t0,zero
-  lw t0,-500(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-488(fp)
-  lw t0,-488(fp)
-  add t2,t0,zero
-  sw t2,-484(fp)
-  lw t0,-484(fp)
-  add t2,t0,zero
-  sw t2,-480(fp)
+  add s6,t0,zero
+  add s4,s4,zero
+  add a0,s6,zero
+  add a1,s4,zero
+  jalr ra,s7,0
+  addi s2,a0,0
+  add s1,s2,zero
+  add s1,s1,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-476(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-472(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-468(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-464(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-460(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-456(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-452(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-448(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-444(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-440(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-436(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-432(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-428(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-424(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-420(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-416(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-412(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-408(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-404(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-400(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-396(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-392(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-388(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-384(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-380(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-376(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-372(fp)
+  add s5,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-368(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-364(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-360(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-356(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-352(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-348(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-344(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-340(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-336(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-332(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-328(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-324(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-320(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-316(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-312(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-308(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-304(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-300(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-296(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-292(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-288(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-284(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-280(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-276(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-272(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-268(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-264(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-260(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-256(fp)
+  add s5,t0,zero
   addi t0,zero,0
   add s3,t0,zero
   addi t0,zero,0
@@ -19723,20 +18363,69 @@ label96:
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
-  lw t0,-492(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-496(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-500(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-488(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-480(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-508(fp)
+  addi t0,zero,0
   add s3,t0,zero
-  lw t0,-484(fp)
+  addi t0,zero,0
   add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  addi t0,zero,0
+  add s3,t0,zero
+  add s3,s4,zero
+  add s3,s6,zero
+  add s3,s7,zero
+  add s3,s2,zero
+  add s3,s1,zero
+  add s3,s4,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
   addi t0,zero,0
@@ -19758,14 +18447,13 @@ label97:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-252(fp)
-  lw t0,-252(fp)
-  add t2,t0,zero
   sw t2,-248(fp)
-  lw t0,-508(fp)
+  lw t0,-248(fp)
   add t2,t0,zero
   sw t2,-244(fp)
-  lw t0,-248(fp)
+  add t2,s4,zero
+  sw t2,-240(fp)
+  lw t0,-244(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -19775,17 +18463,16 @@ label97:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-240(fp)
-  lw t0,-244(fp)
-  sw t0,0(t2)
-  sw t2,-240(fp)
-  lw t0,-244(fp)
-  add t2,t0,zero
   sw t2,-236(fp)
-  lw t0,-504(fp)
+  lw t0,-240(fp)
+  sw t0,0(t2)
+  sw t2,-236(fp)
+  lw t0,-240(fp)
   add t2,t0,zero
   sw t2,-232(fp)
-  lw t0,-232(fp)
+  add t2,s2,zero
+  sw t2,-228(fp)
+  lw t0,-228(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -19795,17 +18482,17 @@ label97:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-228(fp)
-  lw t0,-228(fp)
-  lw t2,0(t0)
   sw t2,-224(fp)
   lw t0,-224(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-220(fp)
   lw t0,-220(fp)
   add t2,t0,zero
   sw t2,-216(fp)
-  lw t0,-248(fp)
+  lw t0,-216(fp)
+  add t2,t0,zero
+  sw t2,-212(fp)
+  lw t0,-244(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -19815,29 +18502,29 @@ label97:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-212(fp)
-  lw t0,-216(fp)
-  sw t0,0(t2)
-  sw t2,-212(fp)
-  lw t0,-216(fp)
-  add t2,t0,zero
   sw t2,-208(fp)
-  lw t0,-248(fp)
+  lw t0,-212(fp)
+  sw t0,0(t2)
+  sw t2,-208(fp)
+  lw t0,-212(fp)
+  add t2,t0,zero
+  sw t2,-204(fp)
+  lw t0,-244(fp)
   add s1,t0,zero
   add t2,s1,zero
-  sw t2,-204(fp)
+  sw t2,-200(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-200(fp)
-  lw t0,-200(fp)
-  add t2,t0,zero
   sw t2,-196(fp)
-  add t2,s1,zero
-  sw t2,-192(fp)
   lw t0,-196(fp)
+  add t2,t0,zero
+  sw t2,-192(fp)
+  add t2,s1,zero
+  sw t2,-188(fp)
+  lw t0,-192(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -19847,17 +18534,16 @@ label97:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-188(fp)
-  lw t0,-192(fp)
-  sw t0,0(t2)
-  sw t2,-188(fp)
-  lw t0,-192(fp)
-  add t2,t0,zero
   sw t2,-184(fp)
-  lw t0,-504(fp)
+  lw t0,-188(fp)
+  sw t0,0(t2)
+  sw t2,-184(fp)
+  lw t0,-188(fp)
   add t2,t0,zero
   sw t2,-180(fp)
-  lw t0,-180(fp)
+  add t2,s2,zero
+  sw t2,-176(fp)
+  lw t0,-176(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -19867,14 +18553,14 @@ label97:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-176(fp)
-  lw t0,-176(fp)
-  lw t2,0(t0)
   sw t2,-172(fp)
   lw t0,-172(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-168(fp)
-  lw t0,-196(fp)
+  lw t0,-168(fp)
+  add t2,t0,zero
+  sw t2,-164(fp)
+  lw t0,-192(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -19884,18 +18570,16 @@ label97:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-164(fp)
-  lw t0,-168(fp)
-  sw t0,0(t2)
-  sw t2,-164(fp)
-  lw t0,-168(fp)
-  add t2,t0,zero
   sw t2,-160(fp)
-  lw t0,-196(fp)
+  lw t0,-164(fp)
+  sw t0,0(t2)
+  sw t2,-160(fp)
+  lw t0,-164(fp)
   add t2,t0,zero
   sw t2,-156(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  lw t0,-192(fp)
+  add s4,t0,zero
+  add t2,s4,zero
   sw t2,-152(fp)
   lw t0,__lookup
   add t2,t0,zero
@@ -19903,8 +18587,7 @@ label97:
   addi t0,zero,4
   add t2,t0,zero
   sw t2,-144(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  add t2,s4,zero
   sw t2,-140(fp)
   lw t0,-144(fp)
   add a0,t0,zero
@@ -19943,8 +18626,7 @@ label97:
   addi t0,zero,0
   add t2,t0,zero
   sw t2,-108(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  add t2,s4,zero
   sw t2,-104(fp)
   lw t0,-108(fp)
   add a0,t0,zero
@@ -20011,8 +18693,7 @@ label97:
   addi t0,zero,2
   add t2,t0,zero
   sw t2,-52(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  add t2,s4,zero
   sw t2,-48(fp)
   lw t0,-52(fp)
   add a0,t0,zero
@@ -20074,8 +18755,7 @@ label97:
   addi t0,zero,1
   add t2,t0,zero
   sw t2,-16(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
+  add t2,s4,zero
   sw t2,-12(fp)
   lw t0,-16(fp)
   add a0,t0,zero
@@ -20101,8 +18781,7 @@ label97:
   add s11,s11,zero
   add s10,s1,zero
   add s10,s10,zero
-  lw t0,-156(fp)
-  add s9,t0,zero
+  add s9,s4,zero
   addi s8,s9,0
   addi t0,zero,0
   addi t1,zero,8
@@ -20126,187 +18805,131 @@ label97:
   add s5,s5,t1
   lw s4,0(s5)
   add s4,s4,zero
-  add t2,s5,zero
-  sw t2,-476(fp)
-  add t2,s6,zero
-  sw t2,-472(fp)
-  add t2,s4,zero
-  sw t2,-468(fp)
-  add t2,s8,zero
-  sw t2,-464(fp)
-  add t2,s9,zero
-  sw t2,-460(fp)
-  add t2,s7,zero
-  sw t2,-456(fp)
-  add t2,s10,zero
-  sw t2,-452(fp)
+  add s5,s5,zero
+  add s5,s6,zero
+  add s5,s4,zero
+  add s5,s8,zero
+  add s5,s9,zero
+  add s5,s7,zero
+  add s5,s10,zero
   lw t0,-12(fp)
-  add t2,t0,zero
-  sw t2,-448(fp)
+  add s5,t0,zero
   lw t0,-16(fp)
-  add t2,t0,zero
-  sw t2,-444(fp)
+  add s5,t0,zero
   lw t0,-20(fp)
-  add t2,t0,zero
-  sw t2,-440(fp)
+  add s5,t0,zero
   lw t0,-8(fp)
-  add t2,t0,zero
-  sw t2,-436(fp)
-  add t2,a1,zero
-  sw t2,-432(fp)
-  add t2,a0,zero
-  sw t2,-428(fp)
-  add t2,s11,zero
-  sw t2,-424(fp)
-  add t2,s11,zero
-  sw t2,-420(fp)
+  add s5,t0,zero
+  add s5,a1,zero
+  add s5,a0,zero
+  add s5,s11,zero
+  add s5,s11,zero
   lw t0,-28(fp)
-  add t2,t0,zero
-  sw t2,-416(fp)
-  add t2,s2,zero
-  sw t2,-412(fp)
+  add s5,t0,zero
+  add s5,s2,zero
   lw t0,-24(fp)
-  add t2,t0,zero
-  sw t2,-408(fp)
-  add t2,s1,zero
-  sw t2,-404(fp)
+  add s5,t0,zero
+  add s5,s1,zero
   lw t0,-32(fp)
-  add t2,t0,zero
-  sw t2,-400(fp)
+  add s5,t0,zero
   lw t0,-36(fp)
-  add t2,t0,zero
-  sw t2,-396(fp)
+  add s5,t0,zero
   lw t0,-48(fp)
-  add t2,t0,zero
-  sw t2,-392(fp)
+  add s5,t0,zero
   lw t0,-52(fp)
-  add t2,t0,zero
-  sw t2,-388(fp)
+  add s5,t0,zero
   lw t0,-56(fp)
-  add t2,t0,zero
-  sw t2,-384(fp)
+  add s5,t0,zero
   lw t0,-44(fp)
-  add t2,t0,zero
-  sw t2,-380(fp)
+  add s5,t0,zero
   lw t0,-68(fp)
-  add t2,t0,zero
-  sw t2,-376(fp)
+  add s5,t0,zero
   lw t0,-72(fp)
-  add t2,t0,zero
-  sw t2,-372(fp)
+  add s5,t0,zero
   lw t0,-64(fp)
-  add t2,t0,zero
-  sw t2,-368(fp)
-  add t2,s3,zero
-  sw t2,-364(fp)
+  add s5,t0,zero
+  add s3,s3,zero
   lw t0,-40(fp)
-  add t2,t0,zero
-  sw t2,-360(fp)
+  add s3,t0,zero
   lw t0,-60(fp)
-  add t2,t0,zero
-  sw t2,-356(fp)
+  add s3,t0,zero
   lw t0,-88(fp)
-  add t2,t0,zero
-  sw t2,-352(fp)
+  add s3,t0,zero
   lw t0,-92(fp)
-  add t2,t0,zero
-  sw t2,-348(fp)
+  add s3,t0,zero
   lw t0,-104(fp)
-  add t2,t0,zero
-  sw t2,-344(fp)
+  add s3,t0,zero
   lw t0,-108(fp)
-  add t2,t0,zero
-  sw t2,-340(fp)
+  add s3,t0,zero
   lw t0,-112(fp)
-  add t2,t0,zero
-  sw t2,-336(fp)
+  add s3,t0,zero
   lw t0,-100(fp)
-  add t2,t0,zero
-  sw t2,-332(fp)
+  add s3,t0,zero
   lw t0,-124(fp)
-  add t2,t0,zero
-  sw t2,-328(fp)
+  add s3,t0,zero
   lw t0,-128(fp)
-  add t2,t0,zero
-  sw t2,-324(fp)
+  add s3,t0,zero
   lw t0,-120(fp)
-  add t2,t0,zero
-  sw t2,-320(fp)
+  add s3,t0,zero
   lw t0,-84(fp)
-  add t2,t0,zero
-  sw t2,-316(fp)
+  add s3,t0,zero
   lw t0,-96(fp)
-  add t2,t0,zero
-  sw t2,-312(fp)
+  add s3,t0,zero
   lw t0,-116(fp)
-  add t2,t0,zero
-  sw t2,-308(fp)
+  add s3,t0,zero
   lw t0,-140(fp)
-  add t2,t0,zero
-  sw t2,-304(fp)
+  add s3,t0,zero
   lw t0,-144(fp)
-  add t2,t0,zero
-  sw t2,-300(fp)
+  add s3,t0,zero
   lw t0,-148(fp)
-  add t2,t0,zero
-  sw t2,-296(fp)
+  add s3,t0,zero
   lw t0,-136(fp)
-  add t2,t0,zero
-  sw t2,-292(fp)
+  add s3,t0,zero
   lw t0,-152(fp)
-  add t2,t0,zero
-  sw t2,-288(fp)
-  lw t0,-176(fp)
-  add t2,t0,zero
-  sw t2,-284(fp)
-  lw t0,-180(fp)
-  add t2,t0,zero
-  sw t2,-280(fp)
+  add s3,t0,zero
   lw t0,-172(fp)
-  add t2,t0,zero
-  sw t2,-276(fp)
-  lw t0,-164(fp)
-  add t2,t0,zero
-  sw t2,-272(fp)
+  add s3,t0,zero
+  lw t0,-176(fp)
+  add s3,t0,zero
   lw t0,-168(fp)
-  add t2,t0,zero
-  sw t2,-268(fp)
+  add s3,t0,zero
   lw t0,-160(fp)
-  add t2,t0,zero
-  sw t2,-264(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
-  sw t2,-260(fp)
-  lw t0,-192(fp)
-  add t2,t0,zero
-  sw t2,-256(fp)
+  add s3,t0,zero
+  lw t0,-164(fp)
+  add s3,t0,zero
+  lw t0,-156(fp)
+  add s3,t0,zero
   lw t0,-184(fp)
+  add s3,t0,zero
+  lw t0,-188(fp)
+  add s3,t0,zero
+  lw t0,-180(fp)
+  add s3,t0,zero
+  lw t0,-196(fp)
   add s3,t0,zero
   lw t0,-200(fp)
   add s3,t0,zero
-  lw t0,-204(fp)
+  lw t0,-224(fp)
   add s3,t0,zero
   lw t0,-228(fp)
   add s3,t0,zero
-  lw t0,-232(fp)
-  add s3,t0,zero
-  lw t0,-224(fp)
-  add s3,t0,zero
   lw t0,-220(fp)
-  add s3,t0,zero
-  lw t0,-212(fp)
   add s3,t0,zero
   lw t0,-216(fp)
   add s3,t0,zero
   lw t0,-208(fp)
   add s3,t0,zero
-  lw t0,-240(fp)
+  lw t0,-212(fp)
   add s3,t0,zero
-  lw t0,-244(fp)
+  lw t0,-204(fp)
   add s3,t0,zero
   lw t0,-236(fp)
   add s3,t0,zero
-  lw t0,-252(fp)
+  lw t0,-240(fp)
+  add s3,t0,zero
+  lw t0,-232(fp)
+  add s3,t0,zero
+  lw t0,-248(fp)
   add s3,t0,zero
   addi t0,zero,0
   add s3,t0,zero
@@ -20328,9 +18951,9 @@ label97:
   add s1,t0,zero
   lw t0,-132(fp)
   add s1,t0,zero
-  lw t0,-196(fp)
+  lw t0,-192(fp)
   add s1,t0,zero
-  lw t0,-248(fp)
+  lw t0,-244(fp)
   add s1,t0,zero
   jal zero,label98
 label98:
@@ -20338,27 +18961,27 @@ label98:
   add a0,s1,zero
   jal zero,fun171__exit
 fun171__exit:
-  lw t0,-552(fp)
+  lw t0,-292(fp)
   add s1,t0,zero
-  lw t0,-548(fp)
+  lw t0,-288(fp)
   add s2,t0,zero
-  lw t0,-544(fp)
+  lw t0,-284(fp)
   add s3,t0,zero
-  lw t0,-540(fp)
+  lw t0,-280(fp)
   add s4,t0,zero
-  lw t0,-536(fp)
+  lw t0,-276(fp)
   add s5,t0,zero
-  lw t0,-532(fp)
+  lw t0,-272(fp)
   add s6,t0,zero
-  lw t0,-528(fp)
+  lw t0,-268(fp)
   add s7,t0,zero
-  lw t0,-524(fp)
+  lw t0,-264(fp)
   add s8,t0,zero
-  lw t0,-520(fp)
+  lw t0,-260(fp)
   add s9,t0,zero
-  lw t0,-516(fp)
+  lw t0,-256(fp)
   add s10,t0,zero
-  lw t0,-512(fp)
+  lw t0,-252(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -20484,33 +19107,33 @@ __fun153:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-788
+  addi sp,sp,-404
   add t2,a0,zero
-  sw t2,-792(fp)
+  sw t2,-408(fp)
   add t2,a1,zero
-  sw t2,-788(fp)
+  sw t2,-404(fp)
   add t2,s1,zero
-  sw t2,-784(fp)
+  sw t2,-400(fp)
   add t2,s2,zero
-  sw t2,-780(fp)
+  sw t2,-396(fp)
   add t2,s3,zero
-  sw t2,-776(fp)
+  sw t2,-392(fp)
   add t2,s4,zero
-  sw t2,-772(fp)
+  sw t2,-388(fp)
   add t2,s5,zero
-  sw t2,-768(fp)
+  sw t2,-384(fp)
   add t2,s6,zero
-  sw t2,-764(fp)
+  sw t2,-380(fp)
   add t2,s7,zero
-  sw t2,-760(fp)
+  sw t2,-376(fp)
   add t2,s8,zero
-  sw t2,-756(fp)
+  sw t2,-372(fp)
   add t2,s9,zero
-  sw t2,-752(fp)
+  sw t2,-368(fp)
   add t2,s10,zero
-  sw t2,-748(fp)
+  sw t2,-364(fp)
   add t2,s11,zero
-  sw t2,-744(fp)
+  sw t2,-360(fp)
 fun153__entry:
   addi t0,zero,8
   add a0,t0,zero
@@ -20518,7 +19141,7 @@ fun153__entry:
   jalr ra,t0,0
   addi s1,a0,0
   add s3,s1,zero
-  lw t0,-788(fp)
+  lw t0,-404(fp)
   add s2,t0,zero
   addi s1,s3,0
   addi t0,zero,0
@@ -20531,7 +19154,7 @@ fun153__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  lw t0,-792(fp)
+  lw t0,-408(fp)
   add s1,t0,zero
   add s2,s1,zero
   addi s1,s3,0
@@ -20545,319 +19168,65 @@ fun153__entry:
   add s1,s1,t1
   sw s2,0(s1)
   add s1,s2,zero
-  add t2,s3,zero
-  sw t2,-740(fp)
-  lw t0,-740(fp)
-  add s1,t0,zero
+  add s4,s3,zero
+  add s1,s4,zero
   lw t0,__lookup
   add s3,t0,zero
   addi t0,zero,0
   add s2,t0,zero
-  lw t0,-740(fp)
-  add s1,t0,zero
+  add s1,s4,zero
   add a0,s2,zero
   add a1,s1,zero
   jalr ra,s3,0
   addi s1,a0,0
-  add t2,s1,zero
-  sw t2,-736(fp)
+  add s2,s1,zero
   lw t0,__lookup
-  add s3,t0,zero
+  add s5,t0,zero
   addi t0,zero,0
-  add s2,t0,zero
-  lw t0,-740(fp)
-  add s1,t0,zero
-  add a0,s2,zero
+  add s3,t0,zero
+  add s1,s4,zero
+  add a0,s3,zero
   add a1,s1,zero
-  jalr ra,s3,0
+  jalr ra,s5,0
   addi s1,a0,0
   add s1,s1,zero
-  add s2,s1,zero
+  add s3,s1,zero
   addi t0,zero,0
   add s1,t0,zero
-  sub s1,s2,s1
+  sub s1,s3,s1
   sltiu s1,s1,1
   beq s1,zero,label102
   jal zero,label101
 label101:
   lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-732(fp)
+  add s6,t0,zero
   addi t0,zero,1
-  add t2,t0,zero
-  sw t2,-728(fp)
-  lw t0,-740(fp)
-  add t2,t0,zero
-  sw t2,-724(fp)
-  lw t0,-728(fp)
-  add a0,t0,zero
-  lw t0,-724(fp)
-  add a1,t0,zero
-  lw t0,-732(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
-  sw t2,-720(fp)
-  lw t0,-720(fp)
-  add t2,t0,zero
-  sw t2,-716(fp)
-  lw t0,-716(fp)
-  add t2,t0,zero
-  sw t2,-712(fp)
+  add s5,t0,zero
+  add s4,s4,zero
+  add a0,s5,zero
+  add a1,s4,zero
+  jalr ra,s6,0
+  addi s3,a0,0
+  add s2,s3,zero
+  add s2,s2,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-708(fp)
+  add s9,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-704(fp)
+  add s9,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-700(fp)
+  add s9,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-696(fp)
+  add s9,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-692(fp)
+  add s9,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-688(fp)
+  add s9,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-684(fp)
+  add s9,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-680(fp)
+  add s9,t0,zero
   addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-676(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-672(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-668(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-664(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-660(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-656(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-652(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-648(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-644(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-640(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-636(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-632(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-628(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-624(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-620(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-616(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-612(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-608(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-604(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-600(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-596(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-592(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-588(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-584(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-580(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-576(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-572(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-568(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-564(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-560(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-556(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-552(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-548(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-544(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-540(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-536(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-532(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-528(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-524(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-520(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-516(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-512(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-508(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-504(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-500(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-496(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-492(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-488(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-484(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-480(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-476(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-472(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-468(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-464(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-460(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-456(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-452(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-448(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-444(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-440(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-436(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-432(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-428(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-424(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-420(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-416(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-412(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-408(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-404(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-400(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-396(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-392(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-388(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-384(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-380(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-376(fp)
-  addi t0,zero,0
-  add t2,t0,zero
-  sw t2,-372(fp)
+  add s9,t0,zero
   addi t0,zero,0
   add s1,t0,zero
   addi t0,zero,0
@@ -20876,20 +19245,165 @@ label101:
   add s1,t0,zero
   addi t0,zero,0
   add s1,t0,zero
-  lw t0,-724(fp)
+  addi t0,zero,0
   add s1,t0,zero
-  lw t0,-728(fp)
+  addi t0,zero,0
   add s1,t0,zero
-  lw t0,-732(fp)
+  addi t0,zero,0
   add s1,t0,zero
-  lw t0,-720(fp)
+  addi t0,zero,0
   add s1,t0,zero
-  lw t0,-712(fp)
+  addi t0,zero,0
   add s1,t0,zero
-  lw t0,-740(fp)
+  addi t0,zero,0
   add s1,t0,zero
-  lw t0,-716(fp)
+  addi t0,zero,0
   add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  addi t0,zero,0
+  add s1,t0,zero
+  add s1,s4,zero
+  add s1,s5,zero
+  add s1,s6,zero
+  add s1,s3,zero
+  add s1,s2,zero
+  add s1,s4,zero
+  add s1,s2,zero
   addi t0,zero,0
   add s4,t0,zero
   addi t0,zero,0
@@ -20921,14 +19435,13 @@ label102:
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-368(fp)
-  lw t0,-368(fp)
+  sw t2,-356(fp)
+  lw t0,-356(fp)
   add t2,t0,zero
-  sw t2,-364(fp)
-  lw t0,-740(fp)
-  add t2,t0,zero
-  sw t2,-360(fp)
-  lw t0,-364(fp)
+  sw t2,-352(fp)
+  add t2,s4,zero
+  sw t2,-348(fp)
+  lw t0,-352(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -20938,37 +19451,16 @@ label102:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-356(fp)
-  lw t0,-360(fp)
-  sw t0,0(t2)
-  sw t2,-356(fp)
-  lw t0,-360(fp)
-  add t2,t0,zero
-  sw t2,-352(fp)
-  lw t0,-736(fp)
-  add t2,t0,zero
-  sw t2,-348(fp)
-  lw t0,-348(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,0
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
   sw t2,-344(fp)
-  lw t0,-344(fp)
-  lw t2,0(t0)
-  sw t2,-340(fp)
-  lw t0,-340(fp)
+  lw t0,-348(fp)
+  sw t0,0(t2)
+  sw t2,-344(fp)
+  lw t0,-348(fp)
   add t2,t0,zero
+  sw t2,-340(fp)
+  add t2,s2,zero
   sw t2,-336(fp)
   lw t0,-336(fp)
-  add t2,t0,zero
-  sw t2,-332(fp)
-  lw t0,-364(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -20978,49 +19470,49 @@ label102:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-328(fp)
+  sw t2,-332(fp)
   lw t0,-332(fp)
-  sw t0,0(t2)
+  lw t2,0(t0)
   sw t2,-328(fp)
-  lw t0,-332(fp)
+  lw t0,-328(fp)
   add t2,t0,zero
   sw t2,-324(fp)
-  lw t0,-364(fp)
+  lw t0,-324(fp)
+  add t2,t0,zero
+  sw t2,-320(fp)
+  lw t0,-352(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-316(fp)
+  lw t0,-320(fp)
+  sw t0,0(t2)
+  sw t2,-316(fp)
+  lw t0,-320(fp)
+  add t2,t0,zero
+  sw t2,-312(fp)
+  lw t0,-352(fp)
   add s1,t0,zero
   add t2,s1,zero
-  sw t2,-320(fp)
+  sw t2,-308(fp)
   addi t0,zero,8
   add a0,t0,zero
   lw t0,malloc
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-316(fp)
-  lw t0,-316(fp)
-  add t2,t0,zero
-  sw t2,-312(fp)
-  add t2,s1,zero
-  sw t2,-308(fp)
-  lw t0,-312(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
   sw t2,-304(fp)
-  lw t0,-308(fp)
-  sw t0,0(t2)
-  sw t2,-304(fp)
-  lw t0,-308(fp)
+  lw t0,-304(fp)
   add t2,t0,zero
   sw t2,-300(fp)
-  lw t0,-736(fp)
-  add t2,t0,zero
+  add t2,s1,zero
   sw t2,-296(fp)
-  lw t0,-296(fp)
+  lw t0,-300(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -21031,99 +19523,114 @@ label102:
   mul t1,t1,t0
   add t2,t2,t1
   sw t2,-292(fp)
-  lw t0,-292(fp)
-  lw t2,0(t0)
-  sw t2,-288(fp)
-  lw t0,-288(fp)
+  lw t0,-296(fp)
+  sw t0,0(t2)
+  sw t2,-292(fp)
+  lw t0,-296(fp)
   add t2,t0,zero
+  sw t2,-288(fp)
+  add t2,s2,zero
   sw t2,-284(fp)
-  lw t0,-312(fp)
+  lw t0,-284(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
   mul t0,t0,t1
   add t2,t2,t0
-  addi t1,zero,0
+  addi t1,zero,1
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
   sw t2,-280(fp)
-  lw t0,-284(fp)
-  sw t0,0(t2)
-  sw t2,-280(fp)
-  lw t0,-284(fp)
-  add t2,t0,zero
+  lw t0,-280(fp)
+  lw t2,0(t0)
   sw t2,-276(fp)
-  lw t0,-312(fp)
+  lw t0,-276(fp)
   add t2,t0,zero
   sw t2,-272(fp)
-  lw t0,-272(fp)
-  add t2,t0,zero
+  lw t0,-300(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,0
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
   sw t2,-268(fp)
-  lw t0,__lookup
+  lw t0,-272(fp)
+  sw t0,0(t2)
+  sw t2,-268(fp)
+  lw t0,-272(fp)
   add t2,t0,zero
   sw t2,-264(fp)
-  addi t0,zero,4
-  add t2,t0,zero
+  lw t0,-300(fp)
+  add s8,t0,zero
+  add t2,s8,zero
   sw t2,-260(fp)
-  lw t0,-272(fp)
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-256(fp)
-  lw t0,-260(fp)
+  addi t0,zero,4
+  add t2,t0,zero
+  sw t2,-252(fp)
+  add t2,s8,zero
+  sw t2,-248(fp)
+  lw t0,-252(fp)
   add a0,t0,zero
-  lw t0,-256(fp)
+  lw t0,-248(fp)
   add a1,t0,zero
-  lw t0,-264(fp)
+  lw t0,-256(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-252(fp)
-  lw t0,-252(fp)
-  add t2,t0,zero
-  sw t2,-248(fp)
-  lw t0,-248(fp)
-  add t2,t0,zero
   sw t2,-244(fp)
   lw t0,-244(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
+  add t2,t0,zero
   sw t2,-240(fp)
   lw t0,-240(fp)
-  lw t2,0(t0)
+  add t2,t0,zero
   sw t2,-236(fp)
   lw t0,-236(fp)
-  add t2,t0,zero
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
+  addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
   sw t2,-232(fp)
-  lw t0,__lookup
-  add t2,t0,zero
+  lw t0,-232(fp)
+  lw t2,0(t0)
   sw t2,-228(fp)
-  addi t0,zero,1
+  lw t0,-228(fp)
   add t2,t0,zero
   sw t2,-224(fp)
-  lw t0,-272(fp)
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-220(fp)
-  lw t0,-224(fp)
+  addi t0,zero,1
+  add t2,t0,zero
+  sw t2,-216(fp)
+  add t2,s8,zero
+  sw t2,-212(fp)
+  lw t0,-216(fp)
   add a0,t0,zero
-  lw t0,-220(fp)
+  lw t0,-212(fp)
   add a1,t0,zero
-  lw t0,-228(fp)
+  lw t0,-220(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-216(fp)
-  lw t0,-216(fp)
-  add t2,t0,zero
-  sw t2,-212(fp)
-  lw t0,-248(fp)
-  add t2,t0,zero
   sw t2,-208(fp)
   lw t0,-208(fp)
+  add t2,t0,zero
+  sw t2,-204(fp)
+  lw t0,-240(fp)
+  add t2,t0,zero
+  sw t2,-200(fp)
+  lw t0,-200(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -21133,82 +19640,80 @@ label102:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-204(fp)
-  lw t0,-204(fp)
+  sw t2,-196(fp)
+  lw t0,-196(fp)
   lw t2,0(t0)
-  sw t2,-200(fp)
-  lw t0,-212(fp)
+  sw t2,-192(fp)
+  lw t0,-204(fp)
   add a0,t0,zero
-  lw t0,-200(fp)
+  lw t0,-192(fp)
   add a1,t0,zero
-  lw t0,-232(fp)
+  lw t0,-224(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-196(fp)
-  lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-192(fp)
-  addi t0,zero,5
-  add t2,t0,zero
   sw t2,-188(fp)
-  lw t0,-272(fp)
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-184(fp)
-  lw t0,-188(fp)
+  addi t0,zero,5
+  add t2,t0,zero
+  sw t2,-180(fp)
+  add t2,s8,zero
+  sw t2,-176(fp)
+  lw t0,-180(fp)
   add a0,t0,zero
-  lw t0,-184(fp)
+  lw t0,-176(fp)
   add a1,t0,zero
-  lw t0,-192(fp)
+  lw t0,-184(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-180(fp)
-  lw t0,-180(fp)
-  add t2,t0,zero
-  sw t2,-176(fp)
-  lw t0,-176(fp)
-  add t2,t0,zero
   sw t2,-172(fp)
   lw t0,-172(fp)
-  addi t2,t0,0
-  addi t0,zero,0
-  addi t1,zero,8
-  mul t0,t0,t1
-  add t2,t2,t0
-  addi t1,zero,1
-  addi t0,zero,4
-  mul t1,t1,t0
-  add t2,t2,t1
+  add t2,t0,zero
   sw t2,-168(fp)
   lw t0,-168(fp)
-  lw t2,0(t0)
+  add t2,t0,zero
   sw t2,-164(fp)
   lw t0,-164(fp)
-  add t2,t0,zero
-  sw t2,-160(fp)
-  lw t0,__lookup
-  add t2,t0,zero
-  sw t2,-156(fp)
+  addi t2,t0,0
+  addi t0,zero,0
+  addi t1,zero,8
+  mul t0,t0,t1
+  add t2,t2,t0
+  addi t1,zero,1
   addi t0,zero,4
+  mul t1,t1,t0
+  add t2,t2,t1
+  sw t2,-160(fp)
+  lw t0,-160(fp)
+  lw t2,0(t0)
+  sw t2,-156(fp)
+  lw t0,-156(fp)
   add t2,t0,zero
   sw t2,-152(fp)
-  lw t0,-272(fp)
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-148(fp)
-  lw t0,-152(fp)
+  addi t0,zero,4
+  add t2,t0,zero
+  sw t2,-144(fp)
+  add t2,s8,zero
+  sw t2,-140(fp)
+  lw t0,-144(fp)
   add a0,t0,zero
-  lw t0,-148(fp)
+  lw t0,-140(fp)
   add a1,t0,zero
-  lw t0,-156(fp)
+  lw t0,-148(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-144(fp)
-  lw t0,-144(fp)
-  add t2,t0,zero
-  sw t2,-140(fp)
-  lw t0,-176(fp)
-  add t2,t0,zero
   sw t2,-136(fp)
   lw t0,-136(fp)
+  add t2,t0,zero
+  sw t2,-132(fp)
+  lw t0,-168(fp)
+  add t2,t0,zero
+  sw t2,-128(fp)
+  lw t0,-128(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -21218,25 +19723,25 @@ label102:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-132(fp)
-  lw t0,-132(fp)
-  lw t2,0(t0)
-  sw t2,-128(fp)
-  lw t0,-140(fp)
-  add a0,t0,zero
-  lw t0,-128(fp)
-  add a1,t0,zero
-  lw t0,-160(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
   sw t2,-124(fp)
   lw t0,-124(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-120(fp)
+  lw t0,-132(fp)
+  add a0,t0,zero
   lw t0,-120(fp)
-  add t2,t0,zero
+  add a1,t0,zero
+  lw t0,-152(fp)
+  jalr ra,t0,0
+  addi t2,a0,0
   sw t2,-116(fp)
   lw t0,-116(fp)
+  add t2,t0,zero
+  sw t2,-112(fp)
+  lw t0,-112(fp)
+  add t2,t0,zero
+  sw t2,-108(fp)
+  lw t0,-108(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -21246,37 +19751,36 @@ label102:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-112(fp)
-  lw t0,-112(fp)
-  lw t2,0(t0)
-  sw t2,-108(fp)
-  lw t0,-108(fp)
-  add t2,t0,zero
   sw t2,-104(fp)
-  lw t0,__lookup
-  add t2,t0,zero
+  lw t0,-104(fp)
+  lw t2,0(t0)
   sw t2,-100(fp)
-  addi t0,zero,3
+  lw t0,-100(fp)
   add t2,t0,zero
   sw t2,-96(fp)
-  lw t0,-272(fp)
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-92(fp)
-  lw t0,-96(fp)
+  addi t0,zero,3
+  add t2,t0,zero
+  sw t2,-88(fp)
+  add t2,s8,zero
+  sw t2,-84(fp)
+  lw t0,-88(fp)
   add a0,t0,zero
-  lw t0,-92(fp)
+  lw t0,-84(fp)
   add a1,t0,zero
-  lw t0,-100(fp)
+  lw t0,-92(fp)
   jalr ra,t0,0
   addi t2,a0,0
-  sw t2,-88(fp)
-  lw t0,-88(fp)
-  add t2,t0,zero
-  sw t2,-84(fp)
-  lw t0,-120(fp)
-  add t2,t0,zero
   sw t2,-80(fp)
   lw t0,-80(fp)
+  add t2,t0,zero
+  sw t2,-76(fp)
+  lw t0,-112(fp)
+  add t2,t0,zero
+  sw t2,-72(fp)
+  lw t0,-72(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -21286,25 +19790,23 @@ label102:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-76(fp)
-  lw t0,-76(fp)
-  lw t2,0(t0)
-  sw t2,-72(fp)
-  lw t0,-84(fp)
-  add a0,t0,zero
-  lw t0,-72(fp)
-  add a1,t0,zero
-  lw t0,-104(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
   sw t2,-68(fp)
   lw t0,-68(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-64(fp)
+  lw t0,-76(fp)
+  add a0,t0,zero
   lw t0,-64(fp)
-  add t2,t0,zero
+  add a1,t0,zero
+  lw t0,-96(fp)
+  jalr ra,t0,0
+  addi t2,a0,0
   sw t2,-60(fp)
   lw t0,-60(fp)
+  add s6,t0,zero
+  add t2,s6,zero
+  sw t2,-56(fp)
+  lw t0,-56(fp)
   addi t2,t0,0
   addi t0,zero,0
   addi t1,zero,8
@@ -21314,34 +19816,30 @@ label102:
   addi t0,zero,4
   mul t1,t1,t0
   add t2,t2,t1
-  sw t2,-56(fp)
-  lw t0,-56(fp)
-  lw t2,0(t0)
   sw t2,-52(fp)
   lw t0,-52(fp)
-  add t2,t0,zero
+  lw t2,0(t0)
   sw t2,-48(fp)
-  lw t0,__lookup
+  lw t0,-48(fp)
   add t2,t0,zero
   sw t2,-44(fp)
-  addi t0,zero,0
+  lw t0,__lookup
   add t2,t0,zero
   sw t2,-40(fp)
-  lw t0,-272(fp)
+  addi t0,zero,0
   add t2,t0,zero
   sw t2,-36(fp)
-  lw t0,-40(fp)
-  add a0,t0,zero
-  lw t0,-36(fp)
-  add a1,t0,zero
-  lw t0,-44(fp)
-  jalr ra,t0,0
-  addi t2,a0,0
+  add t2,s8,zero
   sw t2,-32(fp)
+  lw t0,-36(fp)
+  add a0,t0,zero
   lw t0,-32(fp)
-  add s7,t0,zero
-  lw t0,-64(fp)
-  add s6,t0,zero
+  add a1,t0,zero
+  lw t0,-40(fp)
+  jalr ra,t0,0
+  addi s7,a0,0
+  add s7,s7,zero
+  add s6,s6,zero
   addi s5,s6,0
   addi t0,zero,0
   addi t1,zero,8
@@ -21354,10 +19852,10 @@ label102:
   lw s4,0(s5)
   add a0,s7,zero
   add a1,s4,zero
-  lw t0,-48(fp)
+  lw t0,-44(fp)
   jalr ra,t0,0
   addi s3,a0,0
-  lw t0,-196(fp)
+  lw t0,-188(fp)
   add s2,t0,zero
   add s2,s2,zero
   addi s1,s2,0
@@ -21401,8 +19899,7 @@ label102:
   lw t0,-8(fp)
   add a2,t0,zero
   add a2,a2,zero
-  lw t0,-272(fp)
-  add a1,t0,zero
+  add a1,s8,zero
   addi a0,a1,0
   addi t0,zero,0
   addi t1,zero,8
@@ -21426,264 +19923,178 @@ label102:
   add s9,s9,t1
   lw s8,0(s9)
   add s8,s8,zero
-  add t2,s9,zero
-  sw t2,-708(fp)
-  add t2,s10,zero
-  sw t2,-704(fp)
-  add t2,s8,zero
-  sw t2,-700(fp)
-  add t2,a0,zero
-  sw t2,-696(fp)
-  add t2,a1,zero
-  sw t2,-692(fp)
-  add t2,s11,zero
-  sw t2,-688(fp)
-  add t2,a2,zero
-  sw t2,-684(fp)
+  add s9,s9,zero
+  add s9,s10,zero
+  add s9,s8,zero
+  add s9,a0,zero
+  add s9,a1,zero
+  add s9,s11,zero
+  add s9,a2,zero
   lw t0,-16(fp)
-  add t2,t0,zero
-  sw t2,-680(fp)
+  add s9,t0,zero
   lw t0,-20(fp)
-  add t2,t0,zero
-  sw t2,-676(fp)
-  add t2,s1,zero
-  sw t2,-672(fp)
-  add t2,s2,zero
-  sw t2,-668(fp)
+  add s9,t0,zero
+  add s1,s1,zero
+  add s1,s2,zero
   lw t0,-28(fp)
-  add t2,t0,zero
-  sw t2,-664(fp)
+  add s1,t0,zero
   lw t0,-12(fp)
-  add t2,t0,zero
-  sw t2,-660(fp)
-  add t2,s3,zero
-  sw t2,-656(fp)
+  add s1,t0,zero
+  add s1,s3,zero
   lw t0,-24(fp)
-  add t2,t0,zero
-  sw t2,-652(fp)
-  add t2,s5,zero
-  sw t2,-648(fp)
-  add t2,s6,zero
-  sw t2,-644(fp)
-  lw t0,-36(fp)
-  add t2,t0,zero
-  sw t2,-640(fp)
-  lw t0,-40(fp)
-  add t2,t0,zero
-  sw t2,-636(fp)
-  lw t0,-44(fp)
-  add t2,t0,zero
-  sw t2,-632(fp)
+  add s1,t0,zero
+  add s1,s5,zero
+  add s1,s6,zero
   lw t0,-32(fp)
-  add t2,t0,zero
-  sw t2,-628(fp)
-  lw t0,-56(fp)
-  add t2,t0,zero
-  sw t2,-624(fp)
-  lw t0,-60(fp)
-  add t2,t0,zero
-  sw t2,-620(fp)
+  add s1,t0,zero
+  lw t0,-36(fp)
+  add s1,t0,zero
+  lw t0,-40(fp)
+  add s1,t0,zero
+  add s1,s7,zero
   lw t0,-52(fp)
-  add t2,t0,zero
-  sw t2,-616(fp)
-  add t2,s4,zero
-  sw t2,-612(fp)
-  add t2,s7,zero
-  sw t2,-608(fp)
+  add s1,t0,zero
+  lw t0,-56(fp)
+  add s1,t0,zero
   lw t0,-48(fp)
-  add t2,t0,zero
-  sw t2,-604(fp)
-  lw t0,-76(fp)
-  add t2,t0,zero
-  sw t2,-600(fp)
-  lw t0,-80(fp)
-  add t2,t0,zero
-  sw t2,-596(fp)
-  lw t0,-92(fp)
-  add t2,t0,zero
-  sw t2,-592(fp)
-  lw t0,-96(fp)
-  add t2,t0,zero
-  sw t2,-588(fp)
-  lw t0,-100(fp)
-  add t2,t0,zero
-  sw t2,-584(fp)
-  lw t0,-88(fp)
-  add t2,t0,zero
-  sw t2,-580(fp)
-  lw t0,-112(fp)
-  add t2,t0,zero
-  sw t2,-576(fp)
-  lw t0,-116(fp)
-  add t2,t0,zero
-  sw t2,-572(fp)
-  lw t0,-108(fp)
-  add t2,t0,zero
-  sw t2,-568(fp)
+  add s1,t0,zero
+  add s1,s4,zero
+  add s1,s7,zero
+  lw t0,-44(fp)
+  add s1,t0,zero
+  lw t0,-68(fp)
+  add s1,t0,zero
   lw t0,-72(fp)
-  add t2,t0,zero
-  sw t2,-564(fp)
+  add s1,t0,zero
   lw t0,-84(fp)
-  add t2,t0,zero
-  sw t2,-560(fp)
+  add s1,t0,zero
+  lw t0,-88(fp)
+  add s1,t0,zero
+  lw t0,-92(fp)
+  add s1,t0,zero
+  lw t0,-80(fp)
+  add s1,t0,zero
   lw t0,-104(fp)
-  add t2,t0,zero
-  sw t2,-556(fp)
-  lw t0,-132(fp)
-  add t2,t0,zero
-  sw t2,-552(fp)
-  lw t0,-136(fp)
-  add t2,t0,zero
-  sw t2,-548(fp)
-  lw t0,-148(fp)
-  add t2,t0,zero
-  sw t2,-544(fp)
-  lw t0,-152(fp)
-  add t2,t0,zero
-  sw t2,-540(fp)
-  lw t0,-156(fp)
-  add t2,t0,zero
-  sw t2,-536(fp)
-  lw t0,-144(fp)
-  add t2,t0,zero
-  sw t2,-532(fp)
-  lw t0,-168(fp)
-  add t2,t0,zero
-  sw t2,-528(fp)
-  lw t0,-172(fp)
-  add t2,t0,zero
-  sw t2,-524(fp)
-  lw t0,-164(fp)
-  add t2,t0,zero
-  sw t2,-520(fp)
+  add s1,t0,zero
+  lw t0,-108(fp)
+  add s1,t0,zero
+  lw t0,-100(fp)
+  add s1,t0,zero
+  lw t0,-64(fp)
+  add s1,t0,zero
+  lw t0,-76(fp)
+  add s1,t0,zero
+  lw t0,-96(fp)
+  add s1,t0,zero
+  lw t0,-124(fp)
+  add s1,t0,zero
   lw t0,-128(fp)
-  add t2,t0,zero
-  sw t2,-516(fp)
+  add s1,t0,zero
   lw t0,-140(fp)
-  add t2,t0,zero
-  sw t2,-512(fp)
+  add s1,t0,zero
+  lw t0,-144(fp)
+  add s1,t0,zero
+  lw t0,-148(fp)
+  add s1,t0,zero
+  lw t0,-136(fp)
+  add s1,t0,zero
   lw t0,-160(fp)
-  add t2,t0,zero
-  sw t2,-508(fp)
-  lw t0,-184(fp)
-  add t2,t0,zero
-  sw t2,-504(fp)
-  lw t0,-188(fp)
-  add t2,t0,zero
-  sw t2,-500(fp)
-  lw t0,-192(fp)
-  add t2,t0,zero
-  sw t2,-496(fp)
+  add s1,t0,zero
+  lw t0,-164(fp)
+  add s1,t0,zero
+  lw t0,-156(fp)
+  add s1,t0,zero
+  lw t0,-120(fp)
+  add s1,t0,zero
+  lw t0,-132(fp)
+  add s1,t0,zero
+  lw t0,-152(fp)
+  add s1,t0,zero
+  lw t0,-176(fp)
+  add s1,t0,zero
   lw t0,-180(fp)
-  add t2,t0,zero
-  sw t2,-492(fp)
-  lw t0,-204(fp)
-  add t2,t0,zero
-  sw t2,-488(fp)
-  lw t0,-208(fp)
-  add t2,t0,zero
-  sw t2,-484(fp)
-  lw t0,-220(fp)
-  add t2,t0,zero
-  sw t2,-480(fp)
-  lw t0,-224(fp)
-  add t2,t0,zero
-  sw t2,-476(fp)
-  lw t0,-228(fp)
-  add t2,t0,zero
-  sw t2,-472(fp)
-  lw t0,-216(fp)
-  add t2,t0,zero
-  sw t2,-468(fp)
-  lw t0,-240(fp)
-  add t2,t0,zero
-  sw t2,-464(fp)
-  lw t0,-244(fp)
-  add t2,t0,zero
-  sw t2,-460(fp)
-  lw t0,-236(fp)
-  add t2,t0,zero
-  sw t2,-456(fp)
+  add s1,t0,zero
+  lw t0,-184(fp)
+  add s1,t0,zero
+  lw t0,-172(fp)
+  add s1,t0,zero
+  lw t0,-196(fp)
+  add s1,t0,zero
   lw t0,-200(fp)
-  add t2,t0,zero
-  sw t2,-452(fp)
+  add s1,t0,zero
   lw t0,-212(fp)
-  add t2,t0,zero
-  sw t2,-448(fp)
+  add s1,t0,zero
+  lw t0,-216(fp)
+  add s1,t0,zero
+  lw t0,-220(fp)
+  add s1,t0,zero
+  lw t0,-208(fp)
+  add s1,t0,zero
   lw t0,-232(fp)
-  add t2,t0,zero
-  sw t2,-444(fp)
-  lw t0,-256(fp)
-  add t2,t0,zero
-  sw t2,-440(fp)
-  lw t0,-260(fp)
-  add t2,t0,zero
-  sw t2,-436(fp)
-  lw t0,-264(fp)
-  add t2,t0,zero
-  sw t2,-432(fp)
+  add s1,t0,zero
+  lw t0,-236(fp)
+  add s1,t0,zero
+  lw t0,-228(fp)
+  add s1,t0,zero
+  lw t0,-192(fp)
+  add s1,t0,zero
+  lw t0,-204(fp)
+  add s1,t0,zero
+  lw t0,-224(fp)
+  add s1,t0,zero
+  lw t0,-248(fp)
+  add s1,t0,zero
   lw t0,-252(fp)
-  add t2,t0,zero
-  sw t2,-428(fp)
-  lw t0,-268(fp)
-  add t2,t0,zero
-  sw t2,-424(fp)
-  lw t0,-292(fp)
-  add t2,t0,zero
-  sw t2,-420(fp)
-  lw t0,-296(fp)
-  add t2,t0,zero
-  sw t2,-416(fp)
-  lw t0,-288(fp)
-  add t2,t0,zero
-  sw t2,-412(fp)
+  add s1,t0,zero
+  lw t0,-256(fp)
+  add s1,t0,zero
+  lw t0,-244(fp)
+  add s1,t0,zero
+  lw t0,-260(fp)
+  add s1,t0,zero
   lw t0,-280(fp)
-  add t2,t0,zero
-  sw t2,-408(fp)
+  add s1,t0,zero
   lw t0,-284(fp)
-  add t2,t0,zero
-  sw t2,-404(fp)
+  add s1,t0,zero
   lw t0,-276(fp)
-  add t2,t0,zero
-  sw t2,-400(fp)
+  add s1,t0,zero
+  lw t0,-268(fp)
+  add s1,t0,zero
+  lw t0,-272(fp)
+  add s1,t0,zero
+  lw t0,-264(fp)
+  add s1,t0,zero
+  lw t0,-292(fp)
+  add s1,t0,zero
+  lw t0,-296(fp)
+  add s1,t0,zero
+  lw t0,-288(fp)
+  add s1,t0,zero
   lw t0,-304(fp)
-  add t2,t0,zero
-  sw t2,-396(fp)
+  add s1,t0,zero
   lw t0,-308(fp)
-  add t2,t0,zero
-  sw t2,-392(fp)
-  lw t0,-300(fp)
-  add t2,t0,zero
-  sw t2,-388(fp)
-  lw t0,-316(fp)
-  add t2,t0,zero
-  sw t2,-384(fp)
-  lw t0,-320(fp)
-  add t2,t0,zero
-  sw t2,-380(fp)
-  lw t0,-344(fp)
-  add t2,t0,zero
-  sw t2,-376(fp)
-  lw t0,-348(fp)
-  add t2,t0,zero
-  sw t2,-372(fp)
-  lw t0,-340(fp)
+  add s1,t0,zero
+  lw t0,-332(fp)
   add s1,t0,zero
   lw t0,-336(fp)
   add s1,t0,zero
   lw t0,-328(fp)
   add s1,t0,zero
-  lw t0,-332(fp)
-  add s1,t0,zero
   lw t0,-324(fp)
   add s1,t0,zero
+  lw t0,-316(fp)
+  add s1,t0,zero
+  lw t0,-320(fp)
+  add s1,t0,zero
+  lw t0,-312(fp)
+  add s1,t0,zero
+  lw t0,-344(fp)
+  add s1,t0,zero
+  lw t0,-348(fp)
+  add s1,t0,zero
+  lw t0,-340(fp)
+  add s1,t0,zero
   lw t0,-356(fp)
-  add s1,t0,zero
-  lw t0,-360(fp)
-  add s1,t0,zero
-  lw t0,-352(fp)
-  add s1,t0,zero
-  lw t0,-368(fp)
   add s1,t0,zero
   addi t0,zero,0
   add s1,t0,zero
@@ -21701,23 +20112,22 @@ label102:
   add s4,t0,zero
   add s2,s2,zero
   add s2,s3,zero
-  lw t0,-64(fp)
+  add s2,s6,zero
+  lw t0,-60(fp)
   add s2,t0,zero
-  lw t0,-68(fp)
+  lw t0,-112(fp)
   add s2,t0,zero
-  lw t0,-120(fp)
+  lw t0,-116(fp)
   add s2,t0,zero
-  lw t0,-124(fp)
+  lw t0,-168(fp)
   add s2,t0,zero
-  lw t0,-176(fp)
+  lw t0,-188(fp)
   add s2,t0,zero
-  lw t0,-196(fp)
+  lw t0,-240(fp)
   add s2,t0,zero
-  lw t0,-248(fp)
+  lw t0,-300(fp)
   add s2,t0,zero
-  lw t0,-312(fp)
-  add s2,t0,zero
-  lw t0,-364(fp)
+  lw t0,-352(fp)
   add s2,t0,zero
   jal zero,label103
 label103:
@@ -21725,27 +20135,27 @@ label103:
   add a0,s1,zero
   jal zero,fun153__exit
 fun153__exit:
-  lw t0,-784(fp)
+  lw t0,-400(fp)
   add s1,t0,zero
-  lw t0,-780(fp)
+  lw t0,-396(fp)
   add s2,t0,zero
-  lw t0,-776(fp)
+  lw t0,-392(fp)
   add s3,t0,zero
-  lw t0,-772(fp)
+  lw t0,-388(fp)
   add s4,t0,zero
-  lw t0,-768(fp)
+  lw t0,-384(fp)
   add s5,t0,zero
-  lw t0,-764(fp)
+  lw t0,-380(fp)
   add s6,t0,zero
-  lw t0,-760(fp)
+  lw t0,-376(fp)
   add s7,t0,zero
-  lw t0,-756(fp)
+  lw t0,-372(fp)
   add s8,t0,zero
-  lw t0,-752(fp)
+  lw t0,-368(fp)
   add s9,t0,zero
-  lw t0,-748(fp)
+  lw t0,-364(fp)
   add s10,t0,zero
-  lw t0,-744(fp)
+  lw t0,-360(fp)
   add s11,t0,zero
   addi sp,fp,-4
   lw fp,4(sp)
@@ -22204,25 +20614,24 @@ __main:
   sw fp,4(sp)
   sw ra,0(sp)
   addi fp,sp,4
-  addi sp,sp,-36
+  addi sp,sp,-32
   add t2,s1,zero
-  sw t2,-40(fp)
-  add t2,s2,zero
   sw t2,-36(fp)
-  add t2,s3,zero
+  add t2,s2,zero
   sw t2,-32(fp)
-  add t2,s4,zero
+  add t2,s3,zero
   sw t2,-28(fp)
-  add t2,s5,zero
+  add t2,s4,zero
   sw t2,-24(fp)
-  add t2,s6,zero
+  add t2,s5,zero
   sw t2,-20(fp)
-  add t2,s7,zero
+  add t2,s6,zero
   sw t2,-16(fp)
-  add t2,s8,zero
+  add t2,s7,zero
   sw t2,-12(fp)
-  add t2,s9,zero
+  add t2,s8,zero
   sw t2,-8(fp)
+  add s9,s9,zero
   add s10,s10,zero
   add s11,s11,zero
 main__entry:
@@ -25312,56 +23721,56 @@ label112:
   addi s1,a0,0
   add s1,s1,zero
   addi t0,zero,440
-  add t3,t0,zero
+  add t4,t0,zero
   addi t0,zero,443
-  add a7,t0,zero
-  add a6,t3,a7
+  add t3,t0,zero
+  add a7,t4,t3
   addi t0,zero,2
-  add a5,t0,zero
-  add a4,a6,a5
+  add a6,t0,zero
+  add a5,a7,a6
   addi t0,zero,595
-  add a3,t0,zero
-  add a2,a4,a3
+  add a4,t0,zero
+  add a3,a5,a4
   addi t0,zero,42
-  add a1,t0,zero
-  add a0,a2,a1
-  sub s9,s1,a0
-  sltiu s9,s9,1
-  add a7,a7,zero
-  add a7,t3,zero
-  add a5,a5,zero
-  add a5,a6,zero
-  add a3,a3,zero
-  add a3,a4,zero
-  add a1,a1,zero
-  add a1,a2,zero
+  add a2,t0,zero
+  add a1,a3,a2
+  sub a0,s1,a1
+  sltiu a0,a0,1
+  add t3,t3,zero
+  add t3,t4,zero
+  add a6,a6,zero
+  add a6,a7,zero
+  add a4,a4,zero
+  add a4,a5,zero
+  add a2,a2,zero
+  add a2,a3,zero
   add s2,s2,zero
   add s2,s3,zero
   add s2,s4,zero
   add s2,s1,zero
-  add s2,a0,zero
+  add s2,a1,zero
   add s2,s1,zero
-  add s1,s9,zero
+  add s1,a0,zero
   jal zero,label114
 label113:
   addi t0,zero,0
   add s1,t0,zero
   addi t0,zero,0
-  add a7,t0,zero
+  add t3,t0,zero
   addi t0,zero,0
-  add a7,t0,zero
+  add t3,t0,zero
   addi t0,zero,0
-  add a5,t0,zero
+  add a6,t0,zero
   addi t0,zero,0
-  add a5,t0,zero
+  add a6,t0,zero
   addi t0,zero,0
-  add a3,t0,zero
+  add a4,t0,zero
   addi t0,zero,0
-  add a3,t0,zero
+  add a4,t0,zero
   addi t0,zero,0
-  add a1,t0,zero
+  add a2,t0,zero
   addi t0,zero,0
-  add a1,t0,zero
+  add a2,t0,zero
   addi t0,zero,0
   add s2,t0,zero
   addi t0,zero,0
@@ -25380,24 +23789,23 @@ label114:
   beq s1,zero,label110
   jal zero,label109
 main__exit:
-  lw t0,-40(fp)
-  add s1,t0,zero
   lw t0,-36(fp)
-  add s2,t0,zero
+  add s1,t0,zero
   lw t0,-32(fp)
-  add s3,t0,zero
+  add s2,t0,zero
   lw t0,-28(fp)
-  add s4,t0,zero
+  add s3,t0,zero
   lw t0,-24(fp)
-  add s5,t0,zero
+  add s4,t0,zero
   lw t0,-20(fp)
-  add s6,t0,zero
+  add s5,t0,zero
   lw t0,-16(fp)
-  add s7,t0,zero
+  add s6,t0,zero
   lw t0,-12(fp)
-  add s8,t0,zero
+  add s7,t0,zero
   lw t0,-8(fp)
-  add s9,t0,zero
+  add s8,t0,zero
+  add s9,s9,zero
   add s10,s10,zero
   add s11,s11,zero
   addi sp,fp,-4

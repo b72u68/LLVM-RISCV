@@ -184,95 +184,63 @@ let grcolor (glob_alloc: alloc_res VRMap.t) ((cfg, n): Dfg.t) :
   let get_deg igraph node = List.length (IG.preds igraph node) in
   let is_empty igraph = (List.length (IG.nodes igraph) = 0) in
 
-  let print_igraph igraph =
-      IG.nodes igraph
-         |> List.fold_left (fun s n -> s ^ (Printf.sprintf "(%s, %d) " (vr_to_string (IG.get_data n)) (List.length (IG.succs igraph n)))) ""
-         |> print_endline
-  in
-
-  let spill_var node =
-      match IG.get_data node with
-      | Register _ -> failwith "can't spill a register!"
-      | Variable v -> v
-  in
-
-  let rec simplify igraph spills stack alloc =
-      let rec simp_rec igraph spills stack alloc = function
-          | [] -> (spills, stack, igraph, alloc)
+  let rec simplify igraph stack =
+      let rec simp_rec igraph stack = function
+          | [] -> (stack, igraph)
           | n::t ->
                   if (get_deg igraph n) < k then
-                     simp_rec (IG.rem_node igraph n) spills (n::stack) alloc t
-                  else simp_rec igraph spills stack alloc t
+                     simp_rec (IG.rem_node igraph n) (n::stack) t
+                  else simp_rec igraph stack t
       in
       let og_igraph = igraph in
       let nodes = IG.nodes igraph in
-      let (spills, stack, igraph, alloc) = simp_rec igraph spills stack alloc nodes in
-      if igraph <> og_igraph then simplify igraph spills stack alloc
-      else (spills, stack, igraph, alloc)
+      let (stack, igraph) = simp_rec igraph stack nodes in
+      if igraph <> og_igraph then simplify igraph stack
+      else (stack, igraph)
   in
 
-  let spill igraph spills stack alloc =
+  let spill igraph stack =
       let nodes = IG.nodes igraph in
-      let not_reg = ref [] in
-      let spilled = ref false in
-      let rec spill_rec = function
+      let rec spill_rec is_spilled = function
           | [] ->
-                  if !spilled then (spills, stack, igraph, alloc)
-                  else
-                      if List.length !not_reg = 0 then failwith "can't find a node to spill"
-                      else
-                          let n = List.nth !not_reg 0 in
-                          (
-                              (spill_var n)::spills,
-                              n::stack,
-                              IG.rem_node igraph n,
-                              VRMap.add (IG.get_data n) (OnStack (List.length spills)) alloc
-                          )
+                  if not is_spilled then
+                      let n = List.nth nodes 0 in
+                      (n::stack, IG.rem_node igraph n)
+                  else (stack, igraph)
           | n::t ->
                   match IG.get_data n with
-                  | Register _ -> spill_rec t
-                  | _ ->
-                          not_reg := n::(!not_reg);
-                          if (get_deg igraph n) >= k then
-                              (spilled := true;
-                              (
-                                  (spill_var n)::spills,
-                                  n::stack,
-                                  IG.rem_node igraph n,
-                                  VRMap.add (IG.get_data n) (OnStack (List.length spills)) alloc)
-                              )
-                          else spill_rec t
+                  | Variable _ -> (n::stack, IG.rem_node igraph n)
+                  | Register _ -> spill_rec false t
       in
-      if is_empty igraph then (spills, stack, igraph, alloc)
-      else spill_rec nodes
+      if is_empty igraph then (stack, igraph)
+      else spill_rec false nodes
   in
 
-  let rec simp_spill igraph spills stack alloc =
+  let rec simp_spill igraph stack =
       if not (is_empty igraph) then
-          let (spills, stack, igraph, alloc) = simplify igraph spills stack alloc in
-          let (spills, stack, igraph, alloc) = spill igraph spills stack alloc in
-          simp_spill igraph spills stack alloc
-      else (spills, stack, alloc)
+          let (stack, igraph) = simplify igraph stack in
+          let (stack, igraph) = spill igraph stack in
+          simp_spill igraph stack
+      else stack
   in
 
-  let select igraph (spills, stack, alloc) =
+  let select igraph alloc stack =
       let sel_rec (spills, alloc) n =
-          let nodeval = IG.get_data n in
+          let nvar = IG.get_data n in
           match get_reg igraph alloc n with
-          | Some r -> (spills, VRMap.add nodeval (InReg r) alloc)
+          | Some r -> (spills, VRMap.add nvar (InReg r) alloc)
           | None ->
-                  match VRMap.find_opt nodeval alloc with
-                  | Some _ -> (spills, alloc)
-                  | None ->
-                          ((spill_var n)::spills,
-                           VRMap.add (IG.get_data n) (OnStack (List.length spills)) alloc)
+                  match nvar with
+                  | Register _ -> failwith "can't spill a regsiter"
+                  | Variable v ->
+                          (v::spills, VRMap.add nvar (OnStack (List.length spills)) alloc)
       in
-      List.fold_left sel_rec (spills, alloc) stack
+      List.fold_left sel_rec ([], alloc) stack
   in
 
   let color igraph =
-      simp_spill igraph [] [] glob_alloc
-      |> select igraph
+      simp_spill igraph []
+      |> select igraph glob_alloc
   in
 
   color igraph
