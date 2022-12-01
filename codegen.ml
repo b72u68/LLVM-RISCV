@@ -201,19 +201,17 @@ let grcolor (glob_alloc: alloc_res VRMap.t) ((cfg, n): Dfg.t) :
 
   let spill igraph stack =
       let nodes = IG.nodes igraph in
-      let rec spill_rec is_spilled = function
+      let rec spill_rec = function
           | [] ->
-                  if not is_spilled then
-                      let n = List.nth nodes 0 in
-                      (n::stack, IG.rem_node igraph n)
-                  else (stack, igraph)
+                  let n = List.nth nodes 0 in
+                  (n::stack, IG.rem_node igraph n)
           | n::t ->
                   match IG.get_data n with
                   | Variable _ -> (n::stack, IG.rem_node igraph n)
-                  | Register _ -> spill_rec false t
+                  | Register _ -> spill_rec t
       in
       if is_empty igraph then (stack, igraph)
-      else spill_rec false nodes
+      else spill_rec nodes
   in
 
   let rec simp_spill igraph stack =
